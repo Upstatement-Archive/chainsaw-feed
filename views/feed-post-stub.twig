@@ -1,0 +1,6 @@
+<li class="feed-manager-post {{(post.post_hidden == 'post-hidden') ? 'feed-item-hidden'}}" data-pid="{{post.ID}}">
+	<input name="pids[]" value="{{post.ID}}" type="hidden" class="array-saver"/>
+	<input name="post_scope_{{post.ID}}" value="posts" type="hidden" class="post-scope" />
+	<input name="post_hidden_{{post.ID}}" value="{{post.post_hidden}}" class="post-hidden" type="hidden" />
+	{% include "post-stub.twig" %}
+</li>

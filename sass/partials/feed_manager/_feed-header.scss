@@ -1,0 +1,142 @@
+/* ---------------------------------------------- */
+
+/*  Feeds Manager header                                    
+
+/* ---------------------------------------------- */
+
+
+// Header
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+.feed-manager-header {
+    @include pie-clearfix;
+}
+
+.feed-manager-title {
+    display: inline-block;
+    margin: 0 0 -8px -2px;
+    color: $f-gray-100;
+    letter-spacing: -2px;
+    font-weight: 200;
+    font-size: 45px;
+    cursor: default;
+}
+
+
+
+
+// Feeds actions wrapper for post-types and publish btn
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+.feed-actions {
+    display: inline-block;
+    float: right;
+}
+
+    /*for extension*/.feed-actions-item {
+        padding: 8px 20px;
+        line-height: 100%;
+        font-weight: 600;
+    }
+
+
+
+
+// Post-types
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.post-types {
+    display: inline-block;
+    &:hover >.post-types-title {
+        @include trans($trans-time, color, $trans-ease);
+        color: white;
+    }
+    &:hover .post-types-title-icon {
+        @include trans($trans-time, color, $trans-ease);
+        color: white;
+    }
+}
+
+.post-types-title {
+    @extend .feed-actions-item;
+    @include inline-block;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    background-color: $f-gray-50;
+    color: $f-gray-15;
+    font-size: 12px;
+    cursor: default;
+    height: 30px; /** to standardize across browsers **/
+}
+
+.post-types-title-icon {
+    @extend .icon;
+    margin-left: 5px;
+    color: $f-gray-15;
+    line-height: 0;
+}
+
+.post-types-dropdown-block {
+    @extend .dropdown-block;
+    // @include f-border-radius;
+    background-color: $f-gray-50;
+}
+
+.post-types-dropdown-options {
+    @extend .dropdown-options;
+    &:hover {
+        background-color: $f-gray-75;
+    }
+    &:first-child {
+        border-radius: 3px 3px 0 0;
+    }
+    &:last-child {
+        border-radius: 0 0 3px 3px;
+    }
+}
+
+.post-types-dropdown-options-label {
+    @extend .dropdown-options-label;
+    color: $f-gray-15;
+    input[type=checkbox] {
+        display: none;
+    }
+    &:hover {
+        color: white;
+        > .post-types-dropdown-options-icon {
+            color: white;
+        }
+    }
+}
+
+.post-types-dropdown-options-icon {
+    @extend .icon;
+    float: right;
+    color: $f-gray-30;
+    font-size: 30px;
+}
+
+
+
+
+// Publish button
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.feed-publish-trigger {
+    @extend .btn;
+    @extend .feed-actions-item;
+    @include inline-block;
+    margin: -6px 0 0 6px;
+    height: 30px;
+    background-color: $wp-blue;
+    color: $wp-blue-50; /** to standardize across browsers **/
+    padding-top: 7px;
+    &:hover {
+        @include trans($trans-time, color, $trans-ease);
+        color: white;
+    }
+}
+
+
+
+

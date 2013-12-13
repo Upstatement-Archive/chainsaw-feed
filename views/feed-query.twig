@@ -1,0 +1,13 @@
+<div>
+	{% for pt in post_types %}
+	<fieldset class="fm-query-post-type">
+		
+		<label class="fm-query-post-type-label" for="query-post_type-{{pt.name}}">
+			{{pt.labels.singular_name}}
+		</label>
+
+		<input type="checkbox" value="{{pt.name}}" id="query-post_type-{{pt.name}}" class="ios-checkbox" name="query_post_type[]" {{pt.checked}} /> 
+		
+	</fieldset>
+	{% endfor %}
+</div>

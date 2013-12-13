@@ -1,0 +1,12 @@
+<h2>Select Photo of the Day</h2>
+<form method="post">
+	<section class="four-up clearfix">
+	{% for post in posts %}
+		<div class="picker-tile">
+			<img class="picker-tile-img" src="{{post.get_url|resize(300, 250)}}"/>
+			<input type="radio" name="imp_picked" value="{{post.ID}}" {{post.checked}}/>
+		</div>
+	{% endfor %}
+	</section>
+	<input type="submit" value="Update photo of the day" class="buttom-primary button-hero button"/>
+</form>

@@ -1,0 +1,29 @@
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//	Footer for Feed Manager			 			   
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.feed-footer {
+	position: fixed;
+	bottom: 0px;
+	z-index: 1;
+	padding-top: 15px;
+	width: inherit;
+	height: 50px;
+	border-top:1px solid $f-gray-50;
+	background-color: $background-fallback;
+	background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+	color: $f-gray-75;
+}
+
+.feed-manager-timestamp {
+	@include inline-block;
+	float: right;
+}
+
+.footer-thanks {
+	@include inline-block;
+	float: left;
+	margin: 0;
+}

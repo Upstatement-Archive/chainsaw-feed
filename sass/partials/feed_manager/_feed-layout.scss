@@ -1,0 +1,39 @@
+/* ---------------------------------------------- */
+
+/*  Feeds Manager layout and media queries                                   
+
+/* ---------------------------------------------- */
+
+
+// Layout and base page styles
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.feed-manager-content-wrap {
+    margin: 0 auto;
+    max-width: 1180px;
+}
+
+.feed-manager-content {
+    margin: 50px 40px 0px 20px;
+    min-width: 680px;
+    max-width: 1100px;
+    font-family: $feed-sans;
+    @include user-select;
+}
+
+.feed-manager {
+    margin-top: 10px;
+}
+
+.feed-block-1 {
+    float: left;
+    width: 30%;
+    margin-right: 2%;
+}
+
+.feed-block-2 {
+    width: 68%;
+    float: left;
+    .feeds-block-inner {
+    }
+}

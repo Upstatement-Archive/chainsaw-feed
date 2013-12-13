@@ -1,0 +1,72 @@
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//  Base styles for Feed Manager, mostly reset
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+// Feed Manager Specific
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.toplevel_page_feed_manager_settings #wpwrap {
+    background-color: $background-fallback;
+    background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+}
+
+.feed-manager-content * {
+    @include box-sizing(border-box);
+    list-style: none;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.feed-manager-content {
+    @include user-select();
+    font-family: $feed-sans;
+}
+
+.toplevel_page_feed_manager_settings {
+// Resets
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+    button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    a {
+        text-decoration: none;
+        &:active {
+            outline: none;
+        }
+    }
+
+    label {
+        cursor: default;
+    }
+
+    input[type="text"] {
+        color: $f-gray-50;
+    }
+
+    input {
+        @include placeholder(white, white, transparent);
+        -webkit-appearance: none;
+    }
+
+    // blanket focus reset appears to be the best way
+    // to hide the outline in Chrome Canary
+    *:focus {
+        outline: 0;
+    }
+
+
+    // Search resets
+    // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+    @include webkit-search-reset;
+}
+
+
+

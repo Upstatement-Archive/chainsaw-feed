@@ -1,0 +1,101 @@
+/* ---------------------------------------------- */
+
+/*  Unpinned Categories                
+
+/* ---------------------------------------------- */
+
+// Unpinned Categories
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+/*div*/.unpinned-categories-wrapper {
+    @include trans($trans-time, top, $trans-ease);
+    margin: 0px 0 20px 0;
+}
+    /*ul*/.unpinned-category-list {
+            overflow-x: hidden;
+            margin-top: 0;
+            padding-top: 10px;
+        }
+            /*li*/.unpinned-category {
+                overflow-x: hidden;
+                margin-bottom: 0;
+                cursor: pointer;
+                &:last-child {
+                    margin-bottom: 10px;
+                    .feed-unpinned {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+                .unpinned-category-button {
+                    position: relative;
+                    display: block;
+                    padding: 12px 20px;
+                    border-bottom: 1px solid $f-gray-30;
+                    background-color: $f-gray-50;
+                    color: white;
+                    font-size: 14px;
+                    &:hover {
+                        color: white;
+                        > .unpinned-icon {
+                            @include trans($trans-time, color, $trans-ease);
+                            color: white;
+                        }
+                    }
+                    &:visited {        
+                        color: white;    //Firefox fix
+                    }
+                }
+                
+                /*a[href="#expandCollapse"]*/.category-expanded {
+                    & .unpinned-icon {
+                        color: white;
+                    }
+                }
+
+                    /*span*/.unpinned-icon {
+                        @extend .icon;
+                        position: absolute;
+                        top: 2px;
+                        right: 18px;
+                        color: $f-gray-30;
+                    }
+
+
+// Unpinned stubs
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.feed-unpinned {
+    display: none;
+    margin-bottom: 10px;
+}   
+
+.thin-unpin {
+    
+    .stub-content-mod {
+        pointer-events: none;   
+    }
+
+    .feeds-number-wrap {
+        display: none;
+    }
+    .display-selector {
+        display: none;
+    }
+    .pin {
+        @extend .btn;
+        position: absolute;
+        top: 4px;
+        right: 20px;
+        color: $f-gray-30;
+        &:hover {
+            @include trans($trans-time, color, $trans-ease);
+            background-color: transparent;
+            color: $wp-blue;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,206 @@
+/* ---------------------------------------------- */
+
+/*	Buttons							 			  */ 
+
+/* ---------------------------------------------- */
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Button Defaults
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Set default classes based on style
+
+.btn, .btn-m, .btn-alt {
+	@extend .btn-alt-m;
+}
+
+.btn-s {
+	@extend .btn-alt-s;
+}
+
+.btn-l {
+	@extend .btn-alt-l;
+}
+
+.btn-lt {
+	@extend .btn-lt-m;
+}
+
+.btn-dk {
+	@extend .btn-dk-m;
+}
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Universal Button Styles
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+@mixin input-default {
+	border: 0;
+	background-color: transparent;
+	@include box-shadow(none);
+	@include border-radius(0);
+	-webkit-appearance: none;
+	&:focus {
+		outline: 0;
+	}
+}
+
+.btn-basic {
+	@include input-default;
+
+	text-align: center;
+	@include inline-block;
+	line-height: normal;
+	@include border-radius(3px);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@include trans;	
+
+	@media (min-width: 400px) {
+		width: 128px;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+@mixin btn-basic($btn-size) {
+	@include input-default;
+
+	text-align: center;
+	@include inline-block;
+	line-height: normal;
+	@include border-radius(3px);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@include trans;	
+
+	@media (min-width: 400px) {
+		width: 123px;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Specific Button Styles
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+@mixin btn-light {
+	color: #fff;
+	background-color: #ccc;
+	&:hover {
+		background-color: #aaa;
+	}
+
+	&.disabled, &[disabled],
+	&.disabled:hover, &[disabled]:hover {
+		cursor: default;
+		@include opacity(.65);
+	}	
+}
+
+@mixin btn-dark {
+	color: #fff;
+	background-color: #0064cd;
+}
+
+@mixin btn-alt {
+	color: #fff;
+	background-color: $accent-1;
+
+	&:hover {
+		background-color: darken($accent-1, 5%);
+	}// &:hover	
+}
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Universal Button Sizes
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+	
+@mixin btn-size-small {
+	font-size: 11px;
+	padding: 7px 8px 8px;		
+}
+
+@mixin btn-size-med {
+	font-size: 13px;
+	padding: 7px 8px 8px;		
+}
+
+@mixin btn-size-large {
+	font-size: 13px;
+	padding: 10px 10px 11px;		
+}
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Button Mixin
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Mixin variable defaults
+$btn-size: med !default;
+$btn-style: light !default;
+
+// Mixin used to create any combination of button sizes and styles
+@mixin btn($btn-size, $btn-style) {
+	@extend .btn-basic;
+
+	// Define button sizes & definitions
+	@if $btn-size == "s" or $btn-size == "small" {
+		@include btn-size-small;
+	}
+	@if $btn-size == "m" or $btn-size == "med" or $btn-size == "medium" or $btn-size == "reg" {
+		@include btn-size-med;
+	}
+	@if $btn-size == "l" or $btn-size == "large" {
+		@include btn-size-large;
+	}
+
+
+	// Define button styles & definitions	
+	@if $btn-style == "light" or $btn-style == "lt" or $btn-style == "reg" {
+		@include btn-light;
+	}
+	@if $btn-style == "dark" or $btn-style == "dk" {
+		@include btn-dark;
+	}
+	@if $btn-style == "alt" {
+		@include btn-alt;
+	}
+} // end btn
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Button Class Generator
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Automagically output every combination of button style and size
+
+$size-defaults: s, m, l;
+$style-defaults: lt, dk, alt;
+
+@each $size in $size-defaults {
+	@each $style in $style-defaults {
+	.btn-#{$style}-#{$size} {
+		@include btn($size, $style);
+		}
+	}
+}
+
+
+
+.rh-component-email_signup {
+
+	#mc_signup_submit {
+		@extend .btn-s;
+		border: 0px solid;
+	}
+}

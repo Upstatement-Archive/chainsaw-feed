@@ -1,0 +1,38 @@
+<div class="new-post-stub" data-pid="{{post.ID}}">
+
+	<div class="stub-img-mod">
+		<img class="stub-img" src="{{post.thumbnail.src|resize(120, 120)}}" />
+	</div>
+
+	<div class="stub-tool-mod">
+
+		<div class="feeds-number-wrap">
+			<input type="text" name="feeds-number" maxlength="3" rows="1" class="feeds-number" value="{{loop.index}}" />
+		</div>
+
+		<div class="display-selector">
+			{% if post.post_type == 'post' and feed.tease_sizes|length %}
+			<select class="display-selector-dropdown" name="tease_size_{{post.ID}}">
+				{% for tease_size in feed.tease_sizes %}
+					<option class="display-selector-dropdown-options" value="{{tease_size.slug}}" {{post.tease_size == tease_size.slug ? 'selected'}}>{{tease_size.name}}</option>
+				{% endfor %}
+			</select>
+			{% endif %}
+		</div>
+
+
+		<button class="tool unpin icon" href="#unpin">&#10060;</button>
+	</div>
+
+	<div class="stub-content-mod">
+		<div class="stub-text">
+			<h4 class="stub-title"><a href="/wp-admin/post.php?post={{post.ID}}&amp;action=edit">{{post.post_title}}</a></h4>
+			<p class="stub-meta">
+				<span class="stub-pub-info">{{post.get_post_type.labels.singular_name}} pub. 
+					<time class="stub-date">{{post.post_date|date("m/d/y")}}</time>
+				</span> {{post.get_media_list}}
+			</p>
+		</div>
+	</div>
+
+</div>

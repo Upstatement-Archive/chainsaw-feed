@@ -1,0 +1,6 @@
+<li class="feed-manager-post" data-pid="{{post.ID}}">
+	<input name="results[]" value="{{post.ID}}" type="hidden" class="array-saver" />
+	<input name="post_hidden_{{post.ID}}" value="display" class="post-hidden" type="hidden" />
+	<input name="post_scope_{{post.ID}}" value="pinned" type="hidden" class="post-scope" />
+	{% include "post-stub.html" with {post:post} %}
+</li>

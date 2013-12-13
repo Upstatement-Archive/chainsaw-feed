@@ -1,0 +1,148 @@
+
+<section class="feed-manager-content-wrap">
+
+    <main class="feed-manager-content">
+
+        <!-- header, includes title, publish button and post-types dropdown -->
+        <header class="feed-manager-header">
+            <h2 class="feed-manager-title">Edit Feed: {{feed.title}}</h2>
+            <div class="feed-actions">
+                <input type="button" class="feed-publish-trigger" value="Publish" />
+            </div>
+        </header>
+        <!-- end header -->
+
+
+        <!-- feed manager -->
+        <div class="feed-manager">
+            <input type="hidden" name="active_post_type" value="feeds" />
+
+            <!-- feed-block-1, includes search, unpinned categories/content and removed content -->
+            <div class="feed-block-1">
+                <div class="expand-wrap">
+                    <div class="feed-post-search">
+                        <div class="search-inputs">
+                            <input type="search" results="5" placeholder="Search" />
+                            <input type="submit" value="&#128269;" id="search-button" class="icon" />
+                        </div>
+                    </div>
+                    <div class="unpinned results-mod">
+                        <ul class="feed-in-use results">
+                        </ul>
+                    </div>
+
+                    <div class="unpinned recently-removed-wrap saveable posts" data-scope="posts">
+                        <h3 class="recently-removed-title">Removed</h3>
+                        <ol class=" recently-removed feed-in-use">
+                        </ol>
+                    </div>
+                </div>
+
+
+                <div class="unpinned-categories-wrapper">
+                    <ul class="unpinned-category-list">
+                        {% for list in lists %}
+                        <li class="unpinned-category"><a href="#expandCollapse" class="unpinned-category-button">{{list.name}}<button class="unpinned-icon">&#59228;</button></a>
+                            <div class="feed-unpinned unpinned">
+                                <ol class="feed-in-use saveable posts" data-scope="posts">
+                                    {% for post in list.posts %} {% include "feed-post-stub.twig" %} {% endfor %}
+                                </ol>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- end feed-block-1 -->
+
+
+            <!-- feed-block-2, includes content that is or will be published 
+		 to the feed selected (main feed) and header for that content -->
+            <div class="feed-block-2">
+                <div class="feed-main feeds-block-inner">
+                    <header class="feed-main-header">
+                        {% if feeds|length > 1 %}
+                        <div class="feed-main-dropdown">
+                            <h2 class="feed-main-title">{{feed.title}}
+                                <span class="feed-main-title-icon">&#59228;</span>
+                            </h2>
+                            <ul class="feed-main-dropdown-block">
+                                {% for feed in feeds %}
+                                <li class="feed-main-dropdown-options"><a href="#" class="feed-main-dropdown-options-label">{{ feed.title }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                         {% endif %}
+                        <div class="feed-view-buttons">
+                            <button class="feed-view-toggle">&#9776;</button>
+                            <button class="feed-view-toggle is-active">&#57349;</button>
+                        </div>
+                        <label class="feed-main-instructions">Drag to add articles and set hierarchy.</label>
+                    </header>
+
+
+                    <!-- selected feed post list -->
+                    <form class="feed-main-post-list-wrap feed-main-post-list" id="ink-feed-form" method="post">
+                        <input type="hidden" name="pid" value="{{feeds[0].ID}}" class="pid" />
+                        <section class="feed-query">
+                            <div class="post-types">
+                                <h3 class="post-types-title">Post Types
+                                    <span class="post-types-title-icon">&#59228;</span>
+                                </h3>
+                                <ul class="post-types-dropdown-block">
+                                    {% for post_type in post_types %}
+                                    <li class="post-types-dropdown-options">
+                                        <a href="{{post_type.name}}" class="post-types-dropdown-options-label">{{post_type.labels.name}}
+                                            <span class="post-types-dropdown-options-icon icon" style="{{post_type.in_query ? '' : 'display:none'}}">&#10003;</span>
+                                            <input type="checkbox" name="query_post_type[]" value="{{post_type.name}}" {{post_type.in_query ? 'checked'}} />
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </section>
+                        <input type="hidden" name="ink_page_name" value="feed_manager" />
+                        <ol class="feed-in-use pinned saveable" data-scope="pinned">
+                            {% for post in pinned %}
+                            <li class="feed-manager-post" data-pid="{{post.ID}}">
+                                <input name="pids[]" value="{{post.ID}}" type="hidden" class="array-saver" />
+                                <input name="post_hidden_{{post.ID}}" value="display" class="post-hidden" type="hidden" />
+                                <input name="post_scope_{{post.ID}}" value="pinned" type="hidden" class="post-scope" />{% include "post-stub.twig" with {post:post} %}
+                            </li>
+                            {% endfor %} {% if pinned|length == 0 %}
+                            <div class="feed-pinned-holder">Drop pinned items here</div>
+                            {% endif %}
+                        </ol>
+                        <ol class="feed-in-use saveable" data-scope="posts">
+                            {% for post in posts %}
+                            <li class="feed-manager-post" data-pid="{{post.ID}}">
+                                <input name="pids[]" value="{{post.ID}}" type="hidden" class="array-saver" />
+                                <input name="post_hidden_{{post.ID}}" value="display" class="post-hidden" type="hidden" />
+                                <input name="post_scope_{{post.ID}}" value="posts" type="hidden" class="post-scope" />{% include "post-stub.twig" with {post:post} %}
+                            </li>
+                            {% endfor %}
+                        </ol>
+                    </form>
+                    <!-- end selected feed post list -->
+
+                </div>
+            </div>
+            <!--end feed block 2 -->
+            <footer class="feed-footer">
+                <p class="footer-thanks">Thank you for creating with <a href="http://wordpress.org/" target="_blank">WordPress</a>.</p>
+                <time datetime="2013-05-31T20:54" class="feed-manager-timestamp">Last pub. {{feed.post_modified|date("F jS \\a\\t g:i \\ a")}}</time>
+            </footer>
+        </div>
+        <!--end feed manager -->
+
+    </main>
+
+</section>
+
+<script type="text/javascript" src="/wp-content/plugins/chainsaw-feed/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/chainsaw-feed/js/waypoints.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/chainsaw-feed/js/waypoints-sticky.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/chainsaw-feed/js/jquery.minimalect.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/chainsaw-feed/js/jquery.selectboxit.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/chainsaw-feed/js/inkwell-feed-gus.js"></script>

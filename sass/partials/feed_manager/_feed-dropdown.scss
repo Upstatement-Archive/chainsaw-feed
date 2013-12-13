@@ -1,0 +1,47 @@
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//	Dropdowns for Feed Manager				 			   
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Base styles
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+/*ul*/.dropdown-block {
+	position: absolute;
+    z-index: 1;
+	display: none;
+    margin-top: 0;
+    width: 360px;
+    cursor: pointer;
+}
+
+	/*li*/.dropdown-options {
+	    position: relative;
+	    margin-bottom: 0;
+	    &:hover {
+	        @include trans($trans-time, background-color, $trans-ease);
+	    }
+	}
+
+		/*a*/.dropdown-options-label {
+			@include ellipsis;
+		    display: block;
+			padding: 6px 20px 7px;
+		    font-weight: 500;
+		    &:hover {
+		    	@include trans($trans-time, color, $trans-ease);
+		            > .icon-dropdown-options {
+		                @include trans($trans-time, color, $trans-ease);
+		            }
+		    }
+		}
+			
+			/*span*/.icon-dropdown-options {
+			    @extend .icon;
+			    float: right;
+			}
+
+
+
+

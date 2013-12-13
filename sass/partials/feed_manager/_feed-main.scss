@@ -1,0 +1,135 @@
+/* ---------------------------------------------- */
+
+/*  Feeds Manager main column, where stories are added
+
+/* ---------------------------------------------- */
+
+// Feed-main header
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.feed-main-header {
+    position: relative;
+    @include pie-clearfix;
+    background-color: $wp-blue;
+    label {
+        float:left;
+    }
+    &.stuck {
+        /*position: fixed;
+        top: 0px;
+        z-index: 1;
+        */
+    }
+}
+
+.feed-pinned-holder {
+    text-align:center;
+    min-height:60px;
+    color:$f-gray-50;
+    font-size:20px;
+    padding:20px 20px 10px;
+}
+
+.feed-main-sticky-wrapper {
+    @include trans($trans-time, height, $trans-ease);
+    height: 68px;
+}
+
+.mask-wrapper {
+    margin-left: -1px;
+    &.stuck {
+        position: fixed;
+        top: 0px;
+        z-index: 1;
+        background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+        background-color: $background-fallback;
+        padding-top: 48px;
+    }
+}
+
+.feed-main-title {
+    @include inline-block;
+    margin: $f-block-inset;
+    color: white;
+    font-size: 20px;
+    padding: 11px 0 11px;
+    cursor: default;
+}
+
+.feed-main-title-icon {
+    @extend .icon;
+}
+
+.feed-main-dropdown {
+    width: 365px;  //lame magic number hack
+}
+
+.feed-main-dropdown-block {
+    @extend .dropdown-block;
+}
+
+.feed-main-dropdown-options {
+    @extend .dropdown-options;
+}
+
+.feed-main-dropdown-options-label {
+    @extend .dropdown-options-label;
+    background-color: $wp-blue;
+    color: $wp-blue-50;
+    -moz-appearance:    value;
+    &:hover {
+        background-color: darken($wp-blue-50, 35%);
+        color: white;
+    }
+}
+
+.feed-view-buttons {
+    float:right;
+    top: -2px;
+    margin: $f-block-inset;
+}
+
+.feed-view-toggle {
+    @extend .icon;
+    @extend .btn;
+    margin-left: 5px;
+    color: $wp-blue-50;
+    font-size: 45px;
+    &:hover {
+        @include trans($trans-time, color, $trans-ease);
+        color: white;
+    }
+}
+
+.is-active {
+    color: white;
+    pointer-events: none;
+}
+
+.feed-main-instructions {
+    @include trans($trans-time, height, $trans-ease);
+    display: block;
+    padding: $f-block-inset;
+    line-height: 200%;
+    height: 25px; /* defined so CSS slide-up can occur */
+    background-color: $wp-blue-75;
+    color: white;
+    font-size: 12px;
+}
+
+
+
+
+// Feed-main frame
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.feed-main-post-list {
+    @include trans($trans-time, top, $trans-ease);
+    margin-top: 9px;
+}
+
+
+
+
+
+

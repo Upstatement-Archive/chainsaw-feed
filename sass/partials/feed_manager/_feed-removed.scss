@@ -1,0 +1,23 @@
+/* ---------------------------------------------- */
+
+/*  Removed stub module             
+
+/* ---------------------------------------------- */
+
+.recently-removed-wrap {
+	display: none;
+}
+
+.recently-removed-title {
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding: 11px 20px 12px;
+	background-color: $f-gray-50;
+	color: white;
+	font-size: 14px;
+}
+
+.recently-removed {
+	overflow-y: auto;
+    max-height: 225px; 
+}

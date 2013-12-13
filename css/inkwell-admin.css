@@ -1,0 +1,2143 @@
+/* line 246, ../sass/partials/_layout.scss */
+.ui-block:last-child,
+.ui-block.last {
+  margin-right: 0;
+}
+
+/* line 201, ../sass/partials/_mixins.scss */
+.circle {
+  width: 200px;
+  height: 200px;
+  background: #999999;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+@font-face {
+  font-family: "EntypoRegular";
+  src: url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.eot);
+  src: url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.eot?#iefix) format('eot'), url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.woff) format('woff'), url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.ttf) format('truetype'), url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.svg#EntypoRegular) format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* line 17, ../sass/partials/_typography.scss */
+.icon, .icon-dropdown-options, .post-types-title-icon, .post-types-dropdown-options-icon, .feed-main-title-icon, .feed-view-toggle, .unpinned-icon {
+  font-size: 35px;
+  font-family: 'EntypoRegular';
+  vertical-align: middle;
+}
+
+/* line 246, ../sass/partials/_layout.scss */
+.ui-block:last-child,
+.ui-block.last {
+  margin-right: 0;
+}
+
+/* line 11, ../sass/partials/feed_manager/_feed-base.scss */
+.toplevel_page_feed_manager_settings #wpwrap {
+  background-color: #bfc6c6;
+  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+}
+
+/* line 16, ../sass/partials/feed_manager/_feed-base.scss */
+.feed-manager-content * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 24, ../sass/partials/feed_manager/_feed-base.scss */
+.feed-manager-content {
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans;
+}
+
+/* line 33, ../sass/partials/feed_manager/_feed-base.scss */
+.toplevel_page_feed_manager_settings button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+/* line 39, ../sass/partials/feed_manager/_feed-base.scss */
+.toplevel_page_feed_manager_settings a {
+  text-decoration: none;
+}
+/* line 41, ../sass/partials/feed_manager/_feed-base.scss */
+.toplevel_page_feed_manager_settings a:active {
+  outline: none;
+}
+/* line 46, ../sass/partials/feed_manager/_feed-base.scss */
+.toplevel_page_feed_manager_settings label {
+  cursor: default;
+}
+/* line 50, ../sass/partials/feed_manager/_feed-base.scss */
+.toplevel_page_feed_manager_settings input[type="text"] {
+  color: #bfc6c6;
+}
+/* line 54, ../sass/partials/feed_manager/_feed-base.scss */
+.toplevel_page_feed_manager_settings input {
+  -webkit-appearance: none;
+}
+/* line 324, ../sass/partials/_mixins.scss */
+.toplevel_page_feed_manager_settings input::-webkit-input-placeholder {
+  color: white;
+}
+/* line 327, ../sass/partials/_mixins.scss */
+.toplevel_page_feed_manager_settings input:-moz-placeholder {
+  color: white;
+}
+/* line 330, ../sass/partials/_mixins.scss */
+.toplevel_page_feed_manager_settings input:hover::-webkit-input-placeholder {
+  color: white;
+}
+/* line 333, ../sass/partials/_mixins.scss */
+.toplevel_page_feed_manager_settings input:hover:-moz-placeholder {
+  color: white;
+}
+/* line 336, ../sass/partials/_mixins.scss */
+.toplevel_page_feed_manager_settings input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* line 339, ../sass/partials/_mixins.scss */
+.toplevel_page_feed_manager_settings input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* line 61, ../sass/partials/feed_manager/_feed-base.scss */
+.toplevel_page_feed_manager_settings *:focus {
+  outline: 0;
+}
+/* line 27, ../sass/partials/feed_manager/_feed-mixins.scss */
+.toplevel_page_feed_manager_settings input[type="search"]::-webkit-search-decoration,
+.toplevel_page_feed_manager_settings input[type="search"]::-webkit-search-cancel-button,
+.toplevel_page_feed_manager_settings input[type="search"]::-webkit-search-results-button,
+.toplevel_page_feed_manager_settings input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* ---------------------------------------------- */
+/*  Feeds Manager layout and media queries                                   
+
+/* ---------------------------------------------- */
+/* line 11, ../sass/partials/feed_manager/_feed-layout.scss */
+.feed-manager-content-wrap {
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+/* line 16, ../sass/partials/feed_manager/_feed-layout.scss */
+.feed-manager-content {
+  margin: 50px 40px 0px 20px;
+  min-width: 680px;
+  max-width: 1100px;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 24, ../sass/partials/feed_manager/_feed-layout.scss */
+.feed-manager {
+  margin-top: 10px;
+}
+
+/* line 28, ../sass/partials/feed_manager/_feed-layout.scss */
+.feed-block-1 {
+  float: left;
+  width: 30%;
+  margin-right: 2%;
+}
+
+/* line 34, ../sass/partials/feed_manager/_feed-layout.scss */
+.feed-block-2 {
+  width: 68%;
+  float: left;
+}
+
+/*ul*/
+/* line 10, ../sass/partials/feed_manager/_feed-dropdown.scss */
+.dropdown-block, .post-types-dropdown-block, .feed-main-dropdown-block {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  margin-top: 0;
+  width: 360px;
+  cursor: pointer;
+}
+
+/*li*/
+/* line 19, ../sass/partials/feed_manager/_feed-dropdown.scss */
+.dropdown-options, .display-selector-dropdown-options, .post-types-dropdown-options, .feed-main-dropdown-options {
+  position: relative;
+  margin-bottom: 0;
+}
+/* line 22, ../sass/partials/feed_manager/_feed-dropdown.scss */
+.dropdown-options:hover, .display-selector-dropdown-options:hover, .post-types-dropdown-options:hover, .feed-main-dropdown-options:hover {
+  -webkit-transition: background-color 0.2s ease-in;
+  -moz-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+
+/*a*/
+/* line 27, ../sass/partials/feed_manager/_feed-dropdown.scss */
+.dropdown-options-label, .post-types-dropdown-options-label, .feed-main-dropdown-options-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  padding: 6px 20px 7px;
+  font-weight: 500;
+}
+/* line 32, ../sass/partials/feed_manager/_feed-dropdown.scss */
+.dropdown-options-label:hover, .post-types-dropdown-options-label:hover, .feed-main-dropdown-options-label:hover {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+/* line 34, ../sass/partials/feed_manager/_feed-dropdown.scss */
+.dropdown-options-label:hover > .icon-dropdown-options, .post-types-dropdown-options-label:hover > .icon-dropdown-options, .feed-main-dropdown-options-label:hover > .icon-dropdown-options {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+/*span*/
+/* line 40, ../sass/partials/feed_manager/_feed-dropdown.scss */
+.icon-dropdown-options {
+  float: right;
+}
+
+/* line 10, ../sass/partials/feed_manager/_feed-buttons.scss */
+.btn, .unpin, .feed-publish-trigger, .feed-view-toggle, .thin-unpin .pin, .thin-list.unpin {
+  margin: 0;
+  padding: 0;
+  border: 0px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ---------------------------------------------- */
+/*  Stubs (draggable content iniside Feed Manager)
+
+/* ---------------------------------------------- */
+/* line 7, ../sass/partials/feed_manager/_feed-stub.scss */
+.feed-in-use {
+  margin: 0;
+  min-height: 20px;
+}
+/* line 10, ../sass/partials/feed_manager/_feed-stub.scss */
+.feed-in-use.pinned {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #bfc6c6;
+}
+
+/*li*/
+/* line 21, ../sass/partials/feed_manager/_feed-stub.scss */
+.feed-manager-post {
+  margin-bottom: 10px;
+  cursor: move;
+}
+/* line 24, ../sass/partials/feed_manager/_feed-stub.scss */
+.feed-manager-post.ui-sortable-placeholder {
+  visibility: visible !important;
+  min-height: 150px;
+  border: 1px dashed #bfc6c6;
+  background-color: transparent;
+}
+/* line 30, ../sass/partials/feed_manager/_feed-stub.scss */
+.feed-manager-post:last-child {
+  margin-bottom: 0px;
+}
+
+/*div*/
+/* line 35, ../sass/partials/feed_manager/_feed-stub.scss */
+.new-post-stub {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: -1px 2px 3px #bfc6c6;
+  -moz-box-shadow: -1px 2px 3px #bfc6c6;
+  box-shadow: -1px 2px 3px #bfc6c6;
+  padding: 20px;
+  min-height: 150px;
+  background-color: white;
+}
+
+/* line 50, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-img-mod {
+  float: left;
+  margin-right: 20px;
+  width: 110px;
+  height: 110px;
+  background-color: #ececee;
+}
+
+/* line 58, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-img {
+  width: 110px;
+}
+
+/* line 69, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-tool-mod {
+  position: relative;
+  height: 25px;
+}
+
+/* line 80, ../sass/partials/feed_manager/_feed-stub.scss */
+.feeds-number {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  margin: 0;
+  padding: 4px 0;
+  width: 25px;
+  color: #bfc6c6;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 500;
+  resize: none;
+}
+/* line 91, ../sass/partials/feed_manager/_feed-stub.scss */
+.feeds-number:hover {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  -webkit-transition: border-color 0.2s ease-in;
+  -moz-transition: border-color 0.2s ease-in;
+  -o-transition: border-color 0.2s ease-in;
+  transition: border-color 0.2s ease-in;
+  border-color: #bfc6c6;
+  color: #5a5758;
+}
+/* line 97, ../sass/partials/feed_manager/_feed-stub.scss */
+.feeds-number:focus {
+  outline: none;
+  color: #5a5758;
+}
+
+/* line 104, ../sass/partials/feed_manager/_feed-stub.scss */
+.feeds-number-wrap input[type="text"] {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 116, ../sass/partials/feed_manager/_feed-stub.scss */
+.display-selector {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  width: 100px;
+}
+
+/* line 123, ../sass/partials/feed_manager/_feed-stub.scss */
+.display-selector-dropdown {
+  padding-left: 10px;
+  background-color: white;
+}
+
+/* line 128, ../sass/partials/feed_manager/_feed-stub.scss */
+.display-selector-dropdown-options {
+  padding-left: 10px;
+  border-bottom: 1px solid #ececee;
+  background-color: white;
+}
+/* line 133, ../sass/partials/feed_manager/_feed-stub.scss */
+.display-selector-dropdown-options:last-child {
+  border-bottom: 0;
+}
+/* line 136, ../sass/partials/feed_manager/_feed-stub.scss */
+.display-selector-dropdown-options:hover .selectboxit-option-anchor {
+  color: #9fa9aa;
+}
+
+/* line 141, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-container {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  position: relative;
+  width: auto;
+}
+
+/* line 147, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit {
+  display: block;
+  cursor: pointer;
+}
+
+/* line 152, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-container span, .selectboxit-options a {
+  height: 25px;
+  line-height: 25px;
+}
+
+/* line 157, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  color: #bfc6c6;
+}
+
+/* line 164, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-options {
+  position: absolute;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100px;
+  border: 1px solid #ececee;
+  border-radius: 0px 1px 1px 1px;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* line 178, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-arrow-container {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}
+
+/* line 184, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-arrow {
+  position: absolute;
+  border-top: 5px solid #d9dcdd;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+/* line 191, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-option-icon-container {
+  float: left;
+}
+
+/* line 195, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-container .selectboxit-option-icon {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Drop Down individual option icon positioning */
+/* line 202, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-option-icon-url {
+  float: left;
+  width: 18px;
+  height: 100%;
+  background-position: center;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+}
+
+/* line 211, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-rendering {
+  display: block;
+  visibility: hidden;
+}
+
+/* jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
+/* line 217, ../sass/partials/feed_manager/_feed-stub.scss */
+.jqueryui .ui-icon {
+  background-color: inherit;
+}
+
+/* Another jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
+/* line 222, ../sass/partials/feed_manager/_feed-stub.scss */
+.jqueryui .ui-icon-triangle-1-s {
+  background-position: -64px -16px;
+}
+
+/* line 226, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-option-anchor {
+  color: #bfc6c6;
+}
+/* line 228, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-option-anchor:active {
+  color: #bfc6c6;
+}
+
+/* line 233, ../sass/partials/feed_manager/_feed-stub.scss */
+.selectboxit-btn {
+  border: 1px solid #d9dcdd;
+}
+
+/* line 245, ../sass/partials/feed_manager/_feed-stub.scss */
+.unpin {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  color: #d9dcdd;
+  font-size: 40px;
+}
+/* line 252, ../sass/partials/feed_manager/_feed-stub.scss */
+.unpin:hover {
+  color: #ff6261;
+}
+
+/* line 264, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-content-mod {
+  margin: 10px 0 0 130px;
+  padding-top: 10px;
+  border-top: 1px solid #d9dcdd;
+}
+
+/* line 270, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-title {
+  margin: 0 0 13px 0;
+  font-size: 16px;
+}
+/* line 273, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-title > a {
+  color: #5998b4;
+}
+@media (min-width: 900px) {
+  /* line 273, ../sass/partials/feed_manager/_feed-stub.scss */
+  .stub-title > a {
+    font-size: 18px;
+    line-height: 100%;
+  }
+}
+
+/* line 282, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-meta {
+  margin: 0;
+  color: #9fa9aa;
+  font-size: 14px;
+}
+
+/* line 289, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-pub-info,
+.stub-date {
+  font-weight: 500;
+}
+
+/* ---------------------------------------------- */
+/*  Thin stubs (list-view, unpinned, removed, search)                
+
+/* ---------------------------------------------- */
+/* line 9, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .feed-in-use {
+  margin-left: 0;
+}
+/* line 13, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin.feed-manager-post {
+  margin-bottom: 0px;
+}
+/* line 15, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin.feed-manager-post.ui-sortable-placeholder {
+  margin: 5px 0;
+  min-height: 40px;
+  border: 1px dashed #bfc6c6;
+}
+/* line 22, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .new-post-stub {
+  margin-bottom: 0px;
+  padding: 0;
+  min-height: 0;
+  border-top: 1px solid #ececee;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* line 31, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-img-mod {
+  margin: 5px 10px 5px 6px;
+  height: 30px;
+  width: 30px;
+}
+/* line 37, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-img {
+  width: 30px;
+}
+/* line 41, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-content-mod {
+  margin: 0 40px 0 0;
+  padding: 0;
+  border-top: 0;
+  line-height: 40px;
+}
+/* line 48, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-tool-mod {
+  float: right;
+}
+/* line 52, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-title {
+  display: inline;
+}
+/* line 54, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-title > a {
+  color: #7f8c8d;
+  font-size: 12px;
+}
+/* line 60, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #7f8c8d;
+}
+/* line 65, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-meta {
+  display: none;
+}
+/* line 69, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-date {
+  color: #d9dcdd;
+}
+/* line 73, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .thin-placeholder, .thin .results.ui-sortable-placeholder {
+  visibility: visible !important;
+  height: 40px;
+  border: 1px dashed #bfc6c6;
+  background-color: transparent;
+}
+
+/* ---------------------------------------------- */
+/*  Feeds Manager header                                    
+
+/* ---------------------------------------------- */
+/* line 11, ../sass/partials/feed_manager/_feed-header.scss */
+.feed-manager-header {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.feed-manager-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 15, ../sass/partials/feed_manager/_feed-header.scss */
+.feed-manager-title {
+  display: inline-block;
+  margin: 0 0 -8px -2px;
+  color: #7f8c8d;
+  letter-spacing: -2px;
+  font-weight: 200;
+  font-size: 45px;
+  cursor: default;
+}
+
+/* line 31, ../sass/partials/feed_manager/_feed-header.scss */
+.feed-actions {
+  display: inline-block;
+  float: right;
+}
+
+/*for extension*/
+/* line 36, ../sass/partials/feed_manager/_feed-header.scss */
+.feed-actions-item, .post-types-title, .feed-publish-trigger {
+  padding: 8px 20px;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+/* line 48, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types {
+  display: inline-block;
+}
+/* line 50, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types:hover > .post-types-title {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  color: white;
+}
+/* line 54, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types:hover .post-types-title-icon {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  color: white;
+}
+
+/* line 60, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-title {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  background-color: #bfc6c6;
+  color: #ececee;
+  font-size: 12px;
+  cursor: default;
+  height: 30px;
+  /** to standardize across browsers **/
+}
+
+/* line 72, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-title-icon {
+  margin-left: 5px;
+  color: #ececee;
+  line-height: 0;
+}
+
+/* line 79, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-block {
+  background-color: #bfc6c6;
+}
+
+/* line 87, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-options:hover {
+  background-color: #9fa9aa;
+}
+/* line 90, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-options:first-child {
+  border-radius: 3px 3px 0 0;
+}
+/* line 93, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-options:last-child {
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 98, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-options-label {
+  color: #ececee;
+}
+/* line 101, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-options-label input[type=checkbox] {
+  display: none;
+}
+/* line 104, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-options-label:hover {
+  color: white;
+}
+/* line 106, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-options-label:hover > .post-types-dropdown-options-icon {
+  color: white;
+}
+
+/* line 112, ../sass/partials/feed_manager/_feed-header.scss */
+.post-types-dropdown-options-icon {
+  float: right;
+  color: #d9dcdd;
+  font-size: 30px;
+}
+
+/* line 125, ../sass/partials/feed_manager/_feed-header.scss */
+.feed-publish-trigger {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin: -6px 0 0 6px;
+  height: 30px;
+  background-color: #21759b;
+  color: #90bacd;
+  /** to standardize across browsers **/
+  padding-top: 7px;
+}
+/* line 134, ../sass/partials/feed_manager/_feed-header.scss */
+.feed-publish-trigger:hover {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  color: white;
+}
+
+/* line 12, ../sass/partials/feed_manager/_feed-search.scss */
+.expand-wrap.stuck {
+  position: fixed;
+  top: 48px;
+  width: 320px;
+}
+
+/* line 24, ../sass/partials/feed_manager/_feed-search.scss */
+.feed-post-search {
+  position: relative;
+  padding: 23px 20px 20px 20px;
+  background-color: #bfc6c6;
+}
+/* line 28, ../sass/partials/feed_manager/_feed-search.scss */
+.feed-post-search input[type='search'] {
+  margin: 0 0 5px 0;
+  padding: 0;
+  width: 320px;
+  border-width: 0;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  color: white;
+  font-size: 14px;
+}
+/* line 39, ../sass/partials/feed_manager/_feed-search.scss */
+.feed-post-search input[type='submit'] {
+  position: absolute;
+  right: 18px;
+  bottom: 28px;
+  border: 0;
+  background-color: transparent;
+  color: #d9dcdd;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+/* line 49, ../sass/partials/feed_manager/_feed-search.scss */
+.feed-post-search input[type='submit']:hover {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  color: white;
+}
+
+/* line 56, ../sass/partials/feed_manager/_feed-search.scss */
+.search-inputs {
+  border-bottom: 1px solid #ececee;
+}
+
+/* line 66, ../sass/partials/feed_manager/_feed-search.scss */
+.results-mod {
+  display: none;
+}
+
+/* line 70, ../sass/partials/feed_manager/_feed-search.scss */
+.results-mod-active {
+  overflow-y: auto;
+  max-height: 225px;
+}
+
+/* line 75, ../sass/partials/feed_manager/_feed-search.scss */
+.results {
+  margin: 0;
+}
+
+/* ---------------------------------------------- */
+/*  Feeds Manager main column, where stories are added
+
+/* ---------------------------------------------- */
+/* line 10, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-header {
+  position: relative;
+  *zoom: 1;
+  background-color: #21759b;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.feed-main-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 14, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-header label {
+  float: left;
+}
+/* line 17, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-header.stuck {
+  /*position: fixed;
+  top: 0px;
+  z-index: 1;
+  */
+}
+
+/* line 25, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-pinned-holder {
+  text-align: center;
+  min-height: 60px;
+  color: #bfc6c6;
+  font-size: 20px;
+  padding: 20px 20px 10px;
+}
+
+/* line 33, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-sticky-wrapper {
+  -webkit-transition: height 0.2s ease-in;
+  -moz-transition: height 0.2s ease-in;
+  -o-transition: height 0.2s ease-in;
+  transition: height 0.2s ease-in;
+  height: 68px;
+}
+
+/* line 38, ../sass/partials/feed_manager/_feed-main.scss */
+.mask-wrapper {
+  margin-left: -1px;
+}
+/* line 40, ../sass/partials/feed_manager/_feed-main.scss */
+.mask-wrapper.stuck {
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+  background-color: #bfc6c6;
+  padding-top: 48px;
+}
+
+/* line 50, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-title {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin: 0 20px;
+  color: white;
+  font-size: 20px;
+  padding: 11px 0 11px;
+  cursor: default;
+}
+
+/* line 63, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-dropdown {
+  width: 365px;
+}
+
+/* line 75, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-dropdown-options-label {
+  background-color: #21759b;
+  color: #90bacd;
+  -moz-appearance: value;
+}
+/* line 80, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-dropdown-options-label:hover {
+  background-color: #356176;
+  color: white;
+}
+
+/* line 86, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-view-buttons {
+  float: right;
+  top: -2px;
+  margin: 0 20px;
+}
+
+/* line 92, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-view-toggle {
+  margin-left: 5px;
+  color: #90bacd;
+  font-size: 45px;
+}
+/* line 98, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-view-toggle:hover {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  color: white;
+}
+
+/* line 104, ../sass/partials/feed_manager/_feed-main.scss */
+.is-active {
+  color: white;
+  pointer-events: none;
+}
+
+/* line 109, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-instructions {
+  -webkit-transition: height 0.2s ease-in;
+  -moz-transition: height 0.2s ease-in;
+  -o-transition: height 0.2s ease-in;
+  transition: height 0.2s ease-in;
+  display: block;
+  padding: 0 20px;
+  line-height: 200%;
+  height: 25px;
+  /* defined so CSS slide-up can occur */
+  background-color: #5998b4;
+  color: white;
+  font-size: 12px;
+}
+
+/* line 126, ../sass/partials/feed_manager/_feed-main.scss */
+.feed-main-post-list {
+  -webkit-transition: top 0.2s ease-in;
+  -moz-transition: top 0.2s ease-in;
+  -o-transition: top 0.2s ease-in;
+  transition: top 0.2s ease-in;
+  margin-top: 9px;
+}
+
+/* ---------------------------------------------- */
+/*  Unpinned Categories                
+
+/* ---------------------------------------------- */
+/*div*/
+/* line 10, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-categories-wrapper {
+  -webkit-transition: top 0.2s ease-in;
+  -moz-transition: top 0.2s ease-in;
+  -o-transition: top 0.2s ease-in;
+  transition: top 0.2s ease-in;
+  margin: 0px 0 20px 0;
+}
+
+/*ul*/
+/* line 14, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-list {
+  overflow-x: hidden;
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+/*li*/
+/* line 19, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category {
+  overflow-x: hidden;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+/* line 23, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category:last-child {
+  margin-bottom: 10px;
+}
+/* line 25, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category:last-child .feed-unpinned {
+  margin-bottom: 0;
+}
+
+/* line 31, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-button {
+  position: relative;
+  display: block;
+  padding: 12px 20px;
+  border-bottom: 1px solid #d9dcdd;
+  background-color: #bfc6c6;
+  color: white;
+  font-size: 14px;
+}
+/* line 39, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-button:hover {
+  color: white;
+}
+/* line 41, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-button:hover > .unpinned-icon {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  color: white;
+}
+/* line 46, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-button:visited {
+  color: white;
+}
+
+/*a[href="#expandCollapse"]*/
+/* line 52, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.category-expanded .unpinned-icon {
+  color: white;
+}
+
+/*span*/
+/* line 57, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-icon {
+  position: absolute;
+  top: 2px;
+  right: 18px;
+  color: #d9dcdd;
+}
+
+/* line 69, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.feed-unpinned {
+  display: none;
+  margin-bottom: 10px;
+}
+
+/* line 76, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.thin-unpin .stub-content-mod {
+  pointer-events: none;
+}
+/* line 80, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.thin-unpin .feeds-number-wrap {
+  display: none;
+}
+/* line 83, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.thin-unpin .display-selector {
+  display: none;
+}
+/* line 86, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.thin-unpin .pin {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+  color: #d9dcdd;
+}
+/* line 92, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.thin-unpin .pin:hover {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  background-color: transparent;
+  color: #21759b;
+}
+
+/* ---------------------------------------------- */
+/*  List view specific styling           
+
+/* ---------------------------------------------- */
+/* line 12, ../sass/partials/feed_manager/_feed-listview.scss */
+.thin-list.feeds-number-wrap {
+  display: none;
+}
+/* line 16, ../sass/partials/feed_manager/_feed-listview.scss */
+.thin-list.display-selector {
+  float: left;
+  margin: 8px 45px 8px 10px;
+}
+/* line 21, ../sass/partials/feed_manager/_feed-listview.scss */
+.thin-list.stub-title > a {
+  color: #5998b4;
+}
+/* line 25, ../sass/partials/feed_manager/_feed-listview.scss */
+.thin-list.stub-text {
+  color: #5998b4;
+}
+/* line 28, ../sass/partials/feed_manager/_feed-listview.scss */
+.thin-list.unpin {
+  margin: 0 20px 0 15px;
+  padding-top: 7px;
+  color: #d9dcdd;
+}
+/* line 33, ../sass/partials/feed_manager/_feed-listview.scss */
+.thin-list.unpin:hover {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  background-color: transparent;
+  color: #21759b;
+}
+/* line 38, ../sass/partials/feed_manager/_feed-listview.scss */
+.thin-list.unpin:hover {
+  color: #ff6261;
+}
+
+/* ---------------------------------------------- */
+/*  Removed stub module             
+
+/* ---------------------------------------------- */
+/* line 7, ../sass/partials/feed_manager/_feed-removed.scss */
+.recently-removed-wrap {
+  display: none;
+}
+
+/* line 11, ../sass/partials/feed_manager/_feed-removed.scss */
+.recently-removed-title {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 11px 20px 12px;
+  background-color: #bfc6c6;
+  color: white;
+  font-size: 14px;
+}
+
+/* line 20, ../sass/partials/feed_manager/_feed-removed.scss */
+.recently-removed {
+  overflow-y: auto;
+  max-height: 225px;
+}
+
+/* line 7, ../sass/partials/feed_manager/_feed-footer.scss */
+.feed-footer {
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+  padding-top: 15px;
+  width: inherit;
+  height: 50px;
+  border-top: 1px solid #bfc6c6;
+  background-color: #bfc6c6;
+  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+  color: #9fa9aa;
+}
+
+/* line 20, ../sass/partials/feed_manager/_feed-footer.scss */
+.feed-manager-timestamp {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  float: right;
+}
+
+/* line 25, ../sass/partials/feed_manager/_feed-footer.scss */
+.footer-thanks {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  float: left;
+  margin: 0;
+}
+
+/* ============================================= */
+/*	Layout					   			     	 */
+/* ============================================= */
+/* line 39, ../sass/inkwell-admin.scss */
+.l-txt-admin {
+  max-width: 600px;
+}
+@media (min-width: 600px) {
+  /* line 39, ../sass/inkwell-admin.scss */
+  .l-txt-admin {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 43, ../sass/inkwell-admin.scss */
+.admin-api {
+  margin-top: 50px;
+}
+
+/* line 47, ../sass/inkwell-admin.scss */
+.admin-mod-sm {
+  margin-bottom: 10px;
+}
+
+/* line 51, ../sass/inkwell-admin.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ============================================= */
+/*	Type styles					   			     */
+/* ============================================= */
+/* line 59, ../sass/inkwell-admin.scss */
+.admin-h1 {
+  font-weight: 200;
+  font-size: 42px;
+  font-family: Helvetica, Arial, Verdana, sans;
+  line-height: 110%;
+}
+
+/* line 66, ../sass/inkwell-admin.scss */
+.txt-admin {
+  font-family: Helvetica, Arial, Verdana, sans;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 17px / 160%;
+}
+/* line 72, ../sass/inkwell-admin.scss */
+.txt-admin > p {
+  margin-bottom: 16px;
+}
+
+/* ============================================= */
+/*  Not sure--Jared please define                 */
+/* ============================================= */
+/* line 84, ../sass/inkwell-admin.scss */
+.ios-slider {
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  min-height: 100px;
+  width: 100%;
+  height: 100%;
+}
+/* line 92, ../sass/inkwell-admin.scss */
+.ios-slider .slider {
+  width: 100%;
+  height: 100%;
+}
+/* line 95, ../sass/inkwell-admin.scss */
+.ios-slider .slider .slide {
+  float: left;
+  width: 100%;
+}
+
+/* line 102, ../sass/inkwell-admin.scss */
+.ribbon {
+  min-height: 100px;
+}
+
+/* line 106, ../sass/inkwell-admin.scss */
+.ribbon-hero {
+  min-height: 200px;
+}
+/* line 108, ../sass/inkwell-admin.scss */
+.ribbon-hero .ios-slider {
+  min-height: 200px;
+}
+
+/* line 113, ../sass/inkwell-admin.scss */
+.skin-item-texture .skin-preview-radio {
+  display: none;
+}
+
+/* line 117, ../sass/inkwell-admin.scss */
+.skin-item {
+  *zoom: 1;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #CCC;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.skin-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 122, ../sass/inkwell-admin.scss */
+.skin-item h6 {
+  margin: 0px;
+  margin-bottom: 2px;
+  font-weight: normal;
+  font-size: 1em;
+}
+/* line 128, ../sass/inkwell-admin.scss */
+.skin-item .skin-preview-radio {
+  float: left;
+  width: 10%;
+}
+
+/* line 139, ../sass/inkwell-admin.scss */
+.skin-item-radio {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #DDD;
+}
+/* line 144, ../sass/inkwell-admin.scss */
+.skin-item-radio.skin-item-texture {
+  float: left;
+  margin-right: 2%;
+  width: 48%;
+}
+/* line 149, ../sass/inkwell-admin.scss */
+.skin-item-radio.selected {
+  border-color: #21759b;
+  background-color: white;
+}
+
+/* line 155, ../sass/inkwell-admin.scss */
+.radio-tile.theme-preview.selected, #customize-control-prologue_options_topper .picker-tile.selected, #customize-control-prologue_book_options_topper .picker-tile.selected {
+  -webkit-box-shadow: #21759b 0 0 0 5px;
+  -moz-box-shadow: #21759b 0 0 0 5px;
+  box-shadow: #21759b 0 0 0 5px;
+}
+
+/* line 159, ../sass/inkwell-admin.scss */
+.radio-tile {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.radio-tile:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 161, ../sass/inkwell-admin.scss */
+.radio-tile input[type="radio"] {
+  display: none;
+}
+/* line 167, ../sass/inkwell-admin.scss */
+.radio-tile.selected {
+  border-color: #21759b;
+  background-color: white;
+}
+
+/* line 173, ../sass/inkwell-admin.scss */
+.picker-tile {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #ccc;
+  opacity: .6;
+}
+/* line 178, ../sass/inkwell-admin.scss */
+.two-up .picker-tile {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 48%;
+}
+/* line 184, ../sass/inkwell-admin.scss */
+.four-up .picker-tile {
+  float: left;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  width: 24%;
+}
+/* line 191, ../sass/inkwell-admin.scss */
+#customize-control-prologue_options_topper .picker-tile, #customize-control-prologue_book_options_topper .picker-tile {
+  float: none;
+  margin-right: 0;
+  width: 100%;
+}
+/* line 196, ../sass/inkwell-admin.scss */
+.picker-tile input[type="radio"] {
+  display: none;
+}
+/* line 203, ../sass/inkwell-admin.scss */
+.picker-tile:hover {
+  opacity: 1;
+}
+/* line 206, ../sass/inkwell-admin.scss */
+.picker-tile.selected {
+  border-color: #21759b;
+  background-color: white;
+  opacity: 1;
+}
+/* line 211, ../sass/inkwell-admin.scss */
+.picker-tile h6 {
+  text-align: center;
+}
+/* line 214, ../sass/inkwell-admin.scss */
+.picker-tile .picker-tile-img {
+  width: 100%;
+  max-width: 100%;
+  max-width: 100%;
+  max-height: 200px;
+}
+
+/* line 221, ../sass/inkwell-admin.scss */
+#customize-info {
+  display: none;
+}
+
+/* line 226, ../sass/inkwell-admin.scss */
+#customize-header-actions .back.button {
+  display: none;
+}
+
+/* line 231, ../sass/inkwell-admin.scss */
+ul.option-scroller {
+  *zoom: 1;
+  display: block;
+  width: 100%;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+ul.option-scroller:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 237, ../sass/inkwell-admin.scss */
+.skin-color-squares {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.skin-color-squares:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 239, ../sass/inkwell-admin.scss */
+.skin-color-squares .skin-color-square {
+  float: left;
+  width: 25%;
+  height: 20px;
+}
+
+/* line 246, ../sass/inkwell-admin.scss */
+.skin-texture-square-group {
+  width: 100%;
+  background-color: #e55767;
+}
+/* line 249, ../sass/inkwell-admin.scss */
+.skin-texture-square-group .skin-texture-square {
+  width: 100%;
+  height: 100px;
+}
+
+/* line 255, ../sass/inkwell-admin.scss */
+.customizer-type-preview {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* line 260, ../sass/inkwell-admin.scss */
+.customizer-type-preview-cont {
+  padding: 10px 2px 10px 2px;
+}
+
+/* line 265, ../sass/inkwell-admin.scss */
+.theme-preview-mod .theme-hgroup {
+  position: relative;
+  margin: 20px 0;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ccc;
+}
+/* line 271, ../sass/inkwell-admin.scss */
+.theme-preview-mod .theme-h {
+  margin: 0;
+}
+/* line 274, ../sass/inkwell-admin.scss */
+.theme-preview-mod .theme-submit {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  padding-top: 1px;
+  width: 90px;
+  height: 29px;
+}
+
+/* line 282, ../sass/inkwell-admin.scss */
+.theme-previews {
+  *zoom: 1;
+  margin: auto;
+  max-width: 550px;
+  width: 100%;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.theme-previews:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 287, ../sass/inkwell-admin.scss */
+.theme-previews .theme-preview {
+  display: block;
+}
+/* line 290, ../sass/inkwell-admin.scss */
+.theme-previews .preview-img {
+  -webkit-transition: opacity 0.15s ease-in;
+  -moz-transition: opacity 0.15s ease-in;
+  -o-transition: opacity 0.15s ease-in;
+  transition: opacity 0.15s ease-in;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+/* line 295, ../sass/inkwell-admin.scss */
+.theme-previews .preview-txt {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 150%;
+}
+/* line 301, ../sass/inkwell-admin.scss */
+.theme-previews .ui-block {
+  margin-bottom: 50px;
+}
+@media (min-width: 1000px) {
+  /* line 282, ../sass/inkwell-admin.scss */
+  .theme-previews {
+    max-width: none;
+  }
+  /* line 306, ../sass/inkwell-admin.scss */
+  .theme-previews .ui-block {
+    float: left;
+    margin: 0 40px 40px 0;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1399px) {
+  /* line 312, ../sass/inkwell-admin.scss */
+  .theme-previews .ui-block {
+    width: 46%;
+  }
+  /* line 314, ../sass/inkwell-admin.scss */
+  .theme-previews .ui-block:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 317, ../sass/inkwell-admin.scss */
+  .theme-previews .ui-block:nth-child(2n+3) {
+    clear: left;
+  }
+}
+@media (min-width: 1400px) {
+  /* line 323, ../sass/inkwell-admin.scss */
+  .theme-previews .ui-block {
+    width: 30.5%;
+  }
+  /* line 325, ../sass/inkwell-admin.scss */
+  .theme-previews .ui-block:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 328, ../sass/inkwell-admin.scss */
+  .theme-previews .ui-block:nth-child(3n+4) {
+    clear: left;
+  }
+}
+
+/* line 337, ../sass/inkwell-admin.scss */
+.theme-preview {
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+/* line 342, ../sass/inkwell-admin.scss */
+.theme-preview:hover .preview-img {
+  opacity: .3;
+}
+/* line 345, ../sass/inkwell-admin.scss */
+.theme-preview:hover .preview-txt-mod {
+  opacity: 1;
+}
+/* line 349, ../sass/inkwell-admin.scss */
+.theme-preview .preview-txt-mod {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: opacity 0.15s ease-in;
+  -moz-transition: opacity 0.15s ease-in;
+  -o-transition: opacity 0.15s ease-in;
+  transition: opacity 0.15s ease-in;
+  padding: 20px;
+  opacity: 0;
+}
+/* line 412, ../sass/partials/_mixins.scss */
+.no-rgba .theme-preview .preview-txt-mod {
+  background: transparent url('../images/bg/white-80.png') 50% 50% repeat;
+}
+/* line 356, ../sass/inkwell-admin.scss */
+.theme-preview .preview-h {
+  margin: 0 0 30px;
+  font-weight: 100;
+  font-size: 31px;
+}
+
+/* line 363, ../sass/inkwell-admin.scss */
+.customize-setup-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  background-color: #464646;
+  color: #fff;
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans;
+}
+/* line 371, ../sass/inkwell-admin.scss */
+.customize-setup-bar .step {
+  margin-bottom: 10px;
+}
+/* line 374, ../sass/inkwell-admin.scss */
+.customize-setup-bar .step-h {
+  margin: 4px 0 8px;
+  font-weight: 100;
+  font-size: 24px;
+}
+/* line 379, ../sass/inkwell-admin.scss */
+.customize-setup-bar .step-num {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: 11px;
+}
+/* line 386, ../sass/inkwell-admin.scss */
+.customize-setup-bar .button {
+  margin: 0 7px;
+}
+
+/* line 391, ../sass/inkwell-admin.scss */
+.prologue-setup-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: table;
+  margin-left: -20px;
+  min-height: 65px;
+  width: 100%;
+  background-color: #464646;
+  color: #fff;
+  color: #fff;
+  vertical-align: top;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans;
+}
+/* line 403, ../sass/inkwell-admin.scss */
+.no-flexbox .prologue-setup-bar {
+  display: block;
+}
+/* line 405, ../sass/inkwell-admin.scss */
+.no-flexbox .prologue-setup-bar .step {
+  display: block;
+  float: left;
+}
+/* line 410, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .step {
+  position: relative;
+  display: table-cell;
+  min-height: 5px;
+  vertical-align: middle;
+}
+/* line 416, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .step-prev {
+  padding-left: 20px;
+  width: 27%;
+}
+/* line 420, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .step-current {
+  width: 40%;
+  text-align: center;
+}
+/* line 424, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .step-h {
+  margin: 4px 0 8px;
+  font-weight: 100;
+  font-size: 24px;
+}
+/* line 429, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .step-num {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: 11px;
+}
+/* line 436, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .step-next {
+  width: 27%;
+}
+/* line 439, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .next-btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: black 0 -1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09804) 0px 1px 0px 0px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.09804) 0px 1px 0px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.09804) 0px 1px 0px 0px inset;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2a95c5), color-stop(100%, #21759b));
+  background: -webkit-linear-gradient(top, #2a95c5, #21759b);
+  background: -moz-linear-gradient(top, #2a95c5, #21759b);
+  background: -o-linear-gradient(top, #2a95c5, #21759b);
+  background: linear-gradient(top, #2a95c5, #21759b);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 7px 20px;
+  width: 200px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #124560 #2382ae #2382ae #2382ae;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: 18px;
+}
+/* line 455, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .next-btn:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e9fd2), color-stop(100%, #21759b));
+  background: -webkit-linear-gradient(top, #2e9fd2, #21759b);
+  background: -moz-linear-gradient(top, #2e9fd2, #21759b);
+  background: -o-linear-gradient(top, #2e9fd2, #21759b);
+  background: linear-gradient(top, #2e9fd2, #21759b);
+}
+/* line 458, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .next-btn:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #21759b), color-stop(100%, #278ab7));
+  background: -webkit-linear-gradient(top, #21759b, #278ab7);
+  background: -moz-linear-gradient(top, #21759b, #278ab7);
+  background: -o-linear-gradient(top, #21759b, #278ab7);
+  background: linear-gradient(top, #21759b, #278ab7);
+}
+/* line 461, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .next-btn:after {
+  content: "\0020";
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  display: block;
+  width: 13px;
+  height: 23px;
+  background: url('../images/admin/arrow-right.png') no-repeat 50% 50%;
+}
+/* line 470, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .step-name {
+  display: none;
+}
+/* line 474, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .prev-btn,
+.prologue-setup-bar .next-btn {
+  text-decoration: none;
+}
+/* line 476, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .prev-btn:hover,
+.prologue-setup-bar .next-btn:hover {
+  text-decoration: underline;
+}
+/* line 480, ../sass/inkwell-admin.scss */
+.prologue-setup-bar .prev-btn {
+  color: #ccc;
+}
+
+/* line 486, ../sass/inkwell-admin.scss */
+#customize-theme-controls li[data-customize-tab="upload-new"] {
+  display: none;
+}
+
+/* line 495, ../sass/inkwell-admin.scss */
+.welcome-panel-close {
+  display: none;
+}
+
+/* line 499, ../sass/inkwell-admin.scss */
+.admin-welcome {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* line 504, ../sass/inkwell-admin.scss */
+.welcome-img {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 80px;
+  opacity: .8;
+}
+
+/* line 512, ../sass/inkwell-admin.scss */
+.welcome-panel-content {
+  display: none;
+}
+
+/* line 516, ../sass/inkwell-admin.scss */
+.sprite-sprite, .sprite-edit-off {
+  background: url("../images/sprite-scc1f2af80b.png") no-repeat;
+}
+
+/* line 520, ../sass/inkwell-admin.scss */
+.sprite-edit-off {
+  width: 1px;
+  height: 1px;
+  background-position: 0 0;
+}
+
+/* !== Paul Irish HTML5 Helpers =================== */
+/* line 529, ../sass/inkwell-admin.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+/* !============================================= */
+/* ! Custom Fonts					   			  */
+/* !============================================= */
+/* !============================================= */
+/* ! Universal						   			  */
+/* !============================================= */
+/* Kill the margin on the last column */
+/* line 550, ../sass/inkwell-admin.scss */
+.ui-block:last-child,
+.ui-block.last {
+  margin-right: 0;
+}
+
+/* !============================================= */
+/* ! Media Grid							   			  */
+/* !============================================= */
+/* !============================================= */
+/* ! Grids							   			  */
+/* !============================================= */
+/* Grid-2 vars */
+/* Grid-3 vars */
+/* Grid-3-rrl vars */
+/* Grid-4 vars */
+/* Grid-5 vars */
+/* ! Columns */
+/* line 566, ../sass/inkwell-admin.scss */
+.ui-block-25 {
+  width: 25%;
+}
+
+/* line 570, ../sass/inkwell-admin.scss */
+.ui-block-50 {
+  width: 50%;
+}
+
+/* line 574, ../sass/inkwell-admin.scss */
+.ui-block-75 {
+  width: 75%;
+}
+
+/* !============================================= */
+/* ! Spacers						   			  */
+/* !============================================= */
+/* Variables & Mixins */
+/* Selectors */
+/* line 583, ../sass/inkwell-admin.scss */
+.spacer {
+  margin-bottom: 50px;
+}
+
+/* line 587, ../sass/inkwell-admin.scss */
+.spacer-small {
+  margin-bottom: 10px;
+}
+
+/* line 591, ../sass/inkwell-admin.scss */
+.spacer-med {
+  margin-bottom: 25px;
+}
+
+/* line 595, ../sass/inkwell-admin.scss */
+.spacer-large {
+  margin-bottom: 75px;
+}
+
+/* !============================================= */
+/* ! Image Blocks						   		  */
+/* !============================================= */
+/* line 603, ../sass/inkwell-admin.scss */
+.imageblock-image {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+/* line 608, ../sass/inkwell-admin.scss */
+.imageblock-image-right {
+  float: right;
+  margin: 0 0 0 10px;
+}
+
+/* line 613, ../sass/inkwell-admin.scss */
+.imageblock-content {
+  display: table-cell;
+  width: 1000em;
+  vertical-align: top;
+}
+
+/* line 620, ../sass/inkwell-admin.scss */
+.ie6 .imageblock-content,
+.ie7 .imageblock-content {
+  display: block;
+  width: auto;
+  zoom: 1;
+}
+
+/* ============================================= */
+/*	Form Elements					   			 */
+/* ============================================= */
+/* line 632, ../sass/inkwell-admin.scss */
+.acf-ups-radio-image.widget {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 2%;
+  padding: 10px;
+  min-height: 132px;
+  width: 30.5%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: transparent;
+  text-align: left;
+}
+/* line 642, ../sass/inkwell-admin.scss */
+.acf-ups-radio-image.widget input {
+  top: -2px;
+  position: relative;
+}
+/* line 649, ../sass/inkwell-admin.scss */
+.acf-ups-radio-image.widget .sub-field-instructions,
+.acf-ups-radio-image.widget .sub-field-instructions > p {
+  color: #999999;
+}
+/* line 652, ../sass/inkwell-admin.scss */
+.acf-ups-radio-image.widget .sub-field-intro {
+  color: #666;
+}
+
+/* line 657, ../sass/inkwell-admin.scss */
+.admin-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+/* line 663, ../sass/inkwell-admin.scss */
+.sub-field-instructions {
+  line-height: 140%;
+}
+
+/* line 667, ../sass/inkwell-admin.scss */
+.acf-ups-radio-image img {
+  display: block;
+  margin-bottom: 5px;
+  max-height: 100%;
+  width: 100%;
+}
+
+/* line 674, ../sass/inkwell-admin.scss */
+.acf-ups-radio-image.widget.selected {
+  background-color: white;
+  background-image: none;
+}
+
+/* line 679, ../sass/inkwell-admin.scss */
+.acf-ups-radio-image:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+  border-color: #bbb;
+}
+
+/* Hide stuff on comments page */
+/* line 686, ../sass/inkwell-admin.scss */
+body.options-discussion-php .form-table tr:first-child {
+  display: block;
+}
+/* line 689, ../sass/inkwell-admin.scss */
+body.options-discussion-php .form-table tr {
+  display: none;
+}
+/* line 692, ../sass/inkwell-admin.scss */
+body.options-discussion-php form > h3 {
+  display: none;
+}
+/* line 695, ../sass/inkwell-admin.scss */
+body.options-discussion-php form > p {
+  display: none;
+}
+/* line 697, ../sass/inkwell-admin.scss */
+body.options-discussion-php form > p.submit {
+  display: block;
+}
+
+/* ============================================= */
+/*	Pages					   			 		 */
+/* ============================================= */
+/* line 713, ../sass/inkwell-admin.scss */
+.column-preview_img {
+  background-color: #CECECE;
+}
+/* line 715, ../sass/inkwell-admin.scss */
+.column-preview_img .admin-table-preview-image {
+  max-width: 100%;
+  max-height: 100px;
+}
+
+/* line 721, ../sass/inkwell-admin.scss */
+.fm-query-post-type {
+  *zoom: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.fm-query-post-type:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 726, ../sass/inkwell-admin.scss */
+.fm-query-post-type .fm-query-post-type-label {
+  float: left;
+  padding-top: 6px;
+  padding-left: 4px;
+  color: #444;
+  font-weight: 100;
+  font-size: 17px;
+}
+/* line 734, ../sass/inkwell-admin.scss */
+.fm-query-post-type .iPhoneCheckContainer {
+  right: 3px;
+  float: right;
+}
+
+/* line 743, ../sass/inkwell-admin.scss */
+.acf_postbox .layout[data-layout="pullquote"] textarea {
+  min-height: 80px;
+}
+
+/* photo field hiding */
+/* line 751, ../sass/inkwell-admin.scss */
+label[data-setting="alt"] {
+  display: none;
+}
+
+/* line 756, ../sass/inkwell-admin.scss */
+.media-frame-content label[data-setting="description"] {
+  display: none;
+}
+
+/* line 762, ../sass/inkwell-admin.scss */
+.wp_attachment_details p:nth-child(2) {
+  display: none;
+}
+/* line 765, ../sass/inkwell-admin.scss */
+.wp_attachment_details label[for="content"] {
+  display: none;
+}
+/* line 768, ../sass/inkwell-admin.scss */
+.wp_attachment_details #wp-attachment_content-wrap {
+  display: none;
+}
+
+/* line 773, ../sass/inkwell-admin.scss */
+.media-item .post_content {
+  display: none;
+}
+
+/* line 778, ../sass/inkwell-admin.scss */
+.post_type-feeds #pageparentdiv {
+  display: none;
+}
+
+/* line 783, ../sass/inkwell-admin.scss */
+small {
+  color: #999;
+}
+
+/* tables */
+/* line 788, ../sass/inkwell-admin.scss */
+.column-preview {
+  max-width: 100px;
+  width: 100px;
+}
+
+/* line 793, ../sass/inkwell-admin.scss */
+#postimagediv .inside img {
+  max-width: 100%;
+  width: 100%;
+}

@@ -1,0 +1,1059 @@
+@mixin arrow-defaults {
+	position: relative;
+	display: block;
+	@include circle;
+	border: 1px solid #000;
+
+	// Triangle "Play" Icon
+	&:after {
+		@include content;
+		position: absolute;
+	}
+}
+
+@mixin play-btn {
+	height: 26px;
+	width: 26px;	
+	@include arrow-defaults;
+
+	// Triangle "Play" Icon
+	&:after {
+		top: 8px;
+		left: 10px;
+		@include triangle(right, 6px, #000, 4px);
+	}	
+}
+
+@mixin thin-arrow($type: next, $size: 21px, $color: #aaa, $color-hover: #333) {
+
+	&:before,
+	&:after {
+		@include content;
+		position: absolute;
+		display: inline-block;
+		@include trans(.1s, border-color);				
+	}
+
+	@if $type == next {
+		&:before {
+			right: 0;
+			@include triangle(right, $size, $color, 1.15);
+		}
+		&:hover:before {
+			border-left-color: $color-hover;
+		}
+		&:after {
+			right: 1px;
+			@include triangle(right, $size, #fff, 1.15);
+		}	
+	}
+
+	@if $type == prev or $type == previous {
+		&:before {
+			left: 0;
+			@include triangle(left, $size, $color, 1.15);
+		}
+		&:hover:before {
+			border-right-color: $color-hover;
+		}
+		&:after {
+			left: 1px;
+			@include triangle(left, $size, #fff, 1.15);
+		}
+	}
+}
+
+/* --------------------------------------------- */
+
+/*	Common Modules / Functions / Actions		 */ 
+
+/* --------------------------------------------- */
+
+//
+// Carousel
+//
+
+.ios-slider {
+	position:relative;
+	top:0;
+	left:0;
+	overflow:hidden;
+	width:100%;
+	height:380px;
+	.slider {
+		width:100%;
+		height:100%;
+		.slide {
+			float:left;
+			width:100%;
+			height:100%;
+		}
+	}
+
+	&.rh-component-book {
+		height:250px;
+	}
+
+	.slide-next,
+	.slide-prev {
+		position: absolute;
+		top: 23%;
+		display: block;
+		padding: 6px;
+		height: 65px;
+		width: 40px;
+		background-size: 23px 45px;
+		opacity: .3;
+		@include border-radius(2px);
+		@include trans(.1s, opacity);
+		&:hover {
+			cursor: pointer;
+			opacity: .8;
+		}
+		@media (min-width: 500px) {
+			top: 28%;
+		}
+	}
+
+	.slide-next {
+		right: 0;
+		@include svg(arrow-next-blk-thin);
+		background-position: 100% 50%;
+	} //next
+
+	.slide-prev {
+		left: 0;
+		@include svg(arrow-prev-blk-thin);
+		background-position: 0% 50%;
+	} // prev
+} // ios-slider
+
+@mixin arrow-wht {
+	.slide-next,
+	.slide-prev {
+		background-color: #fff;
+	}
+	.slide-next {
+		@include svg(arrow-next-blk);
+		background-position: 60% 50%;
+	}
+	.slide-prev {
+		@include svg(arrow-prev-blk);
+		background-position: 40% 50%;
+	}
+}
+
+@mixin arrow-blk {
+	.slide-next,
+	.slide-prev {
+		background-color: #000;
+	}	
+	.slide-next {
+		@include svg(arrow-next-wht);
+		background-position: 60% 50%;
+	}
+	.slide-prev {
+		@include svg(arrow-prev-wht);
+		background-position: 40% 50%;
+	}
+}
+
+// Exceptions
+.ios-slider-splash {
+	// Make the arrows smaller for mobile
+	@media (max-width: 499px) {
+		.slide-next,
+		.slide-prev {
+			height: 40px;
+			width: 25px;
+			background-size: 60%;
+		}
+	} // mq
+
+	// Hide arrows ...
+	.slidenav {
+		opacity: 0;
+		@include trans(.1s, opacity);
+	}
+	// ... until hover or unless a touch interface
+	.touch & .slidenav,
+	&:hover .slidenav {
+		opacity: 1;
+	}
+
+	// Make the arrows black
+	@include arrow-blk; 
+
+	// Move off the edge
+	.slide-next {
+		right: 10px;
+	}
+	.slide-prev {
+		left: 10px;		
+	}
+}
+
+
+//
+// Modals
+//
+
+@import "project/modals";
+@import "project/modal-buy";
+
+.modal-insight {
+	@extend .modal;
+	max-width:none;
+	height:840px;
+	width:640px;
+	background-color:#333;
+	border:10px solid rgba(black, .5);
+	top:auto;
+}
+
+
+//
+// Stop Overflow
+//
+
+// Used primarily on books overview to truncate content
+
+.stop-overflow {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	&.expand {
+		height:auto;
+	}
+
+	&:after {
+		@include content;
+		height: 100px;
+		@include background(linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%));
+		@include absolute(n 0 0 0);
+	}
+}
+
+.stop-overflow.expand:after {
+	background: none;
+}
+
+
+.show-more-container {
+	.more-link {
+		&:after {
+			@include content;
+			position: relative;
+			top: -1px;
+			display: inline-block;
+			border-left: 3.4px solid transparent;
+			border-right: 3.4px solid transparent;
+			border-top-width: 4px;
+			border-top-style: solid;
+			@include rotate(.1deg);
+		}
+	}
+} // show-more-container
+
+
+//
+// Random House Component Containers
+//
+
+// The module surrounded the tease
+.rh-mod {
+	margin-bottom: 65px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// Chiefly holds teases
+.rh-component {
+	@include pie-clearfix;
+}
+
+
+//
+// Responsive Video
+//
+
+.video-embed-mod {
+	@include video;
+	margin-bottom: 10px;
+}
+
+
+
+/* --------------------------------------------- */
+
+/*	Components & Teases							 */ 
+
+/* --------------------------------------------- */
+
+
+//
+// Share Tools
+//
+
+.share-tools-s {
+	position: relative;
+	padding: 12px 0 4px;
+	border-top: 1px solid #eee;
+	background-color: #fff;
+
+	.share-title {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		@media (max-width: 449px) {
+			display: block;
+		}
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 8px 8px 0;
+	}	
+}
+
+.share-tools {
+	@extend .share-tools-s;
+
+	@media (min-width: 550px) {
+		padding: 22px;
+		border: 1px solid #eee;
+		min-width: 150px;
+		li {
+			display: block;
+			margin: 0 0 8px;
+		}
+		li a {
+			display: block;
+		}
+	}
+}
+
+
+//
+// Callout Component
+//
+
+.border-mod {
+	border: 1px solid;
+	border-color: #e1e1e1;
+	padding: 30px 30px 35px;
+	background-color:white;	
+	@include box-shadow(rgba(0,0,0,.04) 0 6px 8px);	
+}
+
+
+//
+// Image Component 
+//
+
+.rh-component-image {
+	//display: none;
+}
+
+@mixin img-tz-horiz-sm {
+	.art-bd {
+		float: right;
+		width: 110px;
+		margin-left: 20px;
+	}	
+}
+
+@mixin img-tz-horiz-md {
+	@include pair(37.5%, 5%, top, right);
+}
+
+@mixin img-tz-vert-sm {
+	.art-bd {
+		float: right;
+		width: 80px;
+		margin-left: 20px;
+	}
+}
+
+@mixin img-tz-vert-md {
+	@include pair(110px, 25px, top, right);	
+}
+
+.img-tz {
+	.art-bd {
+		display: block;
+	}
+	.art {
+		@include resp-img;
+	}
+}
+
+.l-txt,
+.l-sider > .ui-block-1 {
+	.img-tz-horiz {
+		@include img-tz-horiz-sm;
+		@media (min-width: 500px) {
+			@include img-tz-horiz-md;
+		}
+	}
+
+	.img-tz-vert {
+		@include img-tz-vert-sm;
+		@media (min-width: 500px) {
+			@include img-tz-vert-md;
+		}
+	}
+}
+
+.l-grid {
+	.img-tz-horiz {
+		@media (max-width: 499px) {
+			@include img-tz-horiz-sm;
+		}
+		@media (min-width: 500px) and (max-width: 899px) {
+			@include img-tz-horiz-md;
+		}
+		@media (min-width: 900px) {
+			.art-bd {
+				margin-bottom: 16px;
+			}
+		}		
+	}
+
+	.img-tz-vert {
+		@media (max-width: 499px) {
+			@include img-tz-vert-sm;
+		}	
+		@media (min-width: 500px) and (max-width: 899px) {
+			@include img-tz-vert-md;			
+		}
+		@media (min-width: 900px) {
+			@include img-tz-vert-sm;
+		}			
+	}
+}
+
+.l-sider > .ui-block-2 {
+	.img-tz {
+		@media (max-width: 499px) {
+			@include img-tz-vert-sm;
+		}	
+		@media (min-width: 500px) and (max-width: 959px) {
+			@include img-tz-vert-md;			
+		}
+		@media (min-width: 960px) {
+			.art-bd {
+				max-width: 150px;
+				margin: 0 auto 16px;
+			}
+		} //mq
+	}
+}
+
+
+
+//
+// Facebook Component
+//
+
+.rh-component-facebook {
+	.fb-post {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid;
+		border-color: #eee;
+
+		&:last-child {
+			border-bottom: 0px;
+		} // last-child
+
+		.fb-txt {
+			margin-bottom: 10px;
+		}
+
+		.img {
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+
+	} // facebook-post
+} // rh-component-facebook
+
+
+//
+// Twitter Component
+//
+
+.rh-component-twitter {
+	.tweet {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid;
+		border-color: #eee;
+
+		&:last-child {
+			border-bottom: 0px;
+		}
+		&:hover .tweet-tools {
+			@include opacity(1);
+		}
+	}
+
+	.tweet-tools {
+		@include trans(.15s, opacity);
+		@include opacity(0);
+
+		li {
+			color: #999;
+			display: inline;
+			margin-right: 10px;
+			font-size: em(12);
+		} // li
+
+		a { 
+			&:hover {
+			text-decoration: underline;
+			}
+		} // a
+
+	} // tweet-tools
+
+	.tweet-hgroup {
+		@include pie-clearfix;
+	}
+
+	.tweet-handle {
+		float: left;
+	}
+
+	.tweet-time {
+		float: right;
+	}
+} // twitter-component
+
+
+//
+// Facebook & Twitter
+//
+
+// Time Stamp
+.rh-component {
+	.time-stamp {
+		font-size: 11px;
+		color: #999;		
+	}
+	a.time-stamp:hover {
+		text-decoration: underline;
+	}
+}
+
+@mixin social-scroll {
+	& .rh-twitter-mod,
+	& .rh-facebook-mod {
+		position: relative;
+		&:after {
+			@include content;
+			display: block;
+			height: 50px;
+			@include background(linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%));
+			@include absolute(n 0 0 0);
+		}
+
+		.fb-posts,
+		.tweets {
+			height: 300px;
+			overflow-y: scroll;
+		}
+	}	
+} // social-scroll
+
+// Truncate FB & Twitter when in single-column layout
+.l-sider {
+	@media (max-width: 959px) {
+		@include social-scroll;
+	}
+}
+
+.l-txt,
+.l-grid,
+.l-sider > .ui-block-1 {
+	@include social-scroll;
+}
+
+
+// 
+// Blog Overview
+// 
+
+.rss-tz,
+.rss-tz-l,
+.rss-tz-s,
+.post-tz,
+.post-tz-l,
+.post-tz-s {
+	margin-bottom: 10px;
+	border-bottom: 1px solid;
+	border-color: #eee;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+
+	&:last-child {
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+.rss-tz,
+.post-tz {
+	.more-link {
+		display: inline;
+	}
+}
+
+
+
+//
+// Events Tease
+//
+
+.events-tz,
+.events-tz-l {
+	position: relative;
+	margin-bottom: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid;
+	border-color: #eee;
+	@include pie-clearfix;
+
+	&:last-child {
+		border-bottom: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+
+//
+// Mini Calendar Base Design
+//
+
+.mini-cal {
+	border: 1px solid #e5e5e5;
+	width: 40px;
+
+	.month {
+		// Background color set by theme
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 2px;
+		letter-spacing: 1px;
+		text-align: center;
+		font-size: 10px;
+	}
+
+	.day {
+		display: block;
+		text-align: center;
+		padding-bottom: 3px;
+		font-size: 17px;
+		background-color: #fff;
+	}
+
+	// Move down a little on event detail page
+	.event-single & {
+		margin-top: 6px;
+	}
+
+}
+
+
+//
+// Book Tease
+//
+
+.sidebar-container {
+	.books-tz,
+	.books-tz-l {
+		text-align:center;
+		.art-bd, .txt-bd {
+			display:block;
+			float:none;
+			margin:0px;
+			margin-left:0px;
+		}
+		.art-bd {
+			margin:auto;
+		}
+	}
+	.rh-component-callout {
+		.border-mod {
+			text-align:center;
+		}
+	}
+}
+
+.ios-slider {
+	.books-tz,
+	.books-tz-l,
+	.books-tz-simple {
+		margin-bottom: 0;		
+	}
+
+	.books-tz,
+	.books-tz-l {
+
+		
+		@media (min-width: 500px) {
+			.art-bd {
+				margin-left: 40px;
+			}
+			.txt-bd {
+				margin-left: 170px;
+				margin-right: 40px;
+			}
+		}
+
+		@media (min-width: 720px) {
+			.txt-bd {
+				margin-left: 210px;
+			}
+		}
+	}
+} // ios-slider
+
+@mixin books-basic {
+	margin-bottom: 70px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.book-tz-h,
+	.book-tz-deck {
+		display: block;
+		text-align: center;
+		margin-bottom: 0;
+	}
+	.book-tz-deck {
+		margin-top: 4px;
+		font-weight: 200;
+	}
+	.book-tz-hgroup {
+		margin-bottom: 10px;
+	}
+	.book-tz-txt {
+		color: #444;
+		margin-bottom: 16px;
+	}
+
+	.book-tz-btn {
+		display: block;	
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	// Book Layout
+	.art-bd {
+		display: block;
+		text-align: center;
+		max-width: 150px;
+		margin: 0 auto 20px;
+	}
+
+	.art {
+		margin: auto;
+		display: block;
+		@include resp-img;
+	}
+
+	.book-tz-art {
+		padding: 2px;
+		border: 1px solid #e5e5e5;
+		background-color: #fff;
+		@include trans;
+		&:hover {
+			border-color: #ccc;
+		}
+	}
+
+}
+
+.books-tz-simple {
+	@include books-basic;
+	.book-tz-h {
+		font-weight: bold;
+	}
+	.book-tz-btn {
+		margin-top: 16px;
+	}
+} // books-tz-simple
+
+.books-tz,
+.books-tz-l {
+
+	@include books-basic;
+
+	@media (min-width: 500px) {
+		@include pie-clearfix;
+		.art-bd {
+			float: left;
+			width: 100px;
+			margin: 0;
+			@include trans(.15s, width);
+		}
+		.txt-bd {
+			margin-left: 130px;
+			max-width: 500px;
+			@include trans(.15s, margin);
+		}
+		.book-tz-btn {
+			display: inline-block;
+		}
+		.book-tz-h,
+		.book-tz-deck {
+			text-align: left;
+		}
+
+	}
+
+	@media (min-width: 720px) {
+		.art-bd {
+			width: 150px;
+		}
+		.txt-bd {
+			margin-left: 180px;
+		}
+	} // mediaquery
+}
+
+.books-tz-s {
+	@include pie-clearfix;
+	margin-bottom: 40px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.art-bd {
+		float: right;
+		width: 80px;
+		margin-left: 20px;
+		> .art {
+			@include resp-img;
+		}
+	}
+
+	@media (min-width: 500px) {
+		@include pair(120px, 20px, top);
+	}
+}
+
+.books-tz,
+.books-tz-s,
+.books-tz-l {
+	.more-link {
+		display: inline;
+	}
+}
+
+
+//
+// Quote Tease
+//
+
+.quote-tz {
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 30px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	// Add the hanging quote
+	// See colors.scss for color info
+	&:before {
+		content: '\201C';
+		display: block;
+		font-size: 52px;
+		line-height: 100%;
+		@include absolute(0 n n 0);
+	}
+}
+
+.quote-txt {
+	margin-bottom: 8px;
+	> a {
+		font-weight: normal;
+	}
+}
+
+.quote-attr {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #999;
+}
+
+
+//
+// Mailchimp Signup
+//
+
+.email-input {
+	width: 100%;	
+	height: 35px;
+	padding: 8px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans;
+	border: 1px solid #ddd;
+	@include border-radius(4px);
+	@include box-shadow(rgba(0,0,0,.1)0 0 3px inset);	
+}
+
+.rh-component-email_signup {
+	max-width: none;
+
+	.mc_merge_var {
+		display: block;
+		margin-bottom: 20px;		
+	}
+
+	.mc_var_label {
+		display: none;
+		margin-bottom: 6px;
+	}
+
+	.mergeRow {
+		display:none;
+	}
+
+	.mergeRow label,
+	.mc_var_label {
+		font-weight: bold;
+		font-size: 13px;
+	}
+
+	.field-group {
+		margin-bottom: 20px;
+	}
+
+	.mc_input {
+		@extend .email-input;
+		font-size: em(15);
+	}
+	.mc_merge_var {
+		margin-bottom: 20px;
+	}
+
+	.mergeRow label {
+		display: inline-block;
+		margin-right: 14px;
+	}
+
+	ul.mc_list li {
+		display: inline;
+		margin-right: 6px;
+		label {
+			font-weight: normal;
+		}
+	}
+
+	.mc_custom_border_hdr {
+		background-color:#fff;
+		border: 0px;
+		padding: 0px;
+	}
+
+	#mc_signup_form {
+		background-color: #fff;
+		border: 0px;
+	}
+
+	.mc_signup_submit {
+		font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans;
+		text-align: left;
+		margin: 0 auto;
+	}
+
+	#email_type_html, #email_type_text, #email_type_mobile {
+		margin: 6px 6px 0px 0px;
+	}
+} // rh-component-email_signup
+
+.rh-component-callout {
+	.callout-mod {
+		max-width: 100%;
+	}
+}
+
+//
+// Exact Target
+//
+
+// TODO: Remove this once styles are applied directly by ET 
+
+.exact-target {
+	#TemplateTable {
+		width: 100%;
+		font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans;
+	}
+	br {
+		display: none;
+	}
+
+	#Email {
+		font-size: 14px;
+		font-weight: 100;
+		margin-bottom: 12px;
+		// follows .email-input style 
+		width: 100%;
+		height: 35px;
+		padding: 8px;
+		font-size: 1.23077em;
+		border: 1px solid rgb(221, 221, 221);
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px inset;
+		-moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px inset;
+		box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px inset;	
+	} // email input
+
+	input[type=submit] {
+		// Follows btn-lt-sm
+		border: 0;
+		padding: 7px 8px 8px;
+
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		text-align: center;
+		color: white;
+		background-color: rgb(204, 204, 204);
+
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		-webkit-appearance: none;
+		display: -moz-inline-stack;
+		display: inline-block;
+		vertical-align: middle;
+		zoom: 1;
+		line-height: normal;
+
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+
+		-webkit-transition: all 0.2s ease-in;
+		-moz-transition: all 0.2s ease-in;
+		-o-transition: all 0.2s ease-in;
+		transition: all 0.2s ease-in;
+
+		@media (min-width: 400px) {
+			width: 128px;
+		}
+	} // submit
+}

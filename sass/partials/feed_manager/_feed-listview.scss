@@ -1,0 +1,42 @@
+/* ---------------------------------------------- */
+
+/*  List view specific styling           
+
+/* ---------------------------------------------- */
+
+.thin-list {
+    // &.feed-manager-post {
+    //     margin-bottom: 0;
+    // }
+
+    &.feeds-number-wrap {
+        display: none;
+    }
+
+    &.display-selector {
+        float: left;
+        margin: 8px 45px 8px 10px;
+    }
+    &.stub-title {
+        > a {
+            color: $wp-blue-75;
+        }
+    }
+    &.stub-text {
+        color: $wp-blue-75;
+    }
+    &.unpin {
+        @extend .btn;
+        margin:0 20px 0 15px;
+        padding-top: 7px;
+        color: $f-gray-30;
+        &:hover {
+            @include trans($trans-time, color, $trans-ease);
+            background-color: transparent;
+            color: $wp-blue;
+        }
+        &:hover {
+            color: $f-accent-100;
+        }
+    }
+}

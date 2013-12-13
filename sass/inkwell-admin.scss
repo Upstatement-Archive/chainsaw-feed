@@ -1,0 +1,796 @@
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+//  SCSS for Inkweller Admin
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//  ## Bring in all Compass Helpers and Feed Manager partials partials
+@import "partials/base";
+@import "partials/mixins";
+@import "partials/typography";
+@import "partials/layout";
+
+// Feed Manager specific
+@import "partials/feed_manager/feed-type";
+@import "partials/feed_manager/feed-variables";
+@import "partials/feed_manager/feed-mixins";
+@import "partials/feed_manager/feed-base";
+@import "partials/feed_manager/feed-layout";
+
+// Feed Manager elements
+@import "partials/feed_manager/feed-dropdown";
+@import "partials/feed_manager/feed-buttons";
+@import "partials/feed_manager/feed-stub";
+@import "partials/feed_manager/feed-stub-thin";
+
+// Feed Manager modules
+@import "partials/feed_manager/feed-header";
+@import "partials/feed_manager/feed-search";
+@import "partials/feed_manager/feed-main";
+@import "partials/feed_manager/feed-unpinned";
+@import "partials/feed_manager/feed-listview";
+@import "partials/feed_manager/feed-removed";
+@import "partials/feed_manager/feed-footer";
+
+
+
+/* ============================================= */
+/*	Layout					   			     	 */
+/* ============================================= */
+
+.l-txt-admin {
+    @include l-txt;
+}
+
+.admin-api {
+    margin-top: 50px;
+}
+
+.admin-mod-sm {
+    margin-bottom: 10px;
+}
+
+.clearfix {
+    @include pie-clearfix;
+}
+
+/* ============================================= */
+/*	Type styles					   			     */
+/* ============================================= */
+
+.admin-h1 {
+    font-weight: 200;
+    font-size: 42px;
+    font-family: $admin-sans;
+    line-height: 110%;
+}
+
+.txt-admin {
+    font-family: $admin-sans;
+    font-style: normal; 
+    font-weight: 200; 
+    font-size: 17px / 160%;
+    // For instances with multiple paragraphs, add margin
+    > p {
+        margin-bottom: 16px;
+    }
+}
+
+
+
+
+/* ============================================= */
+/*  Not sure--Jared please define                 */
+/* ============================================= */
+
+.ios-slider {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    min-height: 100px;
+    width: 100%;
+    height: 100%;
+    .slider {
+        width: 100%;
+        height: 100%;
+        .slide {
+            float: left;
+            width: 100%;
+        }
+    }
+}
+
+.ribbon {
+    min-height: 100px;
+}
+
+.ribbon-hero {
+    min-height: 200px;
+    .ios-slider {
+        min-height: 200px;
+    }
+}
+
+.skin-item-texture .skin-preview-radio {
+    display: none;
+}
+
+.skin-item {
+    @include pie-clearfix;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCC;
+    h6 {
+        margin: 0px;
+        margin-bottom: 2px;
+        font-weight: normal;
+        font-size: 1em;
+    }
+    .skin-preview-radio {
+        float: left;
+        width: 10%;
+    }
+    .skin-preview-group {
+        //float:left;
+        //width:90%;
+   
+    }
+}
+
+.skin-item-radio {
+    @include box-sizing(border-box);
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #DDD;
+    &.skin-item-texture {
+        float: left;
+        margin-right: 2%;
+        width: 48%;
+    }
+    &.selected {
+        border-color: #21759b;
+        background-color: white;
+    }
+}
+
+%big-select {
+    @include box-shadow($wp-blue 0 0 0 5px);
+}
+
+.radio-tile {
+    @include pie-clearfix;
+    input[type="radio"] {
+        display: none;
+    }
+    &.theme-preview.selected {
+        @extend %big-select;
+    }
+    &.selected {
+        border-color: #21759b;
+        background-color: white;
+    }
+}
+
+.picker-tile {
+    @include box-sizing(border-box);
+    padding: 5px;
+    border: 1px solid #ccc;
+    opacity: .6;
+    .two-up & {
+        float: left;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        width: 48%;
+    }
+    .four-up & {
+        float: left;
+        margin-right: 1%;
+        margin-bottom: 1%;
+        width: 24%;
+    }
+    #customize-control-prologue_options_topper &,
+    #customize-control-prologue_book_options_topper & {
+        float: none;
+        margin-right: 0;
+        width: 100%;
+    }
+    input[type="radio"] {
+        display: none;
+    }
+    #customize-control-prologue_options_topper &.selected,
+    #customize-control-prologue_book_options_topper &.selected {
+        @extend %big-select;
+    }
+    &:hover {
+        opacity: 1;
+    }
+    &.selected {
+        border-color: #21759b;
+        background-color: white;
+        opacity: 1;
+    }
+    h6 {
+        text-align: center;
+    }
+    .picker-tile-img {
+        @include resp-img;
+        max-width: 100%;
+        max-height: 200px;
+    }
+}
+
+#customize-info {
+    display: none;
+}
+
+#customize-header-actions {
+    .back.button {
+        display: none;
+    }
+}
+
+ul.option-scroller {
+    @include pie-clearfix;
+    display: block;
+    width: 100%;
+}
+
+.skin-color-squares {
+    @include pie-clearfix;
+    .skin-color-square {
+        float: left;
+        width: 25%;
+        height: 20px;
+    }
+}
+
+.skin-texture-square-group {
+    width: 100%;
+    background-color: #e55767;
+    .skin-texture-square {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+.customizer-type-preview {
+    max-width: 100%;
+    width: 100%;
+}
+
+.customizer-type-preview-cont {
+    padding: 10px 2px 10px 2px;
+}
+
+.theme-preview-mod {
+    .theme-hgroup {
+        position: relative;
+        margin: 20px 0;
+        padding: 0 0 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .theme-h {
+        margin: 0;
+    }
+    .theme-submit {
+        @include absolute(15px 30px n n);
+        padding-top: 1px;
+        width: 90px;
+        height: 29px;
+    }
+}
+
+.theme-previews {
+    @include pie-clearfix;
+    margin: auto;
+    max-width: 550px;
+    width: 100%;
+    .theme-preview {
+        display: block;
+    }
+    .preview-img {
+        @include trans(0.15s, opacity);
+        @include resp-img;
+        display: block;
+    }
+    .preview-txt {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+        line-height: 150%;
+    }
+    .ui-block {
+        margin-bottom: 50px;
+    }
+    @media (min-width: 1000px) {
+        max-width: none;
+        .ui-block {
+            float: left;
+            margin: 0 40px 40px 0;
+        }
+    }
+    @media (min-width: 1000px) and (max-width: 1399px) {
+        .ui-block {
+            width: 46%;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+            &:nth-child(2n+3) {
+                clear: left;
+            }
+        }
+    }
+    @media (min-width: 1400px) {
+        .ui-block {
+            width: 30.5%;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+            &:nth-child(3n+4) {
+                clear: left;
+            }
+        }
+    }
+}
+
+//theme-previews
+
+.theme-preview {
+    position: relative;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    &:hover {
+        .preview-img {
+            opacity: .3;
+        }
+        .preview-txt-mod {
+            opacity: 1;
+        }
+    }
+    .preview-txt-mod {
+        @include bg(white, 0.8);
+        @include absolute(n 0 0 0);
+        @include trans(0.15s, opacity);
+        padding: 20px;
+        opacity: 0;
+    }
+    .preview-h {
+        margin: 0 0 30px;
+        font-weight: 100;
+        font-size: 31px;
+    }
+}
+
+.customize-setup-bar {
+    @include box-sizing(border-box);
+    padding: 15px;
+    width: 100%;
+    background-color: rgb(70, 70, 70);
+    color: #fff;
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans;
+    .step {
+        margin-bottom: 10px;
+    }
+    .step-h {
+        margin: 4px 0 8px;
+        font-weight: 100;
+        font-size: 24px;
+    }
+    .step-num {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 200;
+        font-size: 11px;
+    }
+    .button {
+        margin: 0 7px;
+    }
+}
+
+.prologue-setup-bar {
+    @include box-sizing(border-box);
+    position: relative;
+    display: table;
+    margin-left: -20px;
+    min-height: 65px;
+    width: 100%;
+    background-color: rgb(70, 70, 70);
+    color: #fff;
+    color: #fff;
+    vertical-align: top;
+    font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans;
+    .no-flexbox & {
+        display: block;
+        .step {
+            display: block;
+            float: left;
+        }
+    }
+    .step {
+        position: relative;
+        display: table-cell;
+        min-height: 5px;
+        vertical-align: middle;
+    }
+    .step-prev {
+        padding-left: 20px;
+        width: 27%;
+    }
+    .step-current {
+        width: 40%;
+        text-align: center;
+    }
+    .step-h {
+        margin: 4px 0 8px;
+        font-weight: 100;
+        font-size: 24px;
+    }
+    .step-num {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 200;
+        font-size: 11px;
+    }
+    .step-next {
+        width: 27%;
+    }
+    .next-btn {
+        @include box-sizing(border-box);
+        @include text-shadow(black 0 -1px 0);
+        @include box-shadow(rgba(0, 0, 0, 0.09804) 0px 1px 0px 0px inset);
+        @include background(linear-gradient(top, rgb(42, 149, 197), rgb(33, 117, 155)));
+        @include absolute(0 0 0 n);
+        padding: 7px 20px;
+        width: 200px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(18, 69, 96) rgb(35, 130, 174) rgb(35, 130, 174) rgb(35, 130, 174);
+        color: #fff;
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: 200;
+        font-size: 18px;
+        &:hover {
+            @include background(linear-gradient(top, rgb(46, 159, 210), rgb(33, 117, 155)));
+        }
+        &:active {
+            @include background(linear-gradient(top, rgb(33, 117, 155), rgb(39, 138, 183)));
+        }
+        &:after {
+            @include content;
+            @include absolute(19px 20px n n);
+            display: block;
+            width: 13px;
+            height: 23px;
+            background: image-url("admin/arrow-right.png") no-repeat 50% 50%;
+        }
+    }
+    .step-name {
+        display: none;
+    }
+    .prev-btn,
+    .next-btn {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .prev-btn {
+        color: #ccc;
+    }
+}
+
+#customize-theme-controls {
+    li[data-customize-tab="upload-new"] {
+        display: none;
+    }
+}
+
+//
+// Welcome Screen
+//
+
+.welcome-panel-close {
+    display: none;
+}
+
+.admin-welcome {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.welcome-img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 80px;
+    opacity: .8;
+}
+
+.welcome-panel-content {
+    display: none;
+}
+
+.sprite-sprite, .sprite-edit-off {
+    background: url("../images/sprite-scc1f2af80b.png") no-repeat;
+}
+
+.sprite-edit-off {
+    width: 1px;
+    height: 1px;
+    background-position: 0 0;
+}
+
+/* !== Paul Irish HTML5 Helpers =================== */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
+/* !============================================= */
+/* ! Custom Fonts					   			  */
+/* !============================================= */
+
+
+
+/* !============================================= */
+/* ! Universal						   			  */
+/* !============================================= */
+/* Kill the margin on the last column */
+
+.ui-block:last-child,
+.ui-block.last {
+    margin-right: 0;
+}
+
+/* !============================================= */
+/* ! Media Grid							   			  */
+/* !============================================= */
+/* !============================================= */
+/* ! Grids							   			  */
+/* !============================================= */
+/* Grid-2 vars */
+/* Grid-3 vars */
+/* Grid-3-rrl vars */
+/* Grid-4 vars */
+/* Grid-5 vars */
+/* ! Columns */
+.ui-block-25 {
+    width: 25%;
+}
+
+.ui-block-50 {
+    width: 50%;
+}
+
+.ui-block-75 {
+    width: 75%;
+}
+
+/* !============================================= */
+/* ! Spacers						   			  */
+/* !============================================= */
+/* Variables & Mixins */
+/* Selectors */
+.spacer {
+    margin-bottom: 50px;
+}
+
+.spacer-small {
+    margin-bottom: 10px;
+}
+
+.spacer-med {
+    margin-bottom: 25px;
+}
+
+.spacer-large {
+    margin-bottom: 75px;
+}
+
+/* !============================================= */
+/* ! Image Blocks						   		  */
+/* !============================================= */
+
+.imageblock-image {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.imageblock-image-right {
+    float: right;
+    margin: 0 0 0 10px;
+}
+
+.imageblock-content {
+    display: table-cell;
+    width: 1000em;
+    vertical-align: top;
+}
+
+.ie6 .imageblock-content,
+.ie7 .imageblock-content {
+    display: block;
+    width: auto;
+    zoom: 1;
+}
+
+/* ============================================= */
+
+/*	Form Elements					   			 */
+
+/* ============================================= */
+
+.acf-ups-radio-image.widget {
+    @include box-sizing(border-box);
+    float: left;
+    margin-right: 2%;
+    padding: 10px;
+    min-height: 132px;
+    width: 30.5%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: transparent;
+    text-align: left;
+    input {
+        top: -2px;
+        // Hides radio button
+        //display: none;
+        position: relative;
+    }
+    .sub-field-instructions,
+    .sub-field-instructions > p {
+        color: rgb(153, 153, 153);
+    }
+    .sub-field-intro {
+        color: #666;
+    }
+}
+
+.admin-label {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.sub-field-instructions {
+    line-height: 140%;
+}
+
+.acf-ups-radio-image img {
+    display: block;
+    margin-bottom: 5px;
+    max-height: 100%;
+    width: 100%;
+}
+
+.acf-ups-radio-image.widget.selected {
+    background-color: white;
+    background-image: none;
+}
+
+.acf-ups-radio-image:hover {
+    @include box-shadow(rgba(0, 0, 0, 0.3) 0 0 5px);
+    border-color: #bbb;
+}
+
+/* Hide stuff on comments page */
+body.options-discussion-php {
+    .form-table tr:first-child {
+        display: block;
+    }
+    .form-table tr {
+        display: none;
+    }
+    form > h3 {
+        display: none;
+    }
+    form > p {
+        display: none;
+        &.submit {
+            display: block;
+        }
+    }
+}
+
+/* ============================================= */
+
+/*	Pages					   			 		 */
+
+/* ============================================= */
+
+//
+// Background Promo
+//
+
+.column-preview_img {
+    background-color: #CECECE;
+    .admin-table-preview-image {
+        max-width: 100%;
+        max-height: 100px;
+    }
+}
+
+.fm-query-post-type {
+    @include pie-clearfix;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(#cccccc, 0.5);
+    .fm-query-post-type-label {
+        float: left;
+        padding-top: 6px;
+        padding-left: 4px;
+        color: #444;
+        font-weight: 100;
+        font-size: 17px;
+    }
+    .iPhoneCheckContainer {
+        right: 3px;
+        float: right;
+    }
+}
+
+
+.acf_postbox .layout {
+    &[data-layout="pullquote"] {
+        textarea {
+            min-height: 80px;
+        }
+    }
+}
+
+/* photo field hiding */
+
+label[data-setting="alt"] {
+    display: none;
+}
+
+.media-frame-content {
+    label[data-setting="description"] {
+        display: none;
+    }
+}
+
+.wp_attachment_details {
+    p:nth-child(2) {
+        display: none;
+    }
+    label[for="content"] {
+        display: none;
+    }
+    #wp-attachment_content-wrap {
+        display: none;
+    }
+}
+
+.media-item .post_content {
+    display: none;
+}
+
+.post_type-feeds {
+    #pageparentdiv {
+        display: none;
+    }
+}
+
+small {
+    color: #999;
+}
+
+/* tables */
+.column-preview { 
+    max-width:100px;
+    width:100px;
+}
+
+#postimagediv .inside img {
+    max-width: 100%;
+    width: 100%;
+}

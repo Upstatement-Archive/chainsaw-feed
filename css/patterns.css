@@ -1,0 +1,664 @@
+/* Bring in all Compass Helpers as well as Tito's base style files */
+/* line 201, ../sass/partials/_mixins.scss */
+.circle {
+  width: 200px;
+  height: 200px;
+  background: #999999;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+/* line 246, ../sass/partials/_layout.scss */
+.ui-block:last-child,
+.ui-block.last {
+  margin-right: 0;
+}
+
+/* line 7, ../sass/patterns.scss */
+.page-width, #style-hdr .style-hdr-group, .style-body {
+  min-width: 800px;
+  max-width: 1400px;
+}
+
+/* line 12, ../sass/patterns.scss */
+#style-hdr {
+  background: #222222 url('../images/bg-leather.png') 50% 50% repeat;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 2px 11px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.35) 0 2px 11px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 2px 11px;
+}
+/* line 21, ../sass/patterns.scss */
+#style-hdr .style-logo {
+  display: inline;
+  float: right;
+  position: relative;
+  margin-top: 6px;
+  width: 120px;
+}
+/* line 28, ../sass/patterns.scss */
+#style-hdr .style-hdr-group {
+  margin: 0 5%;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#style-hdr .style-hdr-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 34, ../sass/patterns.scss */
+#style-hdr .style-page-h {
+  font: bold 20px/120% "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  color: #fff;
+  margin: 10px 30px 0 0;
+  letter-spacing: 0;
+  float: left;
+}
+/* line 43, ../sass/patterns.scss */
+#style-hdr .style-page-h.thin,
+#style-hdr .style-page-h .thin {
+  font-weight: normal;
+}
+/* line 47, ../sass/patterns.scss */
+#style-hdr .style-tabs {
+  margin-top: 5px;
+  float: left;
+}
+/* line 52, ../sass/patterns.scss */
+#style-hdr .style-tab {
+  display: inline;
+}
+/* line 56, ../sass/patterns.scss */
+#style-hdr .style-tab > a {
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  color: #999;
+  display: block;
+  float: left;
+  font: normal 12px "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  padding: 10px 12px 11px;
+  min-width: 70px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 67, ../sass/patterns.scss */
+#style-hdr .style-tab > a:hover {
+  color: #fff;
+}
+/* line 73, ../sass/patterns.scss */
+#style-hdr .style-tab a.active,
+#style-hdr .style-tab a.active :hover {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+
+/* end style-hdr */
+/* line 81, ../sass/patterns.scss */
+.style-body {
+  padding: 55px;
+  margin: 80px auto 0;
+}
+
+/* line 87, ../sass/patterns.scss */
+.style-container {
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  margin: 0 0 40px 0;
+}
+
+/* line 92, ../sass/patterns.scss */
+.style-header {
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 16px;
+  padding: 6px;
+  text-shadow: 1px 0 0 #000000;
+}
+
+/* line 102, ../sass/patterns.scss */
+.style-node {
+  border-top: 1px solid #CCCCCC;
+  margin: 30px 0 0;
+  padding: 30px 0 0;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.style-node:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 109, ../sass/patterns.scss */
+.style-node .style-node-h {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  margin: -30px 0 30px 0;
+  padding: 6px;
+  background-color: #ededed;
+}
+
+/* line 119, ../sass/patterns.scss */
+.style-example {
+  float: right;
+  margin: 0 0 0 10px;
+  padding: 10px 0;
+  width: 58%;
+}
+/* line 124, ../sass/patterns.scss */
+.style-example.full {
+  width: 100%;
+}
+
+/* line 129, ../sass/patterns.scss */
+.style-meta-container {
+  float: left;
+  padding: 0 2% 0 1%;
+  border-right: 1px solid #ccc;
+  width: 40%;
+}
+
+/* line 136, ../sass/patterns.scss */
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 141, ../sass/patterns.scss */
+.style-color {
+  font: normal 24px/130% Miller,Georgia,Times,Times New Roman,serif;
+}
+
+/* line 145, ../sass/patterns.scss */
+.style-meta {
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+/* line 150, ../sass/patterns.scss */
+.style-meta dt {
+  font-weight: bold;
+}
+
+/* line 154, ../sass/patterns.scss */
+.style-meta dd {
+  margin: 4px 0 12px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 160, ../sass/patterns.scss */
+.style-meta dd:last-child {
+  border-bottom: none;
+}
+
+/* line 165, ../sass/patterns.scss */
+.style-node-btn a[class*="btn"] {
+  display: block;
+  margin: 0 auto 30px;
+  max-width: 200px;
+}
+/* line 170, ../sass/patterns.scss */
+.style-node-btn a[class*="btn-small"] {
+  max-width: 130px;
+}
+/* line 173, ../sass/patterns.scss */
+.style-node-btn a[class*="btn-large"] {
+  max-width: 270px;
+}
+
+/* Code
+================================== */
+/* line 181, ../sass/patterns.scss */
+.style-meta .code-snip {
+  display: block;
+  color: #666;
+  background-color: #fff;
+}
+/* line 185, ../sass/patterns.scss */
+.style-meta .code-snip textarea {
+  width: 100%;
+  min-height: 61px;
+  background-color: transparent;
+  overflow: visible;
+  color: #666;
+  font: normal 12px/130% "Courier New", Courier, mono;
+  border-color: #e5e5e5;
+}
+/* line 194, ../sass/patterns.scss */
+.style-meta .code-snip pre {
+  display: block;
+  background-color: #333;
+  max-height: 195px;
+  overflow-y: scroll;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  /* string  - pink */
+  /* comment - skyblue */
+  /* type    - lightgreen */
+  /* literal - darkred */
+  /* punctuation */
+  /* html/xml tag    - lightyellow */
+  /* attribute name  - khaki */
+  /* attribute value - pink */
+  /* decimal         - lightgreen */
+  /* plaintext */
+}
+/* line 203, ../sass/patterns.scss */
+.style-meta .code-snip pre .nocode {
+  background-color: none;
+  color: black;
+}
+/* line 204, ../sass/patterns.scss */
+.style-meta .code-snip pre .str {
+  color: #ffa0a0;
+}
+/* line 205, ../sass/patterns.scss */
+.style-meta .code-snip pre .kwd {
+  color: #f0e68c;
+  font-weight: bold;
+}
+/* line 206, ../sass/patterns.scss */
+.style-meta .code-snip pre .com {
+  color: #ffa0a0;
+}
+/* line 207, ../sass/patterns.scss */
+.style-meta .code-snip pre .typ {
+  color: palegreen;
+}
+/* line 208, ../sass/patterns.scss */
+.style-meta .code-snip pre .lit {
+  color: indianred;
+}
+/* line 209, ../sass/patterns.scss */
+.style-meta .code-snip pre .pun {
+  color: rgba(255, 255, 255, 0.35);
+}
+/* line 210, ../sass/patterns.scss */
+.style-meta .code-snip pre .tag {
+  color: #f0e68c;
+  font-weight: bold;
+}
+/* line 211, ../sass/patterns.scss */
+.style-meta .code-snip pre .atn {
+  color: #bdb76b;
+  font-weight: bold;
+}
+/* line 212, ../sass/patterns.scss */
+.style-meta .code-snip pre .atv {
+  color: skyblue;
+}
+/* line 213, ../sass/patterns.scss */
+.style-meta .code-snip pre .dec {
+  color: palegreen;
+}
+/* line 214, ../sass/patterns.scss */
+.style-meta .code-snip pre .pln {
+  color: rgba(255, 255, 255, 0.35);
+}
+/* line 215, ../sass/patterns.scss */
+.style-meta .code-snip pre .pln:first-child {
+  width: 20px;
+  height: 14px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 218, ../sass/patterns.scss */
+.style-meta .code-snip li:last-child .pln:first-child {
+  width: 0;
+  margin-top: 4px;
+}
+/* line 222, ../sass/patterns.scss */
+.style-meta .code-snip .highlight {
+  color: #b32d47;
+}
+
+/* end .style-meta .code-snip */
+/* Specify class=linenums on a pre to get line numbering */
+/* line 229, ../sass/patterns.scss */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #aeaeae;
+}
+
+/* IE indents via margin-left */
+/* line 231, ../sass/patterns.scss */
+li.L0 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L1 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L2 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L3 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L4 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L5 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L6 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L7 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L8 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L9 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L10 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L11 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L12 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L13 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L14 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L15 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L16 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L17 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L18 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L19 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L20 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L21 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L22 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L23 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L24 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L25 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L26 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L27 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L28 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L29 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L30 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L31 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L32 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L33 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L34 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L35 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L36 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L37 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L38 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L39 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L40 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L41 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L42 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L43 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L44 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L45 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L46 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L47 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L48 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L49 {
+  list-style-type: none;
+}
+
+/* line 231, ../sass/patterns.scss */
+li.L50 {
+  list-style-type: none;
+}
+
+/* Alternate shading for lines */
+@media print {
+  /* line 240, ../sass/patterns.scss */
+  pre {
+    background-color: none;
+  }
+
+  /* line 241, ../sass/patterns.scss */
+  pre .str, code .str {
+    color: #006600;
+  }
+
+  /* line 242, ../sass/patterns.scss */
+  pre .kwd, code .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  /* line 243, ../sass/patterns.scss */
+  pre .com, code .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  /* line 244, ../sass/patterns.scss */
+  pre .typ, code .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  /* line 245, ../sass/patterns.scss */
+  pre .lit, code .lit {
+    color: #004444;
+  }
+
+  /* line 246, ../sass/patterns.scss */
+  pre .pun, code .pun {
+    color: #444400;
+  }
+
+  /* line 247, ../sass/patterns.scss */
+  pre .pln, code .pln {
+    color: black;
+  }
+
+  /* line 248, ../sass/patterns.scss */
+  pre .tag, code .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  /* line 249, ../sass/patterns.scss */
+  pre .atn, code .atn {
+    color: #440044;
+  }
+
+  /* line 250, ../sass/patterns.scss */
+  pre .atv, code .atv {
+    color: #006600;
+  }
+}
