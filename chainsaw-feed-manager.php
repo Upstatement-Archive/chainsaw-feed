@@ -135,7 +135,7 @@
 						'description' => '',
 						'public' => true,
 						'show_ui' => true,
-						'show_in_menu' => true,
+						'show_in_menu' => false,
 						'capability_type' => 'page',
 						'hierarchical' => false,
 						'rewrite' => array('slug' => ''),

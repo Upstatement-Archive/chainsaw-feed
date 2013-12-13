@@ -1,4 +1,8 @@
 <?php
+
+include_once(ABSPATH.'wp-content/plugins/timber/timber.php');
+include_once(ABSPATH.'wp-content/plugins/timber-library/timber.php');
+
 class ChainsawFeed extends TimberPost {
 
 	//stored as array
