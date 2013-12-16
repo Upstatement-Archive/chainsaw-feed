@@ -1,7 +1,9 @@
 <?php
-
-include_once(ABSPATH.'wp-content/plugins/timber/timber.php');
-include_once(ABSPATH.'wp-content/plugins/timber-library/timber.php');
+if (is_dir(ABSPATH.'wp-content/plugins/timber')){
+	include_once(ABSPATH.'wp-content/plugins/timber/timber.php');
+} else if (is_dir(ABSPATH.'wp-content/plugins/timber-library/')){
+	include_once(ABSPATH.'wp-content/plugins/timber-library/timber.php');
+}
 
 class ChainsawFeed extends TimberPost {
 
