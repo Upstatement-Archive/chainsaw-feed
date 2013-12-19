@@ -7,7 +7,7 @@
 	Version: 0.2
 	Author: Jared Novack + Upstatement
 	*/
-	TimberHelper::error_log($_POST);
+	// TimberHelper::error_log($_POST);
 	define( 'PLUGIN_PATH', plugin_dir_path(__FILE__) );
 
 	require_once('chainsaw-feed.php');
