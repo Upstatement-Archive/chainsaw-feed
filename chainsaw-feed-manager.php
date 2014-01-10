@@ -10,8 +10,8 @@
 	// TimberHelper::error_log($_POST);
 	define( 'PLUGIN_PATH', plugin_dir_path(__FILE__) );
 
-	require_once('chainsaw-feed.php');
-	require_once('chainsaw-feed-item.php');
+	require_once(__DIR__.'/chainsaw-feed.php');
+	require_once(__DIR__.'/chainsaw-feed-item.php');
 
 	class ChainsawFeedManager {
 
