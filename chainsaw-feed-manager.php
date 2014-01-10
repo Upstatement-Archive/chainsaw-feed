@@ -30,6 +30,7 @@
 			add_action('init', array($this, 'process_post_data'));
 			add_action('admin_menu', array($this, 'add_options_page'));
 			add_filter('get_twig', array($this, 'add_to_twig'));
+			add_action('wp_ajax_chainsaw_query_posts', array($this, 'query_posts'));
 		}
 
 		function __construct_old($post_ids, $post_types){
@@ -37,6 +38,44 @@
 			$intervals->views = 500;
 			$intervals->comments = 5;
 			$intervals->shares = 5;
+		}
+
+		function query_posts(){
+			$query = $_POST['query'];
+			$format = 'json';
+			if (isset($_POST['format'])){
+				$format = $_POST['format'];
+			}
+			if (strlen($query) < 3){
+				return 'no';
+			}
+			global $wpdb;
+			$and_post_types = '';
+			if (isset($this->feeds) && is_array($this->feeds) && count($this->feeds)){
+				$post_types = $this->feeds[0]->query_post_type;
+				if (is_array($post_types)){
+					foreach($post_types as &$pt){
+						$pt = "'".$pt."'";
+					}
+					$post_types = implode(', ', $post_types);
+				}
+				$and_post_types = "AND post_type IN ($post_types)";
+			}
+
+			$query = ("SELECT ID from $wpdb->posts WHERE post_title LIKE '%$query%' AND post_status = 'publish' $and_post_types ORDER BY ID DESC LIMIT 24");
+			error_log($query);
+			$results = $wpdb->get_col($query);
+			$posts = Timber::get_posts($results);
+			if ($format == 'html'){
+				foreach($posts as $post){
+					$data['post'] = $post;
+					$data['tease_sizes'] = InkwellVars::$tease_sizes;
+					Timber::render('feed-post-stub.twig', $data);
+				}
+			} else {
+				echo json_encode($posts);
+			}
+			die();
 		}
 
 		function process_post_data(){

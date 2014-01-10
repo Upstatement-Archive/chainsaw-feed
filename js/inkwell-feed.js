@@ -97,7 +97,7 @@ var inkwellFeed;
 	};
 
 	InkwellFeed.prototype.runPostSearch = function(term){
-		var data = {query:term, action:'inkwell_query_posts', method:'post', format:'html'};
+		var data = {query:term, action:'chainsaw_query_posts', method:'post', format:'html'};
 		$.post(ajaxurl, data, inkwellFeed.onPostResults);
 		return false;
 	};
