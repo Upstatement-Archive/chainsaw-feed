@@ -142,6 +142,7 @@
 			}
 			$context['pinned'] = $feed->get_posts('pinned', 0, 0);
 			$context['posts'] = $feed->get_posts('posts', 0, 0);
+			$context['plugin_dir_url'] = plugin_dir_url(__FILE__);
 			Timber::render('feed-manager.twig', $context);
 			$time_post = microtime(true);
 			$exec_time = $time_post - $time_pre;
