@@ -41,7 +41,7 @@
         position: fixed;
         top: 0px;
         z-index: 1;
-        background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+        background-image: image-url("subtle_surface.png");
         background-color: $background-fallback;
         padding-top: 48px;
     }
