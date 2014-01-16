@@ -8,10 +8,10 @@
 $admin-sans: Helvetica, Arial, Verdana, sans;
 
 @include font-face("EntypoRegular",
-		 			font-files("/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.woff",
-					 		   "/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.ttf",
-					 		   "/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.svg#EntypoRegular"),
-					 		   "/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.eot",
+		 			font-files("entypo.woff",
+					 		   "entypo.ttf",
+					 		   "entypo.svg#EntypoRegular"),
+					 		   "entypo.eot",
 					 		   500, normal);
 
 .icon {

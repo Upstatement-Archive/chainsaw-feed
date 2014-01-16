@@ -10,7 +10,7 @@
 
 .toplevel_page_feed_manager_settings #wpwrap {
     background-color: $background-fallback;
-    background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+    background-image: image-url("subtle_surface.png");
 }
 
 .feed-manager-content * {
