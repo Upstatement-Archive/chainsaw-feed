@@ -16,8 +16,8 @@
 
 @font-face {
   font-family: "EntypoRegular";
-  src: url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.eot);
-  src: url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.eot?#iefix) format('eot'), url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.woff) format('woff'), url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.ttf) format('truetype'), url(/wp-content/plugins/chainsaw-feed/sass/fonts/entypo/entypo.svg#EntypoRegular) format('svg');
+  src: url('../sass/fonts/entypo/entypo.eot');
+  src: url('../sass/fonts/entypo/entypo.eot?#iefix') format('eot'), url('../sass/fonts/entypo/entypo.woff') format('woff'), url('../sass/fonts/entypo/entypo.ttf') format('truetype'), url('../sass/fonts/entypo/entypo.svg#EntypoRegular') format('svg');
   font-weight: 500;
   font-style: normal;
 }
@@ -38,7 +38,7 @@
 /* line 11, ../sass/partials/feed_manager/_feed-base.scss */
 .toplevel_page_feed_manager_settings #wpwrap {
   background-color: #bfc6c6;
-  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+  background-image: url('../sass/img/subtle_surface.png?1389353602');
 }
 
 /* line 16, ../sass/partials/feed_manager/_feed-base.scss */
@@ -897,7 +897,7 @@
   position: fixed;
   top: 0px;
   z-index: 1;
-  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
+  background-image: url('../sass/img/subtle_surface.png?1389353602');
   background-color: #bfc6c6;
   padding-top: 48px;
 }
@@ -1628,7 +1628,7 @@ ul.option-scroller:after {
 }
 /* line 412, ../sass/partials/_mixins.scss */
 .no-rgba .theme-preview .preview-txt-mod {
-  background: transparent url('../images/bg/white-80.png') 50% 50% repeat;
+  background: transparent url('../sass/img/bg/white-80.png') 50% 50% repeat;
 }
 /* line 356, ../sass/inkwell-admin.scss */
 .theme-preview .preview-h {
@@ -1786,7 +1786,7 @@ ul.option-scroller:after {
   display: block;
   width: 13px;
   height: 23px;
-  background: url('../images/admin/arrow-right.png') no-repeat 50% 50%;
+  background: url('../sass/img/admin/arrow-right.png') no-repeat 50% 50%;
 }
 /* line 470, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .step-name {

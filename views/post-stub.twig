@@ -1,8 +1,9 @@
 <div class="new-post-stub" data-pid="{{post.ID}}">
-
+	{% if show_thumbs %}
 	<div class="stub-img-mod">
 		<img class="stub-img" src="{{post.thumbnail.src|resize(120, 120)}}" />
 	</div>
+	{% endif %}
 
 	<div class="stub-tool-mod">
 
@@ -10,6 +11,7 @@
 			<input type="text" name="feeds-number" maxlength="3" rows="1" class="feeds-number" value="{{loop.index}}" />
 		</div>
 
+		{% if feed.tease_sizes %}
 		<div class="display-selector">
 			{% if post.post_type == 'post' and feed.tease_sizes|length %}
 			<select class="display-selector-dropdown" name="tease_size_{{post.ID}}">
@@ -19,6 +21,7 @@
 			</select>
 			{% endif %}
 		</div>
+		{% endif %}
 
 
 		<button class="tool unpin icon" href="#unpin">&#10060;</button>

@@ -23,7 +23,7 @@
 
 /* line 12, ../sass/patterns.scss */
 #style-hdr {
-  background: #222222 url('../images/bg-leather.png') 50% 50% repeat;
+  background: #222222 url('../sass/img/bg-leather.png') 50% 50% repeat;
   padding: 20px 0;
   position: fixed;
   top: 0;

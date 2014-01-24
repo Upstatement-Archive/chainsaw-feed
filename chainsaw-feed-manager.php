@@ -106,7 +106,7 @@
 		}
 
 		function add_options_page() {
-			add_menu_page('Feed Manager', 'Feed Manager', 'edit_posts', 'feed_manager_settings', array($this, 'options_page'), '/wp-content/plugins/wp-admin-icons/icons/arrow-join-090.png');
+			add_menu_page('Feed Manager', 'Feed Manager', 'edit_posts', 'feed_manager_settings', array($this, 'options_page'), 'dashicons-exerpt-view');
 		}
 
 		function get_recent_posts_for_feed($feed){
@@ -143,6 +143,8 @@
 			$context['pinned'] = $feed->get_posts('pinned', 0, 0);
 			$context['posts'] = $feed->get_posts('posts', 0, 0);
 			$context['plugin_dir_url'] = plugin_dir_url(__FILE__);
+			$context['zones'] = $feed->zones;
+			$context['show_thumbs'] = $feed->show_thumbs;
 			Timber::render('feed-manager.twig', $context);
 			$time_post = microtime(true);
 			$exec_time = $time_post - $time_pre;
@@ -152,7 +154,6 @@
 		}
 
 		function filter_post_types($pid, $post_types){
-
 			$feed = new ChainsawFeed($pid);
 			$query = $feed->get_query_post_types();
 			foreach($post_types as $post_type){

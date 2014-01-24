@@ -85,7 +85,7 @@
                     <form class="feed-main-post-list-wrap feed-main-post-list" id="ink-feed-form" method="post">
                         <input type="hidden" name="pid" value="{{feeds[0].ID}}" class="pid" />
                         <section class="feed-query">
-                            <div class="post-types">
+                            <!-- <div class="post-types">
                                 <h3 class="post-types-title">Post Types
                                     <span class="post-types-title-icon">&#59228;</span>
                                 </h3>
@@ -99,9 +99,15 @@
                                     </li>
                                     {% endfor %}
                                 </ul>
-                            </div>
+                            </div> -->
                         </section>
                         <input type="hidden" name="ink_page_name" value="feed_manager" />
+                        {% if zones.pinned.title %}
+                            <h3>{{zones.pinned.title}}</h3>
+                        {% endif %}
+                        {% if zones.pinned.desc %}
+                            <h6>{{zones.pinned.desc}}</h6>
+                        {% endif %}
                         <ol class="feed-in-use pinned saveable" data-scope="pinned">
                             {% for post in pinned %}
                             <li class="feed-manager-post" data-pid="{{post.ID}}">
@@ -113,6 +119,12 @@
                             <div class="feed-pinned-holder">Drop pinned items here</div>
                             {% endif %}
                         </ol>
+                         {% if zones.unpinned.title %}
+                            <h3>{{zones.unpinned.title}}</h3>
+                        {% endif %}
+                        {% if zones.unpinned.desc %}
+                            <h6>{{zones.unpinned.desc}}</h6>
+                        {% endif %}
                         <ol class="feed-in-use saveable" data-scope="posts">
                             {% for post in posts %}
                             <li class="feed-manager-post" data-pid="{{post.ID}}">

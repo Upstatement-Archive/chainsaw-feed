@@ -10,6 +10,7 @@ class ChainsawFeed extends TimberPost {
 	//stored as array
 	var $length = 250;
 	var $ID = false;
+	var $show_thumbs = true;
 	var $post_type = 'feeds';
 
 	var $view_interval = 150;
@@ -32,6 +33,7 @@ class ChainsawFeed extends TimberPost {
 			Jigsaw::show_notice('No Feeds found');
 		}
 		$this->init($pid);
+		$this->zones = array();
 		add_action('wp_enqueue_script', array($this, 'load_scripts'));
 		add_action('add_meta_boxes', array($this, 'add_feed_boxes'));
 		$this->import_custom($this->ID);
@@ -135,8 +137,8 @@ class ChainsawFeed extends TimberPost {
 	}
 
 	function add_feed_boxes(){
-		add_meta_box('feed-manager', 'Feed Name Here', array(&$this, 'feed_manager_inner'), 'feeds', 'normal');
-		add_meta_box('feed-query', 'Feed Post Types', array(&$this, 'feed_manager_query'), 'feeds', 'side');
+		add_meta_box('feed-manager', 'Feed Name Here', array($this, 'feed_manager_inner'), 'feeds', 'normal');
+		add_meta_box('feed-query', 'Feed Post Types', array($this, 'feed_manager_query'), 'feeds', 'side');
 	}
 
 	function save_post($pid){
@@ -195,12 +197,14 @@ class ChainsawFeed extends TimberPost {
 	}
 
 	function feed_manager_inner($post){
-		$context = array();
-		$context['pinned'] = $this->get_posts('pinned');
-		$context['posts'] = $this->get_posts('posts');
-		$context['feed'] = new TimberPost($this->ID);
-		Timber::render('feed-stream.twig', $context);
-		Timber::render('search.twig');
+		// $context = array();
+		// $context['pinned'] = $this->get_posts('pinned');
+		// $context['posts'] = $this->get_posts('posts');
+		// $context['feed'] = new TimberPost($this->ID);
+		// $context['messages'] = $this->messages;
+		// print_r($context['messages']);
+		// Timber::render('feed-stream.twig', $context);
+		// Timber::render('search.twig');
 	}
 
 	function feed_manager_query(){
@@ -231,6 +235,9 @@ class ChainsawFeed extends TimberPost {
 	}
 
 	function in_query($pid){
+		if (!$this->push_to_feed){
+			return false;
+		}
 		$query = array();
 		$query['post_type'] = $this->get_query_post_types();
 		$query['numberposts'] = $this->length;

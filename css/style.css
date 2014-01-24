@@ -716,7 +716,7 @@ body {
 }
 /* line 412, ../sass/partials/_mixins.scss */
 .no-rgba .hdr-dark.hdr-trans {
-  background: transparent url('../images/bg/black-50.png') 50% 50% repeat;
+  background: transparent url('../sass/img/bg/black-50.png') 50% 50% repeat;
 }
 
 /* line 143, ../sass/style.scss */
@@ -731,7 +731,7 @@ body {
 }
 /* line 412, ../sass/partials/_mixins.scss */
 .no-rgba .hdr-light.hdr-trans {
-  background: transparent url('../images/bg/white-50.png') 50% 50% repeat;
+  background: transparent url('../sass/img/bg/white-50.png') 50% 50% repeat;
 }
 
 /* line 153, ../sass/style.scss */
@@ -766,13 +766,13 @@ body {
   width: 50px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/menu-blk.png');
+  background-image: url('../sass/img/icons/menu-blk.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-blk.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-blk.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-blk.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-blk.png')', sizingMethod='scale')";
   position: absolute;
   top: 0;
   right: 0;
@@ -786,7 +786,7 @@ body {
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .main-nav-trigger {
-  background-image: url('../images/icons/menu-blk.svg');
+  background-image: url('../sass/img/icons/menu-blk.svg');
 }
 /* line 183, ../sass/style.scss */
 .main-nav-trigger:hover {
@@ -802,49 +802,49 @@ body {
 .hdr-dark .main-nav-trigger {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/menu-wht.png');
+  background-image: url('../sass/img/icons/menu-wht.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-wht.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-wht.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-wht.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-wht.png')', sizingMethod='scale')";
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .hdr-dark .main-nav-trigger {
-  background-image: url('../images/icons/menu-wht.svg');
+  background-image: url('../sass/img/icons/menu-wht.svg');
 }
 /* line 195, ../sass/style.scss */
 .nav-active .main-nav-trigger {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/menu-x-blk.png');
+  background-image: url('../sass/img/icons/menu-x-blk.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-x-blk.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-x-blk.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-x-blk.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-x-blk.png')', sizingMethod='scale')";
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .nav-active .main-nav-trigger {
-  background-image: url('../images/icons/menu-x-blk.svg');
+  background-image: url('../sass/img/icons/menu-x-blk.svg');
 }
 /* line 199, ../sass/style.scss */
 .hdr-dark.nav-active .main-nav-trigger {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/menu-x-wht.png');
+  background-image: url('../sass/img/icons/menu-x-wht.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-x-wht.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-x-wht.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-x-wht.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-x-wht.png')', sizingMethod='scale')";
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .hdr-dark.nav-active .main-nav-trigger {
-  background-image: url('../images/icons/menu-x-wht.svg');
+  background-image: url('../sass/img/icons/menu-x-wht.svg');
 }
 /* line 204, ../sass/style.scss */
 .no-svg .main-nav-trigger {
@@ -969,33 +969,33 @@ body {
   width: 14px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/twtr-wht.png');
+  background-image: url('../sass/img/icons/twtr-wht.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/twtr-wht.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/twtr-wht.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/twtr-wht.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/twtr-wht.png')', sizingMethod='scale')";
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .menu > .menu-item-slug-twitter > a:before {
-  background-image: url('../images/icons/twtr-wht.svg');
+  background-image: url('../sass/img/icons/twtr-wht.svg');
 }
 /* line 314, ../sass/style.scss */
 .hdr-light .menu > .menu-item-slug-twitter > a:before {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/twtr-blk.png');
+  background-image: url('../sass/img/icons/twtr-blk.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/twtr-blk.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/twtr-blk.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/twtr-blk.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/twtr-blk.png')', sizingMethod='scale')";
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .hdr-light .menu > .menu-item-slug-twitter > a:before {
-  background-image: url('../images/icons/twtr-blk.svg');
+  background-image: url('../sass/img/icons/twtr-blk.svg');
 }
 /* line 321, ../sass/style.scss */
 .menu > .menu-item-slug-facebook > a:before {
@@ -1003,33 +1003,33 @@ body {
   width: 13px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/fb-wht.png');
+  background-image: url('../sass/img/icons/fb-wht.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/fb-wht.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/fb-wht.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/fb-wht.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/fb-wht.png')', sizingMethod='scale')";
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .menu > .menu-item-slug-facebook > a:before {
-  background-image: url('../images/icons/fb-wht.svg');
+  background-image: url('../sass/img/icons/fb-wht.svg');
 }
 /* line 325, ../sass/style.scss */
 .hdr-light .menu > .menu-item-slug-facebook > a:before {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/fb-blk.png');
+  background-image: url('../sass/img/icons/fb-blk.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/fb-blk.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/fb-blk.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/fb-blk.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/fb-blk.png')', sizingMethod='scale')";
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .hdr-light .menu > .menu-item-slug-facebook > a:before {
-  background-image: url('../images/icons/fb-blk.svg');
+  background-image: url('../sass/img/icons/fb-blk.svg');
 }
 
 /* --------------------------------------------- */
@@ -1902,7 +1902,7 @@ body {
   }
   /* line 412, ../sass/partials/_mixins.scss */
   .no-rgba .promo-dark.promo-trans .promo-box {
-    background: transparent url('../images/bg/black-30.png') 50% 50% repeat;
+    background: transparent url('../sass/img/bg/black-30.png') 50% 50% repeat;
   }
   /* line 895, ../sass/style.scss */
   .promo-light.promo-trans .promo-box {
@@ -1911,7 +1911,7 @@ body {
   }
   /* line 412, ../sass/partials/_mixins.scss */
   .no-rgba .promo-light.promo-trans .promo-box {
-    background: transparent url('../images/bg/white-30.png') 50% 50% repeat;
+    background: transparent url('../sass/img/bg/white-30.png') 50% 50% repeat;
   }
   /* line 898, ../sass/style.scss */
   .promo-clear .promo-box {
@@ -1925,7 +1925,7 @@ body {
 }
 /* line 412, ../sass/partials/_mixins.scss */
 .no-rgba .poster-promo-book.promo-dark.promo-trans .promo-box {
-  background: transparent url('../images/bg/black-30.png') 50% 50% repeat;
+  background: transparent url('../sass/img/bg/black-30.png') 50% 50% repeat;
 }
 /* line 907, ../sass/style.scss */
 .poster-promo-book.promo-light.promo-trans .promo-box {
@@ -1934,7 +1934,7 @@ body {
 }
 /* line 412, ../sass/partials/_mixins.scss */
 .no-rgba .poster-promo-book.promo-light.promo-trans .promo-box {
-  background: transparent url('../images/bg/white-30.png') 50% 50% repeat;
+  background: transparent url('../sass/img/bg/white-30.png') 50% 50% repeat;
 }
 /* line 913, ../sass/style.scss */
 .l-strip .promo-light .promo-box {
@@ -2425,7 +2425,7 @@ body {
   }
   /* line 412, ../sass/partials/_mixins.scss */
   .no-rgba .splash-dark.splash-trans .splash-screen {
-    background: transparent url('../images/bg/black-50.png') 50% 50% repeat;
+    background: transparent url('../sass/img/bg/black-50.png') 50% 50% repeat;
   }
   /* line 1268, ../sass/style.scss */
   .splash-light.splash-trans .splash-screen {
@@ -2434,7 +2434,7 @@ body {
   }
   /* line 412, ../sass/partials/_mixins.scss */
   .no-rgba .splash-light.splash-trans .splash-screen {
-    background: transparent url('../images/bg/white-50.png') 50% 50% repeat;
+    background: transparent url('../sass/img/bg/white-50.png') 50% 50% repeat;
   }
   /* line 1271, ../sass/style.scss */
   .splash-clear .splash-screen {
@@ -2886,36 +2886,36 @@ body {
   right: 0;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/arrow-next-blk-thin.png');
+  background-image: url('../sass/img/icons/arrow-next-blk-thin.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/arrow-next-blk-thin.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/arrow-next-blk-thin.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/arrow-next-blk-thin.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/arrow-next-blk-thin.png')', sizingMethod='scale')";
   background-position: 100% 50%;
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .ios-slider .slide-next {
-  background-image: url('../images/icons/arrow-next-blk-thin.svg');
+  background-image: url('../sass/img/icons/arrow-next-blk-thin.svg');
 }
 /* line 124, ../sass/project/_objects.scss */
 .ios-slider .slide-prev {
   left: 0;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/arrow-prev-blk-thin.png');
+  background-image: url('../sass/img/icons/arrow-prev-blk-thin.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/arrow-prev-blk-thin.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/arrow-prev-blk-thin.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/arrow-prev-blk-thin.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/arrow-prev-blk-thin.png')', sizingMethod='scale')";
   background-position: 0% 50%;
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .ios-slider .slide-prev {
-  background-image: url('../images/icons/arrow-prev-blk-thin.svg');
+  background-image: url('../sass/img/icons/arrow-prev-blk-thin.svg');
 }
 
 @media (max-width: 499px) {
@@ -2948,35 +2948,35 @@ body {
 .ios-slider-splash .slide-next {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/arrow-next-wht.png');
+  background-image: url('../sass/img/icons/arrow-next-wht.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/arrow-next-wht.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/arrow-next-wht.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/arrow-next-wht.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/arrow-next-wht.png')', sizingMethod='scale')";
   background-position: 60% 50%;
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .ios-slider-splash .slide-next {
-  background-image: url('../images/icons/arrow-next-wht.svg');
+  background-image: url('../sass/img/icons/arrow-next-wht.svg');
 }
 /* line 155, ../sass/project/_objects.scss */
 .ios-slider-splash .slide-prev {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/arrow-prev-wht.png');
+  background-image: url('../sass/img/icons/arrow-prev-wht.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/arrow-prev-wht.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/arrow-prev-wht.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/arrow-prev-wht.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/arrow-prev-wht.png')', sizingMethod='scale')";
   background-position: 40% 50%;
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .ios-slider-splash .slide-prev {
-  background-image: url('../images/icons/arrow-prev-wht.svg');
+  background-image: url('../sass/img/icons/arrow-prev-wht.svg');
 }
 /* line 188, ../sass/project/_objects.scss */
 .ios-slider-splash .slide-next {
@@ -3141,13 +3141,13 @@ body {
   opacity: .5;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/menu-x-wht.png');
+  background-image: url('../sass/img/icons/menu-x-wht.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-x-wht.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/menu-x-wht.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-x-wht.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/menu-x-wht.png')', sizingMethod='scale')";
   -webkit-transition: opacity 0.1s ease-in;
   -moz-transition: opacity 0.1s ease-in;
   -o-transition: opacity 0.1s ease-in;
@@ -3161,7 +3161,7 @@ body {
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .modal-buy-close {
-  background-image: url('../images/icons/menu-x-wht.svg');
+  background-image: url('../sass/img/icons/menu-x-wht.svg');
 }
 /* line 78, ../sass/project/_modal-buy.scss */
 .modal-buy-close:hover {
@@ -4876,18 +4876,18 @@ body {
   display: inline-block;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('../images/icons/search-wht.png');
+  background-image: url('../sass/img/icons/search-wht.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/search-wht.png')', sizingMethod='scale')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../images/icons/search-wht.png')', sizingMethod='scale')";
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/search-wht.png')', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url('../sass/img/icons/search-wht.png')', sizingMethod='scale')";
   opacity: .8;
 }
 /* line 378, ../sass/partials/_mixins.scss */
 .svg .insight-icon {
-  background-image: url('../images/icons/search-wht.svg');
+  background-image: url('../sass/img/icons/search-wht.svg');
 }
 
 /* line 1808, ../sass/style.scss */
