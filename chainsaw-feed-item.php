@@ -44,7 +44,7 @@ class ChainsawFeedItem {
 		if ($this->feedable || !$this->post){
 			$checked = 'checked="checked"';
 		}
-		echo '<div class="misc-pub-section" id="visibility">';
+		echo '<div class="misc-pub-section" id="chainsaw-offer-to-feeds">';
 		echo '<input type="checkbox" name="is_feedable" id="is_feedable" '.$checked.'/>';
 		echo ' <label for="is_feedable">Make available to Feeds <small>Please note: if this post is already in a feed, you must remove it in Feed Manager. You can also </small> <a href="#send-to-feeds">manually send to feeds</a>.</label>';
 		echo '</div>';
