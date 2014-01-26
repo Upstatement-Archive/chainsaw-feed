@@ -15,11 +15,12 @@
 .feed-manager-title {
     display: inline-block;
     margin: 0 0 -8px -2px;
-    color: $f-gray-100;
-    letter-spacing: -2px;
-    font-weight: 200;
-    font-size: 45px;
+    color: $f-black-75;
     cursor: default;
+    font-size: 23px;
+    font-weight: 400;
+    padding: 9px 15px 4px 0px;
+    line-height: 29px;
 }
 
 
@@ -78,7 +79,7 @@
 
 .post-types-dropdown-block {
     @extend .dropdown-block;
-    // @include f-border-radius;
+    @include f-border-radius;
     background-color: $f-gray-50;
 }
 
@@ -126,14 +127,17 @@
     @extend .btn;
     @extend .feed-actions-item;
     @include inline-block;
+    @include border-radius(3px);
+
     margin: -6px 0 0 6px;
     height: 30px;
+    font-weight: 400;
+    vertical-align: baseline;
     background-color: $wp-blue;
-    color: $wp-blue-50; /** to standardize across browsers **/
-    padding-top: 7px;
+    color: white; /** to standardize across browsers **/
     &:hover {
         @include trans($trans-time, color, $trans-ease);
-        color: white;
+        background-color: $wp-blue-75; 
     }
 }
 

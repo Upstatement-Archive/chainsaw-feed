@@ -10,9 +10,10 @@
 .feed-main-header {
     position: relative;
     @include pie-clearfix;
-    background-color: $wp-blue;
+    // background-color: $wp-blue;
     label {
-        float:left;
+        // float:right;
+        // // display: inline-block;
     }
     &.stuck {
         /*position: fixed;
@@ -22,6 +23,13 @@
     }
 }
 
+.feed-header{
+    width: 100%;
+    // min-height: 48px;
+
+    background-color: $black-15;
+
+}
 .feed-pinned-holder {
     text-align:center;
     min-height:60px;
@@ -84,16 +92,16 @@
 }
 
 .feed-view-buttons {
-    float:right;
-    top: -2px;
-    margin: $f-block-inset;
+    padding-right:2%;
+    margin: -6px 10px;
+    display: inline-flex;
 }
 
 .feed-view-toggle {
     @extend .icon;
     @extend .btn;
     margin-left: 5px;
-    color: $wp-blue-50;
+    color: $black-50;
     font-size: 45px;
     &:hover {
         @include trans($trans-time, color, $trans-ease);
@@ -109,12 +117,13 @@
 .feed-main-instructions {
     @include trans($trans-time, height, $trans-ease);
     display: block;
-    padding: $f-block-inset;
+    // padding: $f-block-inset;
     line-height: 200%;
     height: 25px; /* defined so CSS slide-up can occur */
-    background-color: $wp-blue-75;
-    color: white;
-    font-size: 12px;
+    // background-color: $wp-blue-75;
+    color: $f-black-75;
+    font-size: 13px;
+    font-style: italic;
 }
 
 

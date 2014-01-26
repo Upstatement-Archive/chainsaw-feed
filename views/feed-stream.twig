@@ -5,6 +5,7 @@
         <!-- header, includes title, publish button and post-types dropdown -->
         <header class="feed-manager-header">
             <h2 class="feed-manager-title">Edit Feed: {{feed.title}}</h2>
+             <label class="feed-main-instructions">Drag to add articles and set hierarchy.</label>
             <div class="feed-actions">
                 <input type="button" class="feed-publish-trigger" value="Publish" />
             </div>
@@ -59,6 +60,7 @@
 		 to the feed selected (main feed) and header for that content -->
             <div class="feed-block-2">
                 <div class="feed-main feeds-block-inner">
+                    <div class="feed-header">
                     <header class="feed-main-header">
                         {% if feeds|length > 1 %}
                         <div class="feed-main-dropdown">
@@ -77,8 +79,9 @@
                             <button class="feed-view-toggle">&#9776;</button>
                             <button class="feed-view-toggle is-active">&#57349;</button>
                         </div>
-                        <label class="feed-main-instructions">Drag to add articles and set hierarchy.</label>
+                       
                     </header>
+                    </div>
 
 
                     <!-- selected feed post list -->

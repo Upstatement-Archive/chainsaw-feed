@@ -24,7 +24,7 @@
     &.ui-sortable-placeholder {
         visibility: visible !important;
         min-height: 150px;
-        border: 1px dashed $f-gray-50;
+        border: 3px dashed $f-gray-50;
         background-color: transparent;
     }
     &:last-child {
@@ -36,7 +36,6 @@
         @include f-border-radius;
         @include f-box-shadow;
         padding: 20px;
-        min-height: 150px;
         background-color: white;
     }
 
@@ -68,7 +67,6 @@
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 .stub-tool-mod {
     position: relative;
-    height: 25px;
 }
 
 
@@ -82,7 +80,7 @@
     float: left;
     margin: 0;
     padding: 4px 0;
-    width: 25px;
+    width: 30px;
     color: $f-gray-50;
     text-align: center;
     white-space: nowrap;
@@ -246,7 +244,7 @@
     @extend .btn;
     position: absolute;
     right: 0;
-    top: -5px;
+    top: -18px;
     color: $f-gray-30;
     font-size: 40px;
     &:hover {
@@ -262,32 +260,33 @@
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 .stub-content-mod {
-    margin: 10px 0 0 130px;
+    margin: 8px 8% 2px 11%;;
     padding-top: 10px;
     border-top: 1px solid $f-gray-30;
 }
 
 .stub-title {
     margin: 0 0 13px 0;
-    font-size: 16px;
     > a {
         color: $wp-blue-75;
         @media (min-width: 900px) {
-            font-size: 18px;
-                line-height: 100%;
+            font-size: 16px;
+            font-weight: 600;
         }
     }
 }
 
 .stub-meta {
-    margin: 0;
+    margin-top: -10px;
     color: $f-gray-75;
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.5em;
 }
 
 .stub-pub-info, 
 .stub-date {
-    font-weight: 500;
+    font-weight: 400;
+  
 }
 
 
