@@ -5,25 +5,43 @@
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 .feed-footer {
-	position: fixed;
+	position: absolute;
 	bottom: 0px;
-	z-index: 1;
-	padding-top: 15px;
+	right: 0px;
+	left: 0px;
+	padding: 10px 20px;
+	// padding-top: 15px;
 	width: inherit;
-	height: 50px;
+	// height: 50px;
 	border-top:1px solid $f-gray-50;
 	background-color: $background-fallback;
 	background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
 	color: $f-gray-75;
 }
 
+.st-logo {
+	@include border-radius;
+	background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/upstatement_logo_400.png");
+	height:40px;
+	width:150px;
+	background-size: 80%;
+	background-repeat:no-repeat;
+	background-position:center; 
+	display:inline-block;
+	margin-top:-1px;
+	background-color:$f-black-75;
+	&:hover{
+		background-color:$wp-blue-75;
+	}
+}
+
 .feed-manager-timestamp {
 	@include inline-block;
-	float: right;
+	font-style:italic;
 }
 
 .footer-thanks {
 	@include inline-block;
-	float: left;
+	float:right;
 	margin: 0;
 }

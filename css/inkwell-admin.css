@@ -1168,8 +1168,7 @@
 }
 /* line 28, ../sass/partials/feed_manager/_feed-listview.scss */
 .thin-list.unpin {
-  margin: 0 20px 0 15px;
-  padding-top: 7px;
+  padding-top: 18px;
   color: #d9dcdd;
 }
 /* line 33, ../sass/partials/feed_manager/_feed-listview.scss */
@@ -1213,19 +1212,41 @@
 
 /* line 7, ../sass/partials/feed_manager/_feed-footer.scss */
 .feed-footer {
-  position: fixed;
+  position: absolute;
   bottom: 0px;
-  z-index: 1;
-  padding-top: 15px;
+  right: 0px;
+  left: 0px;
+  padding: 10px 20px;
   width: inherit;
-  height: 50px;
   border-top: 1px solid #bfc6c6;
   background-color: #bfc6c6;
   background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
   color: #9fa9aa;
 }
 
-/* line 20, ../sass/partials/feed_manager/_feed-footer.scss */
+/* line 22, ../sass/partials/feed_manager/_feed-footer.scss */
+.st-logo {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/upstatement_logo_400.png");
+  height: 40px;
+  width: 150px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  margin-top: -1px;
+  background-color: #5a5758;
+}
+/* line 33, ../sass/partials/feed_manager/_feed-footer.scss */
+.st-logo:hover {
+  background-color: #5998b4;
+}
+
+/* line 38, ../sass/partials/feed_manager/_feed-footer.scss */
 .feed-manager-timestamp {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1233,10 +1254,10 @@
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  float: right;
+  font-style: italic;
 }
 
-/* line 25, ../sass/partials/feed_manager/_feed-footer.scss */
+/* line 43, ../sass/partials/feed_manager/_feed-footer.scss */
 .footer-thanks {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1244,7 +1265,7 @@
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  float: left;
+  float: right;
   margin: 0;
 }
 
