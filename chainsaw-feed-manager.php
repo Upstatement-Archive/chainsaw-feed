@@ -69,7 +69,9 @@
 			if ($format == 'html'){
 				foreach($posts as $post){
 					$data['post'] = $post;
-					$data['tease_sizes'] = InkwellVars::$tease_sizes;
+					if (class_exists('InkwellVars') && isset(InkwellVars::$tease_sizes)){
+						$data['tease_sizes'] = InkwellVars::$tease_sizes;
+					}
 					Timber::render('feed-post-stub.twig', $data);
 				}
 			} else {
