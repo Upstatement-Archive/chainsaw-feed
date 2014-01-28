@@ -38,7 +38,7 @@
 /* line 11, ../sass/partials/feed_manager/_feed-base.scss */
 .toplevel_page_feed_manager_settings #wpwrap {
   background-color: #bfc6c6;
-  background-image: url('../sass/img/subtle_surface.png?1389353602');
+  background-image: url('../sass/img/subtle_surface.png?1390586712');
 }
 
 /* line 16, ../sass/partials/feed_manager/_feed-base.scss */
@@ -338,12 +338,17 @@
   width: 110px;
 }
 
-/* line 69, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 62, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-control {
+  margin-top: 10px;
+}
+
+/* line 71, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-tool-mod {
   position: relative;
 }
 
-/* line 79, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 81, ../sass/partials/feed_manager/_feed-stub.scss */
 .feeds-number {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -358,7 +363,7 @@
   font-weight: 500;
   resize: none;
 }
-/* line 90, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 92, ../sass/partials/feed_manager/_feed-stub.scss */
 .feeds-number:hover {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -371,13 +376,13 @@
   border-color: #bfc6c6;
   color: #5a5758;
 }
-/* line 96, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 98, ../sass/partials/feed_manager/_feed-stub.scss */
 .feeds-number:focus {
   outline: none;
   color: #5a5758;
 }
 
-/* line 103, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 105, ../sass/partials/feed_manager/_feed-stub.scss */
 .feeds-number-wrap input[type="text"] {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -386,7 +391,7 @@
   border-radius: 0;
 }
 
-/* line 115, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 117, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector {
   display: inline-block;
   float: left;
@@ -394,28 +399,28 @@
   width: 100px;
 }
 
-/* line 122, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 124, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector-dropdown {
   padding-left: 10px;
   background-color: white;
 }
 
-/* line 127, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 129, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector-dropdown-options {
   padding-left: 10px;
   border-bottom: 1px solid #ececee;
   background-color: white;
 }
-/* line 132, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 134, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector-dropdown-options:last-child {
   border-bottom: 0;
 }
-/* line 135, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 137, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector-dropdown-options:hover .selectboxit-option-anchor {
   color: #9fa9aa;
 }
 
-/* line 140, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 142, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-container {
   display: -moz-inline-stack;
   display: inline-block;
@@ -427,19 +432,19 @@
   width: auto;
 }
 
-/* line 146, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 148, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit {
   display: block;
   cursor: pointer;
 }
 
-/* line 151, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 153, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-container span, .selectboxit-options a {
   height: 25px;
   line-height: 25px;
 }
 
-/* line 156, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 158, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-text {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -448,7 +453,7 @@
   color: #bfc6c6;
 }
 
-/* line 163, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 165, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-options {
   position: absolute;
   display: none;
@@ -463,14 +468,14 @@
   cursor: pointer;
 }
 
-/* line 177, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 179, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-arrow-container {
   position: absolute;
   right: 25px;
   top: 10px;
 }
 
-/* line 183, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 185, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-arrow {
   position: absolute;
   border-top: 5px solid #d9dcdd;
@@ -478,12 +483,12 @@
   border-left: 5px solid transparent;
 }
 
-/* line 190, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 192, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-option-icon-container {
   float: left;
 }
 
-/* line 194, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 196, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-container .selectboxit-option-icon {
   margin: 0;
   padding: 0;
@@ -491,7 +496,7 @@
 }
 
 /* Drop Down individual option icon positioning */
-/* line 201, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 203, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-option-icon-url {
   float: left;
   width: 18px;
@@ -501,39 +506,39 @@
   background-repeat: no-repeat;
 }
 
-/* line 210, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 212, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-rendering {
   display: block;
   visibility: hidden;
 }
 
 /* jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
-/* line 216, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 218, ../sass/partials/feed_manager/_feed-stub.scss */
 .jqueryui .ui-icon {
   background-color: inherit;
 }
 
 /* Another jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
-/* line 221, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 223, ../sass/partials/feed_manager/_feed-stub.scss */
 .jqueryui .ui-icon-triangle-1-s {
   background-position: -64px -16px;
 }
 
-/* line 225, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 227, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-option-anchor {
   color: #bfc6c6;
 }
-/* line 227, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 229, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-option-anchor:active {
   color: #bfc6c6;
 }
 
-/* line 232, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 234, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-btn {
   border: 1px solid #d9dcdd;
 }
 
-/* line 244, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 246, ../sass/partials/feed_manager/_feed-stub.scss */
 .unpin {
   position: absolute;
   right: 0;
@@ -541,35 +546,33 @@
   color: #d9dcdd;
   font-size: 40px;
 }
-/* line 251, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 253, ../sass/partials/feed_manager/_feed-stub.scss */
 .unpin:hover {
   color: #ff6261;
 }
 
-/* line 263, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 265, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-content-mod {
   margin: 8px 8% 2px 11%;
-  padding-top: 10px;
-  border-top: 1px solid #d9dcdd;
 }
 
-/* line 269, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 271, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-title {
   margin: 0 0 13px 0;
 }
-/* line 271, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 273, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-title > a {
   color: #5998b4;
 }
 @media (min-width: 900px) {
-  /* line 271, ../sass/partials/feed_manager/_feed-stub.scss */
+  /* line 273, ../sass/partials/feed_manager/_feed-stub.scss */
   .stub-title > a {
     font-size: 16px;
     font-weight: 600;
   }
 }
 
-/* line 280, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 282, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-meta {
   margin-top: -10px;
   color: #9fa9aa;
@@ -577,7 +580,7 @@
   line-height: 1.5em;
 }
 
-/* line 288, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 290, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-pub-info,
 .stub-date {
   font-weight: 400;
@@ -946,7 +949,7 @@
   position: fixed;
   top: 0px;
   z-index: 1;
-  background-image: url('../sass/img/subtle_surface.png?1389353602');
+  background-image: url('../sass/img/subtle_surface.png?1390586712');
   background-color: #bfc6c6;
   padding-top: 48px;
 }

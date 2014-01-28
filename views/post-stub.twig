@@ -35,6 +35,10 @@
 					<time class="stub-date">{{post.post_date|date("m/d/y")}}</time>
 				</span> {{post.get_media_list}}
 			</p>
+			<div class= "stub-control">
+				<a href="/wp-admin/post.php?post={{post.ID}}&amp;action=edit">Edit </a>
+				<a href="{{post.get_path}}">View</a>
+			</div>			
 		</div>
 	</div>
 
