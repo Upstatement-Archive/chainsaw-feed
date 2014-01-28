@@ -37,6 +37,7 @@
         @include f-box-shadow;
         padding: 20px;
         background-color: white;
+        @include pie-clearfix;
     }
 
 
