@@ -1,13 +1,16 @@
+
+<div class="wrap">
 <section class="feed-manager-content-wrap">
 
     <main class="feed-manager-content">
 
         <!-- header, includes title, publish button and post-types dropdown -->
         <header class="feed-manager-header">
-            <h2 class="feed-manager-title">Edit Feed: {{feed.title}}</h2>
-             <label class="feed-main-instructions">Drag to add articles and set hierarchy.</label>
+            <h2>Edit Feed: {{feed.title}}</h2>
+            <!--  <label class="feed-main-instructions">Drag to add articles and set hierarchy.</label> -->
+             <p>Drag to add articles and set hierarchy.</p>
             <div class="feed-actions">
-                <input type="button" class="feed-publish-trigger" value="Publish" />
+                <input type="button" class="button button-primary button-large" value="Publish" />
             </div>
         </header>
         <!-- end header -->
@@ -104,13 +107,17 @@
                                 </ul>
                             </div> -->
                         </section>
+                       
                         <input type="hidden" name="ink_page_name" value="feed_manager" />
                         {% if zones.pinned.title %}
-                            <h3>{{zones.pinned.title}}</h3>
+                            <div class="feed-manager-zone">
+                                <h3 class= "zone-title">{{zones.pinned.title}}</h3>
                         {% endif %}
                         {% if zones.pinned.desc %}
-                            <h6>{{zones.pinned.desc}}</h6>
+                                <h6 class= "zone-desc">{{zones.pinned.desc}}</h6>
+                              </div>
                         {% endif %}
+                        </div>
                         <ol class="feed-in-use pinned saveable" data-scope="pinned">
                             {% for post in pinned %}
                             <li class="feed-manager-post" data-pid="{{post.ID}}">
@@ -123,10 +130,10 @@
                             {% endif %}
                         </ol>
                          {% if zones.unpinned.title %}
-                            <h3>{{zones.unpinned.title}}</h3>
+                                <h3 class= "zone-title">{{zones.unpinned.title}}</h3>
                         {% endif %}
                         {% if zones.unpinned.desc %}
-                            <h6>{{zones.unpinned.desc}}</h6>
+                                <h6 class= "zone-desc">{{zones.unpinned.desc}}</h6>
                         {% endif %}
                         <ol class="feed-in-use saveable" data-scope="posts">
                             {% for post in posts %}
@@ -156,7 +163,7 @@
     </main>
 
 </section>
-
+</div>
 <script type="text/javascript" src="{{plugin_dir_url}}/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="{{plugin_dir_url}}/js/waypoints.min.js"></script>
 <script type="text/javascript" src="{{plugin_dir_url}}/js/waypoints-sticky.min.js"></script>

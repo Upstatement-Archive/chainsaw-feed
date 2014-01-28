@@ -27,7 +27,7 @@
     width: 100%;
     // min-height: 48px;
 
-    background-color: $black-15;
+    background-color: white;
 
 }
 .feed-pinned-holder {
@@ -105,12 +105,12 @@
     font-size: 45px;
     &:hover {
         @include trans($trans-time, color, $trans-ease);
-        color: white;
+        color: black;
     }
 }
 
 .is-active {
-    color: white;
+    color: black;
     pointer-events: none;
 }
 

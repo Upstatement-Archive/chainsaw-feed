@@ -6,7 +6,8 @@
 
 .thin {
 
-    .feed-in-use {
+    &.feed-in-use {
+        padding-top: 0px;
         margin-left: 0;
     }
 
@@ -52,8 +53,6 @@
     .stub-title {
            margin:-24px 0px -12px 0px;
         > a {
-
-            color: $f-gray-100;
             font-size: 12px;
         }
     }
@@ -76,6 +75,9 @@
         height: 40px;
         border: 1px dashed $f-gray-50;
         background-color: transparent;
+    }
+     .stub-control{
+        display: none;
     }
 }
 

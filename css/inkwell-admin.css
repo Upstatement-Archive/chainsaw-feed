@@ -38,7 +38,7 @@
 /* line 11, ../sass/partials/feed_manager/_feed-base.scss */
 .toplevel_page_feed_manager_settings #wpwrap {
   background-color: #bfc6c6;
-  background-image: url('../sass/img/subtle_surface.png?1390586712');
+  background: none repeat scroll 0% 0% #f1f1f1;
 }
 
 /* line 16, ../sass/partials/feed_manager/_feed-base.scss */
@@ -259,7 +259,7 @@
 }
 
 /* line 10, ../sass/partials/feed_manager/_feed-buttons.scss */
-.btn, .unpin, .feed-publish-trigger, .feed-view-toggle, .thin-unpin .pin, .thin-list.unpin {
+.btn, .unpin, .feed-view-toggle, .thin-unpin .pin, .thin-list.unpin {
   margin: 0;
   padding: 0;
   border: 0px solid transparent;
@@ -276,34 +276,34 @@
 .feed-in-use {
   margin: 0;
   min-height: 20px;
+  padding-top: 20px;
 }
-/* line 10, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 11, ../sass/partials/feed_manager/_feed-stub.scss */
 .feed-in-use.pinned {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px dashed #bfc6c6;
 }
 
 /*li*/
-/* line 21, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 22, ../sass/partials/feed_manager/_feed-stub.scss */
 .feed-manager-post {
   margin-bottom: 10px;
   cursor: move;
 }
-/* line 24, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 25, ../sass/partials/feed_manager/_feed-stub.scss */
 .feed-manager-post.ui-sortable-placeholder {
   visibility: visible !important;
   min-height: 150px;
   border: 3px dashed #bfc6c6;
   background-color: transparent;
 }
-/* line 30, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 31, ../sass/partials/feed_manager/_feed-stub.scss */
 .feed-manager-post:last-child {
   margin-bottom: 0px;
 }
 
 /*div*/
-/* line 35, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 36, ../sass/partials/feed_manager/_feed-stub.scss */
 .new-post-stub {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -324,7 +324,20 @@
   clear: both;
 }
 
-/* line 50, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 44, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-control {
+  margin-top: 10px;
+}
+/* line 46, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-control a {
+  color: #0074a2;
+}
+/* line 49, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-control a:hover {
+  color: #1e8cbe;
+}
+
+/* line 59, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-img-mod {
   float: left;
   margin-right: 20px;
@@ -333,22 +346,17 @@
   background-color: #ececee;
 }
 
-/* line 58, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 67, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-img {
   width: 110px;
 }
 
-/* line 62, ../sass/partials/feed_manager/_feed-stub.scss */
-.stub-control {
-  margin-top: 10px;
-}
-
-/* line 71, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 78, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-tool-mod {
   position: relative;
 }
 
-/* line 81, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 88, ../sass/partials/feed_manager/_feed-stub.scss */
 .feeds-number {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -363,7 +371,7 @@
   font-weight: 500;
   resize: none;
 }
-/* line 92, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 99, ../sass/partials/feed_manager/_feed-stub.scss */
 .feeds-number:hover {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -376,13 +384,13 @@
   border-color: #bfc6c6;
   color: #5a5758;
 }
-/* line 98, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 105, ../sass/partials/feed_manager/_feed-stub.scss */
 .feeds-number:focus {
   outline: none;
   color: #5a5758;
 }
 
-/* line 105, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 112, ../sass/partials/feed_manager/_feed-stub.scss */
 .feeds-number-wrap input[type="text"] {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -391,7 +399,7 @@
   border-radius: 0;
 }
 
-/* line 117, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 124, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector {
   display: inline-block;
   float: left;
@@ -399,28 +407,28 @@
   width: 100px;
 }
 
-/* line 124, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 131, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector-dropdown {
   padding-left: 10px;
   background-color: white;
 }
 
-/* line 129, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 136, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector-dropdown-options {
   padding-left: 10px;
   border-bottom: 1px solid #ececee;
   background-color: white;
 }
-/* line 134, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 141, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector-dropdown-options:last-child {
   border-bottom: 0;
 }
-/* line 137, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 144, ../sass/partials/feed_manager/_feed-stub.scss */
 .display-selector-dropdown-options:hover .selectboxit-option-anchor {
   color: #9fa9aa;
 }
 
-/* line 142, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 149, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-container {
   display: -moz-inline-stack;
   display: inline-block;
@@ -432,19 +440,19 @@
   width: auto;
 }
 
-/* line 148, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 155, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit {
   display: block;
   cursor: pointer;
 }
 
-/* line 153, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 160, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-container span, .selectboxit-options a {
   height: 25px;
   line-height: 25px;
 }
 
-/* line 158, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 165, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-text {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -453,7 +461,7 @@
   color: #bfc6c6;
 }
 
-/* line 165, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 172, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-options {
   position: absolute;
   display: none;
@@ -468,14 +476,14 @@
   cursor: pointer;
 }
 
-/* line 179, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 186, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-arrow-container {
   position: absolute;
   right: 25px;
   top: 10px;
 }
 
-/* line 185, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 192, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-arrow {
   position: absolute;
   border-top: 5px solid #d9dcdd;
@@ -483,12 +491,12 @@
   border-left: 5px solid transparent;
 }
 
-/* line 192, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 199, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-option-icon-container {
   float: left;
 }
 
-/* line 196, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 203, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-container .selectboxit-option-icon {
   margin: 0;
   padding: 0;
@@ -496,7 +504,7 @@
 }
 
 /* Drop Down individual option icon positioning */
-/* line 203, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 210, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-option-icon-url {
   float: left;
   width: 18px;
@@ -506,39 +514,39 @@
   background-repeat: no-repeat;
 }
 
-/* line 212, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 219, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-rendering {
   display: block;
   visibility: hidden;
 }
 
 /* jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
-/* line 218, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 225, ../sass/partials/feed_manager/_feed-stub.scss */
 .jqueryui .ui-icon {
   background-color: inherit;
 }
 
 /* Another jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
-/* line 223, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 230, ../sass/partials/feed_manager/_feed-stub.scss */
 .jqueryui .ui-icon-triangle-1-s {
   background-position: -64px -16px;
 }
 
-/* line 227, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 234, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-option-anchor {
   color: #bfc6c6;
 }
-/* line 229, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 236, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-option-anchor:active {
   color: #bfc6c6;
 }
 
-/* line 234, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 241, ../sass/partials/feed_manager/_feed-stub.scss */
 .selectboxit-btn {
   border: 1px solid #d9dcdd;
 }
 
-/* line 246, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 253, ../sass/partials/feed_manager/_feed-stub.scss */
 .unpin {
   position: absolute;
   right: 0;
@@ -546,33 +554,37 @@
   color: #d9dcdd;
   font-size: 40px;
 }
-/* line 253, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 260, ../sass/partials/feed_manager/_feed-stub.scss */
 .unpin:hover {
   color: #ff6261;
 }
 
-/* line 265, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 272, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-content-mod {
   margin: 8px 8% 2px 11%;
 }
 
-/* line 271, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 278, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-title {
   margin: 0 0 13px 0;
 }
-/* line 273, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 280, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-title > a {
-  color: #5998b4;
+  color: #0074a2;
 }
 @media (min-width: 900px) {
-  /* line 273, ../sass/partials/feed_manager/_feed-stub.scss */
+  /* line 280, ../sass/partials/feed_manager/_feed-stub.scss */
   .stub-title > a {
     font-size: 16px;
     font-weight: 600;
   }
 }
+/* line 286, ../sass/partials/feed_manager/_feed-stub.scss */
+.stub-title > a:hover {
+  color: #1e8cbe;
+}
 
-/* line 282, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 292, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-meta {
   margin-top: -10px;
   color: #9fa9aa;
@@ -580,10 +592,26 @@
   line-height: 1.5em;
 }
 
-/* line 290, ../sass/partials/feed_manager/_feed-stub.scss */
+/* line 300, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-pub-info,
 .stub-date {
   font-weight: 400;
+}
+
+/* line 306, ../sass/partials/feed_manager/_feed-stub.scss */
+.zone-title {
+  font-weight: 200;
+  font-size: 20px;
+  display: block;
+  line-height: 24px;
+  padding: 12px 0 6px 0;
+}
+
+/* line 313, ../sass/partials/feed_manager/_feed-stub.scss */
+.zone-desc {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 /* ---------------------------------------------- */
@@ -591,20 +619,21 @@
 
 /* ---------------------------------------------- */
 /* line 9, ../sass/partials/feed_manager/_feed-stub-thin.scss */
-.thin .feed-in-use {
+.thin.feed-in-use {
+  padding-top: 0px;
   margin-left: 0;
 }
-/* line 13, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 14, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin.feed-manager-post {
   margin-bottom: 0px;
 }
-/* line 15, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 16, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin.feed-manager-post.ui-sortable-placeholder {
   margin: 5px 0;
   min-height: 40px;
   border: 1px dashed #bfc6c6;
 }
-/* line 22, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 23, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .new-post-stub {
   margin-bottom: 0px;
   padding: 1px 18px 7px 18px;
@@ -613,57 +642,60 @@
   border-radius: 0;
   box-shadow: none;
 }
-/* line 31, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 32, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-img-mod {
   margin: 5px 10px 5px 6px;
   height: 30px;
   width: 30px;
 }
-/* line 37, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 38, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-img {
   width: 30px;
 }
-/* line 41, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 42, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-content-mod {
   margin: -4px 18px 0 0;
   padding: 0;
   border-top: 0;
   line-height: 40px;
 }
-/* line 48, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 49, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-tool-mod {
   float: right;
 }
-/* line 52, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 53, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-title {
   margin: -24px 0px -12px 0px;
 }
-/* line 54, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 55, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-title > a {
-  color: #7f8c8d;
   font-size: 12px;
 }
-/* line 61, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 60, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #7f8c8d;
 }
-/* line 66, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 65, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-meta {
   display: none;
 }
-/* line 70, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 69, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-date {
   color: #d9dcdd;
 }
-/* line 74, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 73, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .thin-placeholder, .thin .results.ui-sortable-placeholder {
   visibility: visible !important;
   height: 40px;
   border: 1px dashed #bfc6c6;
   background-color: transparent;
+}
+/* line 79, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .stub-control {
+  display: none;
 }
 
 /* ---------------------------------------------- */
@@ -701,7 +733,7 @@
 
 /*for extension*/
 /* line 37, ../sass/partials/feed_manager/_feed-header.scss */
-.feed-actions-item, .post-types-title, .feed-publish-trigger {
+.feed-actions-item, .post-types-title {
   padding: 8px 20px;
   line-height: 100%;
   font-weight: 600;
@@ -800,36 +832,6 @@
   font-size: 30px;
 }
 
-/* line 126, ../sass/partials/feed_manager/_feed-header.scss */
-.feed-publish-trigger {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  margin: -6px 0 0 6px;
-  height: 30px;
-  font-weight: 400;
-  vertical-align: baseline;
-  background-color: #21759b;
-  color: white;
-  /** to standardize across browsers **/
-}
-/* line 138, ../sass/partials/feed_manager/_feed-header.scss */
-.feed-publish-trigger:hover {
-  -webkit-transition: color 0.2s ease-in;
-  -moz-transition: color 0.2s ease-in;
-  -o-transition: color 0.2s ease-in;
-  transition: color 0.2s ease-in;
-  background-color: #5998b4;
-}
-
 /* line 12, ../sass/partials/feed_manager/_feed-search.scss */
 .expand-wrap.stuck {
   position: fixed;
@@ -919,7 +921,7 @@
 /* line 26, ../sass/partials/feed_manager/_feed-main.scss */
 .feed-header {
   width: 100%;
-  background-color: #cccccc;
+  background-color: white;
 }
 
 /* line 33, ../sass/partials/feed_manager/_feed-main.scss */
@@ -1005,12 +1007,12 @@
   -moz-transition: color 0.2s ease-in;
   -o-transition: color 0.2s ease-in;
   transition: color 0.2s ease-in;
-  color: white;
+  color: black;
 }
 
 /* line 112, ../sass/partials/feed_manager/_feed-main.scss */
 .is-active {
-  color: white;
+  color: black;
   pointer-events: none;
 }
 
@@ -1056,39 +1058,39 @@
 /* line 14, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category-list {
   margin-top: 12px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
 }
 
 /*li*/
-/* line 18, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 21, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category {
   margin-bottom: 0;
   cursor: pointer;
 }
-/* line 21, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 24, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category:last-child {
   margin-bottom: 10px;
 }
-/* line 23, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 26, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category:last-child .feed-unpinned {
   margin-bottom: 0;
 }
 
-/* line 29, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 32, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category-button {
   position: relative;
   display: block;
   padding: 13px 32px 13px 18px;
   border-bottom: 2px solid #d9dcdd;
-  background-color: #cccccc;
-  color: white;
-  font-weight: 600;
+  background-color: white;
+  color: black;
+  font-weight: 400;
   font-size: 13px;
+  border-bottom: 1px solid #dfdfdf;
+  margin: 0px;
 }
-/* line 39, ../sass/partials/feed_manager/_feed-unpinned.scss */
-.unpinned-category-button:hover {
-  color: white;
-}
-/* line 41, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 47, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category-button:hover > .unpinned-icon {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1096,23 +1098,15 @@
   transition: color 0.2s ease-in;
   color: white;
 }
-/* line 46, ../sass/partials/feed_manager/_feed-unpinned.scss */
-.unpinned-category-button:visited {
-  color: white;
-}
 
 /*a[href="#expandCollapse"]*/
-/* line 52, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 58, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .category-expanded {
-  background-color: #5998b4;
-}
-/* line 55, ../sass/partials/feed_manager/_feed-unpinned.scss */
-.category-expanded .unpinned-icon {
-  color: white;
+  background-color: whitesmoke;
 }
 
 /*span*/
-/* line 60, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 66, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-icon {
   position: absolute;
   top: 2px;
@@ -1120,32 +1114,32 @@
   color: #d9dcdd;
 }
 
-/* line 72, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 78, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .feed-unpinned {
   display: none;
   margin-bottom: 10px;
 }
 
-/* line 80, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 86, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-content-mod {
   pointer-events: none;
 }
-/* line 84, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 90, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .feeds-number-wrap {
   display: none;
 }
-/* line 87, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 93, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .display-selector {
   display: none;
 }
-/* line 90, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 96, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin {
   position: absolute;
   top: 10px;
   right: -1px;
   color: #21759b;
 }
-/* line 96, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 102, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin:hover {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1153,6 +1147,10 @@
   transition: color 0.2s ease-in;
   background-color: transparent;
   color: #d9dcdd;
+}
+/* line 108, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.thin-unpin .stub-control {
+  display: none;
 }
 
 /* ---------------------------------------------- */
@@ -1229,8 +1227,6 @@
   padding: 10px 20px;
   width: inherit;
   border-top: 1px solid #bfc6c6;
-  background-color: #bfc6c6;
-  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
   color: #9fa9aa;
 }
 

@@ -7,10 +7,11 @@
 .feed-in-use {
     margin: 0;
     min-height:20px;
+    padding-top:20px;
     &.pinned {
         margin-bottom:20px;
         padding-bottom:10px;
-        border-bottom:1px dashed $f-gray-50;
+        // border-bottom:1px dashed $f-gray-50;
     }
 }
 
@@ -40,7 +41,15 @@
         @include pie-clearfix;
     }
 
-
+.stub-control{
+    margin-top: 10px;
+    a{
+        color: $wp-link-before;
+    }
+    a:hover {
+        color: $wp-link-hover;
+    }
+}
 
 
 
@@ -59,9 +68,7 @@
     width: 110px;
 }
 
-.stub-control{
-    margin-top: 10px;
-}
+
 
 
 
@@ -271,11 +278,14 @@
 .stub-title {
     margin: 0 0 13px 0;
     > a {
-        color: $wp-blue-75;
+        color: $wp-link-before;
         @media (min-width: 900px) {
             font-size: 16px;
             font-weight: 600;
         }
+    &:hover {
+        color: $wp-link-hover;
+    }
     }
 }
 
@@ -292,6 +302,19 @@
   
 }
 
+
+    .zone-title{
+        font-weight: 200;
+        font-size: 20px;
+        display: block;
+        line-height: 24px;
+        padding:12px 0 6px 0;
+    }
+    .zone-desc{
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 20px;
+    }
 
 
 

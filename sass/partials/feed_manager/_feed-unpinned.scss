@@ -13,6 +13,9 @@
 }
     /*ul*/.unpinned-category-list {
             margin-top: 12px;
+
+            border: 1px solid rgb(229, 229, 229);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
         
         }
             /*li*/.unpinned-category {
@@ -31,29 +34,32 @@
                     display: block;
                     padding: 13px 32px 13px 18px;
                     border-bottom: 2px solid $f-gray-30;
-                    background-color: $black-15;
-                    color: white;
-                    font-weight: 600;
+                    background-color: white;
+                    color: black;
+                    font-weight: 400;
                     font-size: 13px;
 
+                    border-bottom: 1px solid rgb(223, 223, 223);
+                    margin: 0px;
+
                     &:hover {
-                        color: white;
+                        // color: white;
                         > .unpinned-icon {
                             @include trans($trans-time, color, $trans-ease);
                             color: white;
                         }
                     }
                     &:visited {        
-                        color: white;    //Firefox fix
+                        // color: white;    //Firefox fix
                     }
                 }
                 
                 /*a[href="#expandCollapse"]*/
                     .category-expanded {
-                        background-color:$wp-blue-75;
+                        background-color:$wp-button-grey-light;
 
                     & .unpinned-icon {
-                        color: white;
+                        // color: white;
                     }
                 }
 
@@ -98,6 +104,9 @@
             background-color: transparent;
             color: $f-gray-30;
         }
+    }
+    .stub-control{
+        display: none;
     }
 }
 
