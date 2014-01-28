@@ -10,6 +10,7 @@ class ChainsawFeed extends TimberPost {
 	//stored as array
 	var $length = 250;
 	var $ID = false;
+	var $push_to_feed = true;
 	var $show_thumbs = true;
 	var $post_type = 'feeds';
 
