@@ -119,27 +119,3 @@
 
 
 
-// // Publish button
-// // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-
-// .feed-publish-trigger {
-//     @extend .btn;
-//     @extend .feed-actions-item;
-//     @include inline-block;
-//     @include border-radius(3px);
-
-//     margin: -6px 0 0 6px;
-//     height: 30px;
-//     font-weight: 400;
-//     vertical-align: baseline;
-//     background-color: $wp-blue;
-//     color: white; /** to standardize across browsers **/
-//     &:hover {
-//         @include trans($trans-time, color, $trans-ease);
-//         background-color: $wp-blue-75; 
-//     }
-// }
-
-
-
-

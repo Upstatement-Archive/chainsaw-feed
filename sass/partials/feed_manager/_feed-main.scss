@@ -10,22 +10,15 @@
 .feed-main-header {
     position: relative;
     @include pie-clearfix;
-    // background-color: $wp-blue;
     label {
-        // float:right;
-        // // display: inline-block;
+
     }
     &.stuck {
-        /*position: fixed;
-        top: 0px;
-        z-index: 1;
-        */
     }
 }
 
 .feed-header{
     width: 100%;
-    // min-height: 48px;
 
     background-color: white;
 
@@ -49,8 +42,6 @@
         position: fixed;
         top: 0px;
         z-index: 1;
-        background-image: image-url("subtle_surface.png");
-        background-color: $background-fallback;
         padding-top: 48px;
     }
 }
