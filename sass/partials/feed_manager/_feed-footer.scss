@@ -10,38 +10,44 @@
 	right: 0px;
 	left: 0px;
 	padding: 10px 20px;
-	// padding-top: 15px;
 	width: inherit;
-	// height: 50px;
 	border-top:1px solid $f-gray-50;
-	// background-color: $background-fallback;
-	// background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/subtle_surface.png");
 	color: $f-gray-75;
+	margin: 0 auto;
 }
 
 .st-logo {
-	@include border-radius;
-	background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/upstatement_logo_400.png");
-	height:40px;
-	width:150px;
-	background-size: 80%;
+
+	background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/ups-lig.png");
+	height:60px;
+	width:60px;
+	@include border-radius(30px);
+	margin-top: -40px;
 	background-repeat:no-repeat;
 	background-position:center; 
 	display:inline-block;
-	margin-top:-1px;
 	background-color:$f-black-75;
+	border: $wp-bg solid 5px;
 	&:hover{
 		background-color:$wp-blue-75;
 	}
 }
 
+.footer-logo {
+	text-align:center;
+	padding-bottom:10px;
+}
 .feed-manager-timestamp {
 	@include inline-block;
 	font-style:italic;
+	float:right;
 }
 
 .footer-thanks {
 	@include inline-block;
-	float:right;
 	margin: 0;
+	width:100%;
+	p {
+		float:left;
+	}
 }
