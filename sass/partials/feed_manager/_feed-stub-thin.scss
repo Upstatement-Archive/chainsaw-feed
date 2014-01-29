@@ -30,13 +30,11 @@
     }
 
     .stub-img-mod {
-        margin: 10px 10px 5px 6px;
-        height: 30px;
-        width: 30px;
+      display: none;
     }
 
     .stub-img {
-        width: 30px;
+        // width: 30px;
     }
 
     .stub-content-mod {
@@ -62,7 +60,7 @@
     .stub-text {
         @include ellipsis;
         color: $f-gray-100;
-        margin-left: 60px;
+        // margin-left: 60px;
     }
 
     .stub-meta {
