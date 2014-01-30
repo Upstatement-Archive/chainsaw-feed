@@ -1,13 +1,13 @@
-var inkwellFeed;
+var chainsawFeed;
 
 ;(function($){
 
-	function InkwellFeed(){
+	function ChainsawFeed(){
 		this.lastSearch = null;
 		this.bindHandlers();
 	}
 
-	InkwellFeed.prototype.bindHandlers = function(){
+	ChainsawFeed.prototype.bindHandlers = function(){
 		var THIS = this;
 		$(document).on('ready', THIS.initSortable);
 		$(window).on('load', function(){
@@ -20,9 +20,10 @@ var inkwellFeed;
 			$('.feed-post-search').show();
 			$('a[href="#send-to-feeds"]').on('click', THIS.onManuallySendToFeeds);
 			$('#wpfooter').hide();
+			$('.feed-view-toggle').on('click', THIS.toggleStubDisplay);
 			$('.feed-manager').css('visibility','visible');
-			inkwellFeed.updateNumberings();
-			inkwellFeed.updateScope();
+			chainsawFeed.updateNumberings();
+			chainsawFeed.updateScope();
 			$('.post-types-dropdown-options a').on('click', THIS.togglePostTypeOption);
 		});
 		$(document).on('click', '.feed-publish-trigger', function(){
@@ -30,7 +31,30 @@ var inkwellFeed;
 		});
 	};
 
-	InkwellFeed.prototype.togglePostTypeOption = function(e){
+	ChainsawFeed.prototype.toggleStubDisplay = function(e){
+		var $feedZones = $('.feed-main-post-list .feed-in-use');
+		var $stubText = $feedZones.find('.stub-text');
+		$('.feed-view-toggle').toggleClass('is-active');
+		$feedZones.toggleClass('list-view');
+		if ($feedZones.hasClass('list-view')) {
+			$stubText.each(function(){
+				$(this).prepend($(this).find('.stub-date'));
+			});
+		} else {
+			$stubText.each(function(){
+				$(this).find('.stub-pub-info').append($(this).find('.stub-date'));
+			});
+		}
+		chainsawFeed.refreshThin();
+	};
+
+	ChainsawFeed.prototype.refreshThin = function(){
+		$('.feed-block-2').find('.list-view').find('*').addClass("thin thin-list");
+		$('.feed-block-2').find('.list-view').find('*').removeClass('thin-unpin');
+		$('.feed-block-2').find('.feed-in-use').not('.list-view').find('*').removeClass('thin thin-list thin-unpin');
+	};
+
+	ChainsawFeed.prototype.togglePostTypeOption = function(e){
 		console.log('togglePostTypeOption');
 		var $this = $(this);
 		var $checkbox = $this.find('input:checkbox');
@@ -50,7 +74,7 @@ var inkwellFeed;
 		return false;
 	};
 
-	InkwellFeed.prototype.onManuallySendToFeeds = function(e){
+	ChainsawFeed.prototype.onManuallySendToFeeds = function(e){
 		var data = {action:'manually_send_post_to_feeds', pid:acf.post_id};
 		$.post(ajaxurl, data, function(response){
 			alert('Added to your feed!');
@@ -58,7 +82,7 @@ var inkwellFeed;
 		return false;
 	};
 
-	InkwellFeed.prototype.onPostSearchEnter = function(e){
+	ChainsawFeed.prototype.onPostSearchEnter = function(e){
 		if (e.keyCode != 13){
 			return;
 		}
@@ -66,43 +90,43 @@ var inkwellFeed;
 		var $this = $(this);
 		var search = $this.val();
 		if (search.length > 3){
-			inkwellFeed.runPostSearch(search);
+			chainsawFeed.runPostSearch(search);
 		}
 		return false;
 	};
 
-	InkwellFeed.prototype.clearLastSearch = function(){
+	ChainsawFeed.prototype.clearLastSearch = function(){
 		setTimeout(function(){
-			inkwellFeed.lastSearch = null;
+			chainsawFeed.lastSearch = null;
 		}, 1000);
 	};
 
-	InkwellFeed.prototype.onPostSearch = function(e){
+	ChainsawFeed.prototype.onPostSearch = function(e){
 		var $this = $(this);
 		var $form = $this.closest('.feed-post-search');
 		var search = $form.find('input[type="search"]').val();
-		if (search == inkwellFeed.lastSearch) {
-			inkwellFeed.clearLastSearch();
+		if (search == chainsawFeed.lastSearch) {
+			chainsawFeed.clearLastSearch();
 			return false;
 		}
-		inkwellFeed.lastSearch = search;
+		chainsawFeed.lastSearch = search;
 		if (search.length < 3){
 			alert('Your search must be at least 3 characters.');
-			inkwellFeed.clearLastSearch();
+			chainsawFeed.clearLastSearch();
 			return false;
 		}
-		inkwellFeed.clearLastSearch();
-		inkwellFeed.runPostSearch(search);
+		chainsawFeed.clearLastSearch();
+		chainsawFeed.runPostSearch(search);
 		return false;
 	};
 
-	InkwellFeed.prototype.runPostSearch = function(term){
+	ChainsawFeed.prototype.runPostSearch = function(term){
 		var data = {query:term, action:'chainsaw_query_posts', method:'post', format:'html'};
-		$.post(ajaxurl, data, inkwellFeed.onPostResults);
+		$.post(ajaxurl, data, chainsawFeed.onPostResults);
 		return false;
 	};
 
-	InkwellFeed.prototype.onPostResults = function(res, resp){
+	ChainsawFeed.prototype.onPostResults = function(res, resp){
 		//var json = JSON.parse(res);
 		$results = $('.feed-in-use.results');
 		$results.empty();
@@ -131,17 +155,11 @@ var inkwellFeed;
 		});
 
 		// Make sure .thin is where it should be
-		(function refreshThin(){
-			$('.feed-block-1').find('.unpinned').find('*').addClass('thin thin-unpin');
-			$('.feed-block-2').find('.list-view').find('*').addClass("thin thin-list");
-			$('.feed-block-1').find('.unpinned').find('*').removeClass('thin-list');
-			$('.feed-block-2').find('.list-view').find('*').removeClass('thin-unpin');
-			$('.feed-block-2').find('.feed-in-use').not('.list-view').find('*').removeClass('thin thin-list thin-unpin');
-		})();
+		chainsawFeed.refreshThin();
 
 	};
 
-	InkwellFeed.prototype.onFeedItemUnpin = function(){
+	ChainsawFeed.prototype.onFeedItemUnpin = function(){
 		var $this = $(this);
 		var $li = $this.closest('li');
 		$li.closest('.feed-manager').find('ul.posts').prepend($li);
@@ -149,7 +167,7 @@ var inkwellFeed;
 		return false;
 	};
 
-	InkwellFeed.prototype.updateScope = function() {
+	ChainsawFeed.prototype.updateScope = function() {
 		$('.feed-main-post-list .feed-manager-post').each(function(i) {
 			var $this = $(this);
 			var $feed = $this.closest('.feed-in-use');
@@ -157,13 +175,13 @@ var inkwellFeed;
 		});
 	};
 
-	InkwellFeed.prototype.updateNumberings = function(){
+	ChainsawFeed.prototype.updateNumberings = function(){
 		$('.feed-main-post-list .new-post-stub').each(function(i) {
 			$(this).find('.feeds-number').val(i+1);
 		});
 	};
 
-	InkwellFeed.prototype.onFeedItemPin = function(){
+	ChainsawFeed.prototype.onFeedItemPin = function(){
 		var $this = $(this),
 			$li = $this.closest('li');
 
@@ -179,13 +197,7 @@ var inkwellFeed;
 		$('.pinned').find('.pin').replaceWith('<button class="tool unpin icon" href="#unpin">&#10060;</button>');
 
 		// Make sure .thin is where it should be
-		(function refreshThin(){
-			$('.feed-block-1').find('.unpinned').find('*').addClass('thin thin-unpin');
-			$('.feed-block-2').find('.list-view').find('*').addClass("thin thin-list");
-			$('.feed-block-1').find('.unpinned').find('*').removeClass('thin-list');
-			$('.feed-block-2').find('.list-view').find('*').removeClass('thin-unpin');
-			$('.feed-block-2').find('.feed-in-use').not('.list-view').find('*').removeClass('thin thin-list thin-unpin');
-		})();
+		chainsawFeed.refreshThin();
 
 		// Append stub date to pinned stories
 		$('.pinned .stub-text').each(function(){
@@ -198,8 +210,8 @@ var inkwellFeed;
 		});
 
 		// Re-index the list
-		inkwellFeed.updateNumberings();
-		inkwellFeed.updateScope();
+		chainsawFeed.updateNumberings();
+		chainsawFeed.updateScope();
 		//THIS.update();
 
 		// Hide recently removed block when empty and set category top
@@ -209,7 +221,7 @@ var inkwellFeed;
 		return false;
 	};
 
-	InkwellFeed.prototype.onFeedItemRemove = function(){
+	ChainsawFeed.prototype.onFeedItemRemove = function(){
 		alert('onFeedItemRemove');
 		var $this = $(this);
 		var $li = $this.closest('li');
@@ -219,7 +231,7 @@ var inkwellFeed;
 		return false;
 	};
 
-	InkwellFeed.prototype.onSortableUpdate = function(event, ui){
+	ChainsawFeed.prototype.onSortableUpdate = function(event, ui){
 		var $li = $(ui.item);
 		var $ol = $li.find('.feed-in-use');
 		var scope = $ol.data('scope');
@@ -230,9 +242,8 @@ var inkwellFeed;
 		/* remove duplicates */
 		var pid = $li.data('pid');
 		$('li.feed-manager-post[data-pid="'+pid+'"]').not($li).remove();
-		console.log('updateNumberings');
-		inkwellFeed.updateNumberings();
-		inkwellFeed.updateScope();
+		chainsawFeed.updateNumberings();
+		chainsawFeed.updateScope();
 		$('.feed-in-use').each(function(){
 			var $this = $(this);
 			var stubs = $this.find('.feed-manager-post');
@@ -246,7 +257,7 @@ var inkwellFeed;
 
 
 
-	InkwellFeed.prototype.initSortable = function(){
+	ChainsawFeed.prototype.initSortable = function(){
 		var THIS = this;
 
 		$('.feed-block-1 .feed-in-use').sortable({
@@ -255,7 +266,7 @@ var inkwellFeed;
 			scroll: false,
 			revert: 200,
 			connectWith: '.feed-block-2 .feed-in-use',
-			update:inkwellFeed.onSortableUpdate
+			update:chainsawFeed.onSortableUpdate
 		});
 
 		$('.feed-block-2 .feed-in-use').sortable({
@@ -264,7 +275,7 @@ var inkwellFeed;
 			scroll: false,
 			revert: 200,
 			connectWith: '.feed-block-2 .feed-in-use',
-			update:inkwellFeed.onSortableUpdate
+			update:chainsawFeed.onSortableUpdate
 		});
 
 		$('.feeds-number').on('keypress', function(e){
@@ -281,20 +292,20 @@ var inkwellFeed;
 			var $before = $container.find('.feed-manager-post:eq('+pos+')');
 			$before.after($stub);
 			$('.feed-block-2 .feed-in-use').sortable('refresh');
-			inkwellFeed.updateNumberings();
-			inkwellFeed.updateScope();
+			chainsawFeed.updateNumberings();
+			chainsawFeed.updateScope();
 			$this.blur();
 			return false;
 		});
 
 	};
 
-	InkwellFeed.prototype.updateSelectMenu = function(){
+	ChainsawFeed.prototype.updateSelectMenu = function(){
 		var $select = $(this);
 		var value = $select.data('selected');
 		$select.val(value);
 	};
 
-	inkwellFeed = new InkwellFeed();
+	chainsawFeed = new ChainsawFeed();
 
 })(jQuery);

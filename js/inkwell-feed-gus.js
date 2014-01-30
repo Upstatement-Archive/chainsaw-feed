@@ -1,6 +1,5 @@
 ;(function($){
 
-
 	$(".display-selector-dropdown").selectBoxIt({
 		showEffect: "slideDown",
 	    hideEffect: "slideUp",
@@ -9,19 +8,9 @@
 	});
 
 
-
-
 	// Utility functions
 	// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
-	// Make sure .thin is where it should be
-	function refreshThin(){
-		$('.feed-block-1').find('.unpinned').find('*').addClass('thin thin-unpin');
-		$('.feed-block-2').find('.list-view').find('*').addClass("thin thin-list");
-		$('.feed-block-1').find('.unpinned').find('*').removeClass('thin-list');
-		$('.feed-block-2').find('.list-view').find('*').removeClass('thin-unpin');
-		$('.feed-block-2').find('.feed-in-use').not('.list-view').find('*').removeClass('thin thin-list thin-unpin');
-	};
 
 	// Replace the unpin button with a pin button
 	function pinButton(){
@@ -71,8 +60,6 @@
 	});
 
 
-
-
 	// Functions to set the page
 	// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
@@ -81,10 +68,7 @@
 		updatedIcon = recentUpdated.children('.unpinned-icon');
 
 		pinButton();
-		refreshThin();
 		$('.unpinned .stub-text').each(prependStubDate);
-		$('#wpfooter').hide();
-		$('#adminmenuback').css('z-index','0');
 
 		// Bind the enter key to the search button
 		$(".search-inputs").keyup(function(event){
@@ -129,7 +113,7 @@
 	$('.display-selector').hover(
 		function(){
 			$(this).find('.display-selector-dropdown-block').slideDown(200);
-		}, 
+		},
 		function () {
 			$(this).find('.display-selector-dropdown-block').slideUp(200);
 		}
@@ -155,41 +139,10 @@
 
 	// Toggle between list and expanded views
 	// Due to toggle, this will only work if there are two buttons and two views
-	$('.feed-view-toggle').on('click', function() {
-		var $feedZone = $('.feed-in-use');
-		var $stubText = $('.stub-text');
-
-		$('.feed-view-toggle').toggleClass('is-active');
-		$feedZone.toggleClass('list-view');
-		if ($feedZone.hasClass('list-view')) {
-			$stubText.each(function(){
-				$(this).prepend($(this).find('.stub-date'));
-			});
-		} else {
-			$stubText.each(function(){
-				$(this).find('.stub-pub-info').append($(this).find('.stub-date'));
-			});
-		}
-
-		refreshThin();
-
-	});
 
 	// Refresh functionality once a user has dragged an item
 	$('.feed-in-use').on("sortstop", function( event, ui ) {
-		var instructions = $('.feed-main-instructions'),
 		pinned = $('.pinned');
-
-		// Hide instructions
-		instructions.css('height','0');
-		$('.feed-main-sticky-wrapper').css('height','40');
-
-		setTimeout(function() {
-			instructions.hide();
-		}, 200);
-
-		// Move the fixed feed main up
-		$('.feed-main-post-list').css('top','165px');
 
 		// Prepend stub date to unpinned stories
 		$('.unpinned .stub-text').each(prependStubDate);
@@ -205,12 +158,10 @@
 		// Hide recently removed block when empty and set category top
 		if ($('.removed-stub').length === 0) {
 			$('.recently-removed-wrap').slideUp(200);
-		} else {
 		}
 
 		// Replace pin button with unpin
 		pinned.find('.pin').replaceWith('<button class="tool unpin icon" href="#unpin">&#10060;</button>');
-		refreshThin();
 	});
 
 	// Functionality for the recently removed block
@@ -220,7 +171,6 @@
 		removedPost.removeClass('pinned');
 		removedPost.prependTo('.recently-removed');
 		pinButton();
-		refreshThin();
 		$('.recently-removed-wrap').show();
 		$('.removed-stub .stub-text').each(prependStubDate);
 	});

@@ -619,11 +619,11 @@
   margin-left: 0;
 }
 /* line 14, ../sass/partials/feed_manager/_feed-stub-thin.scss */
-.thin.feed-manager-post {
+.thin .feed-manager-post {
   margin-bottom: 0px;
 }
 /* line 16, ../sass/partials/feed_manager/_feed-stub-thin.scss */
-.thin.feed-manager-post.ui-sortable-placeholder {
+.thin .feed-manager-post.ui-sortable-placeholder {
   margin: 5px 0;
   min-height: 40px;
   border: 1px dashed #bfc6c6;
