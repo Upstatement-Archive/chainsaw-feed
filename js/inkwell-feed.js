@@ -40,22 +40,24 @@ var chainsawFeed;
 			$stubText.each(function(){
 				$(this).prepend($(this).find('.stub-date'));
 			});
+			$feedZones.addClass('thin thin-list');
 		} else {
 			$stubText.each(function(){
 				$(this).find('.stub-pub-info').append($(this).find('.stub-date'));
 			});
+			$feedZones.removeClass('thin thin-list');
 		}
 		chainsawFeed.refreshThin();
 	};
 
 	ChainsawFeed.prototype.refreshThin = function(){
+
 		$('.feed-block-2').find('.list-view').find('*').addClass("thin thin-list");
 		$('.feed-block-2').find('.list-view').find('*').removeClass('thin-unpin');
 		$('.feed-block-2').find('.feed-in-use').not('.list-view').find('*').removeClass('thin thin-list thin-unpin');
 	};
 
 	ChainsawFeed.prototype.togglePostTypeOption = function(e){
-		console.log('togglePostTypeOption');
 		var $this = $(this);
 		var $checkbox = $this.find('input:checkbox');
 		var active = $checkbox.is(':checked');

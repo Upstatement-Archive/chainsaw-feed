@@ -614,21 +614,25 @@
 
 /* ---------------------------------------------- */
 /* line 9, ../sass/partials/feed_manager/_feed-stub-thin.scss */
-.thin.feed-in-use {
+.thin .feed-in-use {
   padding-top: 0px;
   margin-left: 0;
 }
 /* line 14, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+.thin .feeds-number-wrap {
+  display: none;
+}
+/* line 18, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .feed-manager-post {
   margin-bottom: 0px;
 }
-/* line 16, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 20, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .feed-manager-post.ui-sortable-placeholder {
   margin: 5px 0;
   min-height: 40px;
   border: 1px dashed #bfc6c6;
 }
-/* line 23, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 27, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .new-post-stub {
   margin-bottom: 0px;
   padding: 1px 18px 7px 18px;
@@ -637,54 +641,54 @@
   border-radius: 0;
   box-shadow: none;
 }
-/* line 32, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 36, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-img-mod {
   display: none;
 }
-/* line 40, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 44, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-content-mod {
   margin: -4px 18px 0 0;
   padding: 0;
   border-top: 0;
   line-height: 40px;
 }
-/* line 47, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 51, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-tool-mod {
   float: right;
 }
-/* line 51, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 55, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-title {
   margin: -24px 0px -12px 0px;
 }
-/* line 53, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 57, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-title > a {
   font-size: 12px;
   font-weight: 400;
   color: black;
 }
-/* line 60, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 64, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #7f8c8d;
 }
-/* line 66, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 70, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-meta {
   display: none;
 }
-/* line 70, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 74, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-date {
   color: #d9dcdd;
 }
-/* line 74, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 78, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .thin-placeholder, .thin .results.ui-sortable-placeholder {
   visibility: visible !important;
   height: 40px;
   border: 1px dashed #bfc6c6;
   background-color: transparent;
 }
-/* line 80, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 84, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-control {
   display: none;
 }
