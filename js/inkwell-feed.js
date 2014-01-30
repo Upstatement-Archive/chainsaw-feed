@@ -26,7 +26,7 @@ var inkwellFeed;
 			$('.post-types-dropdown-options a').on('click', THIS.togglePostTypeOption);
 		});
 		$(document).on('click', '.feed-publish-trigger', function(){
-			$('#ink-feed-form').submit();
+			$('#chainsaw-feed-form').submit();
 		});
 	};
 
@@ -221,15 +221,16 @@ var inkwellFeed;
 
 	InkwellFeed.prototype.onSortableUpdate = function(event, ui){
 		var $li = $(ui.item);
-		var scope = $li.closest('ul').data('scope');
+		var $ol = $li.find('.feed-in-use');
+		var scope = $ol.data('scope');
 		$li.find('.post-scope').val(scope);
-		var $ul = $li.closest('ul');
-		if ($ul.hasClass('saveable')){
+		if ($ol.hasClass('saveable')){
 			$li.find('.array-saver').attr('name', 'pids[]');
 		}
 		/* remove duplicates */
 		var pid = $li.data('pid');
 		$('li.feed-manager-post[data-pid="'+pid+'"]').not($li).remove();
+		console.log('updateNumberings');
 		inkwellFeed.updateNumberings();
 		inkwellFeed.updateScope();
 		$('.feed-in-use').each(function(){

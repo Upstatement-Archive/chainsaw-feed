@@ -5534,3 +5534,8 @@ a.book-buy-btn {
     page-break-after: avoid;
   }
 }
+/* This governs JS based CSS */
+/* line 2, ../sass/project/_events.scss */
+.hidden-submit {
+  display: none;
+}

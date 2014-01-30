@@ -9,9 +9,8 @@
             <h2>Edit Feed: {{feed.title}}</h2>
             <!--  <label class="feed-main-instructions">Drag to add articles and set hierarchy.</label> -->
              <p>Drag to add articles and set hierarchy.<span class="feed-actions">
-                <input type="button" class="button button-primary button-large" value="Publish" />
+                <input type="button" class="button button-primary button-large feed-publish-trigger" value="Publish" />
             </span></p>
-            
         </header>
         <!-- end header -->
 
@@ -82,42 +81,27 @@
                             <button class="feed-view-toggle">&#9776;</button>
                             <button class="feed-view-toggle is-active">&#57349;</button>
                         </div>
-                       
                     </header>
                     </div>
 
 
                     <!-- selected feed post list -->
-                    <form class="feed-main-post-list-wrap feed-main-post-list" id="ink-feed-form" method="post">
+                    <form class="feed-main-post-list-wrap feed-main-post-list" id="chainsaw-feed-form" method="post">
                         <input type="hidden" name="pid" value="{{feeds[0].ID}}" class="pid" />
-                        <section class="feed-query">
-                            <!-- <div class="post-types">
-                                <h3 class="post-types-title">Post Types
-                                    <span class="post-types-title-icon">&#59228;</span>
-                                </h3>
-                                <ul class="post-types-dropdown-block">
-                                    {% for post_type in post_types %}
-                                    <li class="post-types-dropdown-options">
-                                        <a href="{{post_type.name}}" class="post-types-dropdown-options-label">{{post_type.labels.name}}
-                                            <span class="post-types-dropdown-options-icon icon" style="{{post_type.in_query ? '' : 'display:none'}}">&#10003;</span>
-                                            <input type="checkbox" name="query_post_type[]" value="{{post_type.name}}" {{post_type.in_query ? 'checked'}} />
-                                        </a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div> -->
-                        </section>
-                       
+
+                        {% include "feed-post-types-dropdown.twig" %}
+
                         <input type="hidden" name="ink_page_name" value="feed_manager" />
-                        {% if zones.pinned.title %}
+                        {% if zones.pinned.title or zones.pinned.desc %}
                             <div class="feed-manager-zone">
-                                <h3 class= "zone-title">{{zones.pinned.title}}</h3>
+                                {% if zones.pinned.title %}
+                                    <h3 class= "zone-title">{{zones.pinned.title}}</h3>
+                                {% endif %}
+                                {% if zones.pinned.desc %}
+                                    <h6 class= "zone-desc">{{zones.pinned.desc}}</h6>
+                                {% endif %}
+                            </div>
                         {% endif %}
-                        {% if zones.pinned.desc %}
-                                <h6 class= "zone-desc">{{zones.pinned.desc}}</h6>
-                              </div>
-                        {% endif %}
-                        </div>
                         <ol class="feed-in-use pinned saveable" data-scope="pinned">
                             {% for post in pinned %}
                             <li class="feed-manager-post" data-pid="{{post.ID}}">

@@ -62,15 +62,6 @@
 		$this.find('.stub-pub-info').append($this.find('.stub-date'));
 	};
 
-	// Resize the footer
-	function footerWidth(){
-		$('.feed-footer').width($('.feed-manager').outerWidth() + 1 );
-	};
-
-	// Resize the main feed
-	function feedWidth(){
-		$('.feed-main-header').width($('.feed-manager-header').outerWidth() - 338);
-	};
 
 	// Hides search results when user clicks outside of results-mod
 	$(document).on('click', function hideResults(e) {
@@ -106,7 +97,6 @@
 		updatedIcon = recentUpdated.children('.unpinned-icon');
 
 		pinButton();
-		footerWidth();
 		refreshThin();
 		$('.unpinned .stub-text').each(prependStubDate);
 		$('#wpfooter').hide();
@@ -250,30 +240,5 @@
 		$('.recently-removed-wrap').show();
 		$('.removed-stub .stub-text').each(prependStubDate);
 	});
-
-	// Resize the footer on window resize
-	$(window).resize(footerWidth);
-
-	// Resize the main feed on window resize
-	$(window).resize(feedWidth);
-
-	// Resize feed-main header on menu collapse/expand
-	$('#collapse-menu').on('click', function (){
-		setTimeout(function() {
-			feedWidth();
-		}, 5);
-	});
-
-	// Resize footer when admin menu is collapsed/expanded
-	// not sure why it needs a timeout, but doesn't work without -gw
-	$("#collapse-menu").on('click', function() {
-		setTimeout(function() {
-			footerWidth();
-		}, 0);
-	});
-
-
-
-
 
 })(jQuery);
