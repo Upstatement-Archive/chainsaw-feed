@@ -1,22 +1,6 @@
 ;(function($){
 
 
-
-	// jQuery plugin functions
-	// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-	/*
-    $('.mask-wrapper').waypoint('sticky', {
-        offset: 48, // Apply "stuck" when element 48px from top
-        wrapper: '<div class="feed-main-sticky-wrapper" />',
-        handler: function(dir) {
-            $('.feed-main-header').width($('.feed-manager-header').outerWidth() - 338);
-            if ($('.feed-main-instructions').outerHeight() === 0) {
-                $('.feed-main-sticky-wrapper').css('height', '40px');
-            }
-        }
-    });
-*/
-
 	$(".display-selector-dropdown").selectBoxIt({
 		showEffect: "slideDown",
 	    hideEffect: "slideUp",
@@ -43,24 +27,24 @@
 	function pinButton(){
 		var pinButton = $('<button></button>', { class: 'tool pin icon', text: '\u2795', href: '#pin'});
 		$('.unpinned').find('.unpin').replaceWith(pinButton);
-	};
+	}
 
 	// Replace the pin button with an unpin button
 	function unpinButton(){
 		var unpinButton = $('<button></button>', { class: 'tool unpin icon', text: '\u274C', href: '#unpin'});
 		$('.pinned').find('.pin').replaceWith(unpinButton);
-	};
+	}
 
 	// Prepend the stub date to any unpinned content
 	function prependStubDate(){
 		$(this).find('.stub-date').prependTo(this);
-	};
+	}
 
 	// Append the stub date to any pinned content
 	function appendStubDate(){
 		var $this = $(this);
 		$this.find('.stub-pub-info').append($this.find('.stub-date'));
-	};
+	}
 
 
 	// Hides search results when user clicks outside of results-mod
@@ -125,7 +109,7 @@
 	$('.post-types').hover(
 		function(){
 			$('.post-types-dropdown-block').slideDown(200);
-		}, 
+		},
 		function () {
 			$('.post-types-dropdown-block').slideUp(200);
 		}
@@ -172,17 +156,17 @@
 	// Toggle between list and expanded views
 	// Due to toggle, this will only work if there are two buttons and two views
 	$('.feed-view-toggle').on('click', function() {
-		var pinned = $('.feed-in-use');
-		var stubtext = $('.stub-text');
+		var $feedZone = $('.feed-in-use');
+		var $stubText = $('.stub-text');
 
 		$('.feed-view-toggle').toggleClass('is-active');
-		pinned.toggleClass('list-view');
-		if (pinned.hasClass('list-view')) {
-			stubtext.each(function(){
+		$feedZone.toggleClass('list-view');
+		if ($feedZone.hasClass('list-view')) {
+			$stubText.each(function(){
 				$(this).prepend($(this).find('.stub-date'));
 			});
 		} else {
-			$('.pinned .stub-text').each(function(){
+			$stubText.each(function(){
 				$(this).find('.stub-pub-info').append($(this).find('.stub-date'));
 			});
 		}

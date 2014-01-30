@@ -24,8 +24,8 @@
     cursor: move;
     &.ui-sortable-placeholder {
         visibility: visible !important;
-        min-height: 150px;
-        border: 3px dashed $f-gray-50;
+        border: 2px dashed rgba($f-gray-50, .66);
+        @include border-radius(5px);
         background-color: transparent;
     }
     &:last-child {
