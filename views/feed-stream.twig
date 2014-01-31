@@ -23,9 +23,9 @@
             <div class="feed-block-1">
                 <div class="expand-wrap">
                     <div class="feed-post-search">
-                        <div class="search-inputs">
-                            <input type="search" results="5" placeholder="Search" />
-                            <input type="submit" value="&#128269;" id="search-button" class="icon" />
+                         <div class="search-box">
+                            <input type="search" results="5" placeholder="Search all article titles" />
+                            <input type="submit" value="Search Titles" id="search-button" class="button" />
                         </div>
                     </div>
                     <div class="unpinned results-mod">
@@ -47,7 +47,7 @@
                         <li class="unpinned-category"><a href="#expandCollapse" class="unpinned-category-button">{{list.name}}<button class="unpinned-icon">&#59228;</button></a>
                             <div class="feed-unpinned unpinned">
                                 <ol class="feed-in-use saveable posts" data-scope="posts">
-                                    {% for post in list.posts %} {% include "feed-post-stub.twig" %} {% endfor %}
+                                    {% for post in list.posts %}{% include "feed-post-stub.twig" %}  {% endfor %}
                                 </ol>
                             </div>
                         </li>

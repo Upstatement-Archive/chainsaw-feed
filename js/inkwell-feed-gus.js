@@ -7,6 +7,9 @@
 	    hideEffectSpeed: 200
 	});
 
+// Post number count
+$("ol").each(function(){$(this).parent().siblings(".unpinned-category-button").append("<b>("+$(this).children('li').length+")</b>");});
+	
 
 	// Utility functions
 	// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
