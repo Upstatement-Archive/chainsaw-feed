@@ -647,10 +647,9 @@
 }
 /* line 44, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-content-mod {
-  margin: -4px 18px 0 0;
   padding: 0;
   border-top: 0;
-  line-height: 40px;
+  line-height: 14px;
 }
 /* line 51, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-tool-mod {
@@ -658,7 +657,7 @@
 }
 /* line 55, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-title {
-  margin: -24px 0px -12px 0px;
+  margin: 0;
 }
 /* line 57, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-title > a {
@@ -668,27 +667,25 @@
 }
 /* line 64, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  padding-top: 10px;
   color: #7f8c8d;
 }
-/* line 70, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 71, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-meta {
   display: none;
 }
-/* line 74, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 75, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-date {
   color: #d9dcdd;
 }
-/* line 78, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 79, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .thin-placeholder, .thin .results.ui-sortable-placeholder {
   visibility: visible !important;
   height: 40px;
   border: 1px dashed #bfc6c6;
   background-color: transparent;
 }
-/* line 84, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 85, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-control {
   display: none;
 }
@@ -839,52 +836,23 @@
 }
 /* line 25, ../sass/partials/feed_manager/_feed-search.scss */
 .feed-post-search input[type='search'] {
-  margin: 7px 4px -2px 0px;
-  padding-left: 2%;
+  width: 60%;
+  padding-right: 3%;
   height: 28px;
-  width: 100%;
-  height: 36px;
-  padding-right: 40px;
-}
-/* line 34, ../sass/partials/feed_manager/_feed-search.scss */
-.feed-post-search input[type='submit'] {
-  border: 0px none;
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  padding-bottom: 25px;
-  background-color: transparent;
-  color: #21759b;
-  cursor: pointer;
-  margin-left: -60px;
-}
-/* line 44, ../sass/partials/feed_manager/_feed-search.scss */
-.feed-post-search input[type='submit']:hover {
-  -webkit-transition: color 0.2s ease-in;
-  -moz-transition: color 0.2s ease-in;
-  -o-transition: color 0.2s ease-in;
-  transition: color 0.2s ease-in;
-  color: #d9dcdd;
 }
 
-/* line 51, ../sass/partials/feed_manager/_feed-search.scss */
-.search-inputs {
-  margin-top: -7px;
-  width: 100%;
-}
-
-/* line 62, ../sass/partials/feed_manager/_feed-search.scss */
+/* line 37, ../sass/partials/feed_manager/_feed-search.scss */
 .results-mod {
   display: none;
 }
 
-/* line 66, ../sass/partials/feed_manager/_feed-search.scss */
+/* line 41, ../sass/partials/feed_manager/_feed-search.scss */
 .results-mod-active {
   overflow-y: auto;
   max-height: 225px;
 }
 
-/* line 71, ../sass/partials/feed_manager/_feed-search.scss */
+/* line 46, ../sass/partials/feed_manager/_feed-search.scss */
 .results {
   margin: 0;
 }
@@ -1083,15 +1051,21 @@
   transition: color 0.2s ease-in;
   color: #1e8cbe;
 }
+/* line 56, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-button > b {
+  padding-left: 10px;
+  color: #aaaaaa;
+  font-weight: 700;
+}
 
 /*a[href="#expandCollapse"]*/
-/* line 59, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 64, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .category-expanded {
   background-color: whitesmoke;
 }
 
 /*span*/
-/* line 67, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 72, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-icon {
   position: absolute;
   top: 2px;
@@ -1099,29 +1073,29 @@
   color: #d9dcdd;
 }
 
-/* line 79, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 84, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .feed-unpinned {
   display: none;
   margin-bottom: 10px;
 }
 
-/* line 87, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 92, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-content-mod {
   pointer-events: none;
   margin: -4px 31px 0px 0px;
 }
-/* line 91, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 96, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .feeds-number-wrap {
   display: none;
 }
-/* line 94, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 99, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .display-selector {
   display: none;
 }
-/* line 97, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 102, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin {
   position: absolute;
-  top: 13px;
+  top: 9px;
   color: #5a5758;
   height: 24px;
   width: 24px;
@@ -1135,7 +1109,7 @@
   right: -6px;
   padding-left: 1px;
 }
-/* line 108, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 113, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin:hover {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1144,7 +1118,7 @@
   background-color: transparent;
   color: #1e8cbe;
 }
-/* line 114, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 119, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-control {
   display: none;
 }
@@ -1319,10 +1293,15 @@
   clear: both;
 }
 
+/* line 55, ../sass/inkwell-admin.scss */
+#adminmenuback {
+  z-index: 0;
+}
+
 /* ============================================= */
 /*	Type styles					   			     */
 /* ============================================= */
-/* line 59, ../sass/inkwell-admin.scss */
+/* line 64, ../sass/inkwell-admin.scss */
 .admin-h1 {
   font-weight: 200;
   font-size: 42px;
@@ -1330,14 +1309,14 @@
   line-height: 110%;
 }
 
-/* line 66, ../sass/inkwell-admin.scss */
+/* line 71, ../sass/inkwell-admin.scss */
 .txt-admin {
   font-family: Helvetica, Arial, Verdana, sans;
   font-style: normal;
   font-weight: 200;
   font-size: 17px / 160%;
 }
-/* line 72, ../sass/inkwell-admin.scss */
+/* line 77, ../sass/inkwell-admin.scss */
 .txt-admin > p {
   margin-bottom: 16px;
 }
@@ -1345,7 +1324,7 @@
 /* ============================================= */
 /*  Not sure--Jared please define                 */
 /* ============================================= */
-/* line 84, ../sass/inkwell-admin.scss */
+/* line 89, ../sass/inkwell-admin.scss */
 .ios-slider {
   position: relative;
   top: 0;
@@ -1355,37 +1334,37 @@
   width: 100%;
   height: 100%;
 }
-/* line 92, ../sass/inkwell-admin.scss */
+/* line 97, ../sass/inkwell-admin.scss */
 .ios-slider .slider {
   width: 100%;
   height: 100%;
 }
-/* line 95, ../sass/inkwell-admin.scss */
+/* line 100, ../sass/inkwell-admin.scss */
 .ios-slider .slider .slide {
   float: left;
   width: 100%;
 }
 
-/* line 102, ../sass/inkwell-admin.scss */
+/* line 107, ../sass/inkwell-admin.scss */
 .ribbon {
   min-height: 100px;
 }
 
-/* line 106, ../sass/inkwell-admin.scss */
+/* line 111, ../sass/inkwell-admin.scss */
 .ribbon-hero {
   min-height: 200px;
 }
-/* line 108, ../sass/inkwell-admin.scss */
+/* line 113, ../sass/inkwell-admin.scss */
 .ribbon-hero .ios-slider {
   min-height: 200px;
 }
 
-/* line 113, ../sass/inkwell-admin.scss */
+/* line 118, ../sass/inkwell-admin.scss */
 .skin-item-texture .skin-preview-radio {
   display: none;
 }
 
-/* line 117, ../sass/inkwell-admin.scss */
+/* line 122, ../sass/inkwell-admin.scss */
 .skin-item {
   *zoom: 1;
   margin-bottom: 10px;
@@ -1398,20 +1377,20 @@
   display: table;
   clear: both;
 }
-/* line 122, ../sass/inkwell-admin.scss */
+/* line 127, ../sass/inkwell-admin.scss */
 .skin-item h6 {
   margin: 0px;
   margin-bottom: 2px;
   font-weight: normal;
   font-size: 1em;
 }
-/* line 128, ../sass/inkwell-admin.scss */
+/* line 133, ../sass/inkwell-admin.scss */
 .skin-item .skin-preview-radio {
   float: left;
   width: 10%;
 }
 
-/* line 139, ../sass/inkwell-admin.scss */
+/* line 144, ../sass/inkwell-admin.scss */
 .skin-item-radio {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1420,26 +1399,26 @@
   border: 1px solid #ccc;
   background-color: #DDD;
 }
-/* line 144, ../sass/inkwell-admin.scss */
+/* line 149, ../sass/inkwell-admin.scss */
 .skin-item-radio.skin-item-texture {
   float: left;
   margin-right: 2%;
   width: 48%;
 }
-/* line 149, ../sass/inkwell-admin.scss */
+/* line 154, ../sass/inkwell-admin.scss */
 .skin-item-radio.selected {
   border-color: #21759b;
   background-color: white;
 }
 
-/* line 155, ../sass/inkwell-admin.scss */
+/* line 160, ../sass/inkwell-admin.scss */
 .radio-tile.theme-preview.selected, #customize-control-prologue_options_topper .picker-tile.selected, #customize-control-prologue_book_options_topper .picker-tile.selected {
   -webkit-box-shadow: #21759b 0 0 0 5px;
   -moz-box-shadow: #21759b 0 0 0 5px;
   box-shadow: #21759b 0 0 0 5px;
 }
 
-/* line 159, ../sass/inkwell-admin.scss */
+/* line 164, ../sass/inkwell-admin.scss */
 .radio-tile {
   *zoom: 1;
 }
@@ -1449,17 +1428,17 @@
   display: table;
   clear: both;
 }
-/* line 161, ../sass/inkwell-admin.scss */
+/* line 166, ../sass/inkwell-admin.scss */
 .radio-tile input[type="radio"] {
   display: none;
 }
-/* line 167, ../sass/inkwell-admin.scss */
+/* line 172, ../sass/inkwell-admin.scss */
 .radio-tile.selected {
   border-color: #21759b;
   background-color: white;
 }
 
-/* line 173, ../sass/inkwell-admin.scss */
+/* line 178, ../sass/inkwell-admin.scss */
 .picker-tile {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1468,45 +1447,45 @@
   border: 1px solid #ccc;
   opacity: .6;
 }
-/* line 178, ../sass/inkwell-admin.scss */
+/* line 183, ../sass/inkwell-admin.scss */
 .two-up .picker-tile {
   float: left;
   margin-right: 2%;
   margin-bottom: 2%;
   width: 48%;
 }
-/* line 184, ../sass/inkwell-admin.scss */
+/* line 189, ../sass/inkwell-admin.scss */
 .four-up .picker-tile {
   float: left;
   margin-right: 1%;
   margin-bottom: 1%;
   width: 24%;
 }
-/* line 191, ../sass/inkwell-admin.scss */
+/* line 196, ../sass/inkwell-admin.scss */
 #customize-control-prologue_options_topper .picker-tile, #customize-control-prologue_book_options_topper .picker-tile {
   float: none;
   margin-right: 0;
   width: 100%;
 }
-/* line 196, ../sass/inkwell-admin.scss */
+/* line 201, ../sass/inkwell-admin.scss */
 .picker-tile input[type="radio"] {
   display: none;
 }
-/* line 203, ../sass/inkwell-admin.scss */
+/* line 208, ../sass/inkwell-admin.scss */
 .picker-tile:hover {
   opacity: 1;
 }
-/* line 206, ../sass/inkwell-admin.scss */
+/* line 211, ../sass/inkwell-admin.scss */
 .picker-tile.selected {
   border-color: #21759b;
   background-color: white;
   opacity: 1;
 }
-/* line 211, ../sass/inkwell-admin.scss */
+/* line 216, ../sass/inkwell-admin.scss */
 .picker-tile h6 {
   text-align: center;
 }
-/* line 214, ../sass/inkwell-admin.scss */
+/* line 219, ../sass/inkwell-admin.scss */
 .picker-tile .picker-tile-img {
   width: 100%;
   max-width: 100%;
@@ -1514,17 +1493,17 @@
   max-height: 200px;
 }
 
-/* line 221, ../sass/inkwell-admin.scss */
+/* line 226, ../sass/inkwell-admin.scss */
 #customize-info {
   display: none;
 }
 
-/* line 226, ../sass/inkwell-admin.scss */
+/* line 231, ../sass/inkwell-admin.scss */
 #customize-header-actions .back.button {
   display: none;
 }
 
-/* line 231, ../sass/inkwell-admin.scss */
+/* line 236, ../sass/inkwell-admin.scss */
 ul.option-scroller {
   *zoom: 1;
   display: block;
@@ -1537,7 +1516,7 @@ ul.option-scroller:after {
   clear: both;
 }
 
-/* line 237, ../sass/inkwell-admin.scss */
+/* line 242, ../sass/inkwell-admin.scss */
 .skin-color-squares {
   *zoom: 1;
 }
@@ -1547,47 +1526,47 @@ ul.option-scroller:after {
   display: table;
   clear: both;
 }
-/* line 239, ../sass/inkwell-admin.scss */
+/* line 244, ../sass/inkwell-admin.scss */
 .skin-color-squares .skin-color-square {
   float: left;
   width: 25%;
   height: 20px;
 }
 
-/* line 246, ../sass/inkwell-admin.scss */
+/* line 251, ../sass/inkwell-admin.scss */
 .skin-texture-square-group {
   width: 100%;
   background-color: #e55767;
 }
-/* line 249, ../sass/inkwell-admin.scss */
+/* line 254, ../sass/inkwell-admin.scss */
 .skin-texture-square-group .skin-texture-square {
   width: 100%;
   height: 100px;
 }
 
-/* line 255, ../sass/inkwell-admin.scss */
+/* line 260, ../sass/inkwell-admin.scss */
 .customizer-type-preview {
   max-width: 100%;
   width: 100%;
 }
 
-/* line 260, ../sass/inkwell-admin.scss */
+/* line 265, ../sass/inkwell-admin.scss */
 .customizer-type-preview-cont {
   padding: 10px 2px 10px 2px;
 }
 
-/* line 265, ../sass/inkwell-admin.scss */
+/* line 270, ../sass/inkwell-admin.scss */
 .theme-preview-mod .theme-hgroup {
   position: relative;
   margin: 20px 0;
   padding: 0 0 10px;
   border-bottom: 1px solid #ccc;
 }
-/* line 271, ../sass/inkwell-admin.scss */
+/* line 276, ../sass/inkwell-admin.scss */
 .theme-preview-mod .theme-h {
   margin: 0;
 }
-/* line 274, ../sass/inkwell-admin.scss */
+/* line 279, ../sass/inkwell-admin.scss */
 .theme-preview-mod .theme-submit {
   position: absolute;
   top: 15px;
@@ -1597,7 +1576,7 @@ ul.option-scroller:after {
   height: 29px;
 }
 
-/* line 282, ../sass/inkwell-admin.scss */
+/* line 287, ../sass/inkwell-admin.scss */
 .theme-previews {
   *zoom: 1;
   margin: auto;
@@ -1610,11 +1589,11 @@ ul.option-scroller:after {
   display: table;
   clear: both;
 }
-/* line 287, ../sass/inkwell-admin.scss */
+/* line 292, ../sass/inkwell-admin.scss */
 .theme-previews .theme-preview {
   display: block;
 }
-/* line 290, ../sass/inkwell-admin.scss */
+/* line 295, ../sass/inkwell-admin.scss */
 .theme-previews .preview-img {
   -webkit-transition: opacity 0.15s ease-in;
   -moz-transition: opacity 0.15s ease-in;
@@ -1624,72 +1603,72 @@ ul.option-scroller:after {
   max-width: 100%;
   display: block;
 }
-/* line 295, ../sass/inkwell-admin.scss */
+/* line 300, ../sass/inkwell-admin.scss */
 .theme-previews .preview-txt {
   margin: 0;
   color: #666;
   font-size: 14px;
   line-height: 150%;
 }
-/* line 301, ../sass/inkwell-admin.scss */
+/* line 306, ../sass/inkwell-admin.scss */
 .theme-previews .ui-block {
   margin-bottom: 50px;
 }
 @media (min-width: 1000px) {
-  /* line 282, ../sass/inkwell-admin.scss */
+  /* line 287, ../sass/inkwell-admin.scss */
   .theme-previews {
     max-width: none;
   }
-  /* line 306, ../sass/inkwell-admin.scss */
+  /* line 311, ../sass/inkwell-admin.scss */
   .theme-previews .ui-block {
     float: left;
     margin: 0 40px 40px 0;
   }
 }
 @media (min-width: 1000px) and (max-width: 1399px) {
-  /* line 312, ../sass/inkwell-admin.scss */
+  /* line 317, ../sass/inkwell-admin.scss */
   .theme-previews .ui-block {
     width: 46%;
   }
-  /* line 314, ../sass/inkwell-admin.scss */
+  /* line 319, ../sass/inkwell-admin.scss */
   .theme-previews .ui-block:nth-child(2n) {
     margin-right: 0;
   }
-  /* line 317, ../sass/inkwell-admin.scss */
+  /* line 322, ../sass/inkwell-admin.scss */
   .theme-previews .ui-block:nth-child(2n+3) {
     clear: left;
   }
 }
 @media (min-width: 1400px) {
-  /* line 323, ../sass/inkwell-admin.scss */
+  /* line 328, ../sass/inkwell-admin.scss */
   .theme-previews .ui-block {
     width: 30.5%;
   }
-  /* line 325, ../sass/inkwell-admin.scss */
+  /* line 330, ../sass/inkwell-admin.scss */
   .theme-previews .ui-block:nth-child(3n) {
     margin-right: 0;
   }
-  /* line 328, ../sass/inkwell-admin.scss */
+  /* line 333, ../sass/inkwell-admin.scss */
   .theme-previews .ui-block:nth-child(3n+4) {
     clear: left;
   }
 }
 
-/* line 337, ../sass/inkwell-admin.scss */
+/* line 342, ../sass/inkwell-admin.scss */
 .theme-preview {
   position: relative;
   border: 1px solid #ccc;
   background-color: #fff;
 }
-/* line 342, ../sass/inkwell-admin.scss */
+/* line 347, ../sass/inkwell-admin.scss */
 .theme-preview:hover .preview-img {
   opacity: .3;
 }
-/* line 345, ../sass/inkwell-admin.scss */
+/* line 350, ../sass/inkwell-admin.scss */
 .theme-preview:hover .preview-txt-mod {
   opacity: 1;
 }
-/* line 349, ../sass/inkwell-admin.scss */
+/* line 354, ../sass/inkwell-admin.scss */
 .theme-preview .preview-txt-mod {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.8);
@@ -1708,14 +1687,14 @@ ul.option-scroller:after {
 .no-rgba .theme-preview .preview-txt-mod {
   background: transparent url('../sass/img/bg/white-80.png') 50% 50% repeat;
 }
-/* line 356, ../sass/inkwell-admin.scss */
+/* line 361, ../sass/inkwell-admin.scss */
 .theme-preview .preview-h {
   margin: 0 0 30px;
   font-weight: 100;
   font-size: 31px;
 }
 
-/* line 363, ../sass/inkwell-admin.scss */
+/* line 368, ../sass/inkwell-admin.scss */
 .customize-setup-bar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1727,17 +1706,17 @@ ul.option-scroller:after {
   text-align: center;
   font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans;
 }
-/* line 371, ../sass/inkwell-admin.scss */
+/* line 376, ../sass/inkwell-admin.scss */
 .customize-setup-bar .step {
   margin-bottom: 10px;
 }
-/* line 374, ../sass/inkwell-admin.scss */
+/* line 379, ../sass/inkwell-admin.scss */
 .customize-setup-bar .step-h {
   margin: 4px 0 8px;
   font-weight: 100;
   font-size: 24px;
 }
-/* line 379, ../sass/inkwell-admin.scss */
+/* line 384, ../sass/inkwell-admin.scss */
 .customize-setup-bar .step-num {
   margin: 0;
   text-transform: uppercase;
@@ -1745,12 +1724,12 @@ ul.option-scroller:after {
   font-weight: 200;
   font-size: 11px;
 }
-/* line 386, ../sass/inkwell-admin.scss */
+/* line 391, ../sass/inkwell-admin.scss */
 .customize-setup-bar .button {
   margin: 0 7px;
 }
 
-/* line 391, ../sass/inkwell-admin.scss */
+/* line 396, ../sass/inkwell-admin.scss */
 .prologue-setup-bar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1766,39 +1745,39 @@ ul.option-scroller:after {
   vertical-align: top;
   font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans;
 }
-/* line 403, ../sass/inkwell-admin.scss */
+/* line 408, ../sass/inkwell-admin.scss */
 .no-flexbox .prologue-setup-bar {
   display: block;
 }
-/* line 405, ../sass/inkwell-admin.scss */
+/* line 410, ../sass/inkwell-admin.scss */
 .no-flexbox .prologue-setup-bar .step {
   display: block;
   float: left;
 }
-/* line 410, ../sass/inkwell-admin.scss */
+/* line 415, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .step {
   position: relative;
   display: table-cell;
   min-height: 5px;
   vertical-align: middle;
 }
-/* line 416, ../sass/inkwell-admin.scss */
+/* line 421, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .step-prev {
   padding-left: 20px;
   width: 27%;
 }
-/* line 420, ../sass/inkwell-admin.scss */
+/* line 425, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .step-current {
   width: 40%;
   text-align: center;
 }
-/* line 424, ../sass/inkwell-admin.scss */
+/* line 429, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .step-h {
   margin: 4px 0 8px;
   font-weight: 100;
   font-size: 24px;
 }
-/* line 429, ../sass/inkwell-admin.scss */
+/* line 434, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .step-num {
   margin: 0;
   text-transform: uppercase;
@@ -1806,11 +1785,11 @@ ul.option-scroller:after {
   font-weight: 200;
   font-size: 11px;
 }
-/* line 436, ../sass/inkwell-admin.scss */
+/* line 441, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .step-next {
   width: 27%;
 }
-/* line 439, ../sass/inkwell-admin.scss */
+/* line 444, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .next-btn {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1839,7 +1818,7 @@ ul.option-scroller:after {
   font-weight: 200;
   font-size: 18px;
 }
-/* line 455, ../sass/inkwell-admin.scss */
+/* line 460, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .next-btn:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e9fd2), color-stop(100%, #21759b));
   background: -webkit-linear-gradient(top, #2e9fd2, #21759b);
@@ -1847,7 +1826,7 @@ ul.option-scroller:after {
   background: -o-linear-gradient(top, #2e9fd2, #21759b);
   background: linear-gradient(top, #2e9fd2, #21759b);
 }
-/* line 458, ../sass/inkwell-admin.scss */
+/* line 463, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .next-btn:active {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #21759b), color-stop(100%, #278ab7));
   background: -webkit-linear-gradient(top, #21759b, #278ab7);
@@ -1855,7 +1834,7 @@ ul.option-scroller:after {
   background: -o-linear-gradient(top, #21759b, #278ab7);
   background: linear-gradient(top, #21759b, #278ab7);
 }
-/* line 461, ../sass/inkwell-admin.scss */
+/* line 466, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .next-btn:after {
   content: "\0020";
   position: absolute;
@@ -1866,42 +1845,42 @@ ul.option-scroller:after {
   height: 23px;
   background: url('../sass/img/admin/arrow-right.png') no-repeat 50% 50%;
 }
-/* line 470, ../sass/inkwell-admin.scss */
+/* line 475, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .step-name {
   display: none;
 }
-/* line 474, ../sass/inkwell-admin.scss */
+/* line 479, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .prev-btn,
 .prologue-setup-bar .next-btn {
   text-decoration: none;
 }
-/* line 476, ../sass/inkwell-admin.scss */
+/* line 481, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .prev-btn:hover,
 .prologue-setup-bar .next-btn:hover {
   text-decoration: underline;
 }
-/* line 480, ../sass/inkwell-admin.scss */
+/* line 485, ../sass/inkwell-admin.scss */
 .prologue-setup-bar .prev-btn {
   color: #ccc;
 }
 
-/* line 486, ../sass/inkwell-admin.scss */
+/* line 491, ../sass/inkwell-admin.scss */
 #customize-theme-controls li[data-customize-tab="upload-new"] {
   display: none;
 }
 
-/* line 495, ../sass/inkwell-admin.scss */
+/* line 500, ../sass/inkwell-admin.scss */
 .welcome-panel-close {
   display: none;
 }
 
-/* line 499, ../sass/inkwell-admin.scss */
+/* line 504, ../sass/inkwell-admin.scss */
 .admin-welcome {
   margin-bottom: 24px;
   text-align: center;
 }
 
-/* line 504, ../sass/inkwell-admin.scss */
+/* line 509, ../sass/inkwell-admin.scss */
 .welcome-img {
   display: block;
   margin: auto;
@@ -1910,17 +1889,17 @@ ul.option-scroller:after {
   opacity: .8;
 }
 
-/* line 512, ../sass/inkwell-admin.scss */
+/* line 517, ../sass/inkwell-admin.scss */
 .welcome-panel-content {
   display: none;
 }
 
-/* line 516, ../sass/inkwell-admin.scss */
+/* line 521, ../sass/inkwell-admin.scss */
 .sprite-sprite, .sprite-edit-off {
   background: url("../images/sprite-scc1f2af80b.png") no-repeat;
 }
 
-/* line 520, ../sass/inkwell-admin.scss */
+/* line 525, ../sass/inkwell-admin.scss */
 .sprite-edit-off {
   width: 1px;
   height: 1px;
@@ -1928,7 +1907,7 @@ ul.option-scroller:after {
 }
 
 /* !== Paul Irish HTML5 Helpers =================== */
-/* line 529, ../sass/inkwell-admin.scss */
+/* line 534, ../sass/inkwell-admin.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   position: static;
@@ -1946,7 +1925,7 @@ ul.option-scroller:after {
 /* ! Universal						   			  */
 /* !============================================= */
 /* Kill the margin on the last column */
-/* line 550, ../sass/inkwell-admin.scss */
+/* line 555, ../sass/inkwell-admin.scss */
 .ui-block:last-child,
 .ui-block.last {
   margin-right: 0;
@@ -1964,17 +1943,17 @@ ul.option-scroller:after {
 /* Grid-4 vars */
 /* Grid-5 vars */
 /* ! Columns */
-/* line 566, ../sass/inkwell-admin.scss */
+/* line 571, ../sass/inkwell-admin.scss */
 .ui-block-25 {
   width: 25%;
 }
 
-/* line 570, ../sass/inkwell-admin.scss */
+/* line 575, ../sass/inkwell-admin.scss */
 .ui-block-50 {
   width: 50%;
 }
 
-/* line 574, ../sass/inkwell-admin.scss */
+/* line 579, ../sass/inkwell-admin.scss */
 .ui-block-75 {
   width: 75%;
 }
@@ -1984,22 +1963,22 @@ ul.option-scroller:after {
 /* !============================================= */
 /* Variables & Mixins */
 /* Selectors */
-/* line 583, ../sass/inkwell-admin.scss */
+/* line 588, ../sass/inkwell-admin.scss */
 .spacer {
   margin-bottom: 50px;
 }
 
-/* line 587, ../sass/inkwell-admin.scss */
+/* line 592, ../sass/inkwell-admin.scss */
 .spacer-small {
   margin-bottom: 10px;
 }
 
-/* line 591, ../sass/inkwell-admin.scss */
+/* line 596, ../sass/inkwell-admin.scss */
 .spacer-med {
   margin-bottom: 25px;
 }
 
-/* line 595, ../sass/inkwell-admin.scss */
+/* line 600, ../sass/inkwell-admin.scss */
 .spacer-large {
   margin-bottom: 75px;
 }
@@ -2007,26 +1986,26 @@ ul.option-scroller:after {
 /* !============================================= */
 /* ! Image Blocks						   		  */
 /* !============================================= */
-/* line 603, ../sass/inkwell-admin.scss */
+/* line 608, ../sass/inkwell-admin.scss */
 .imageblock-image {
   float: left;
   margin: 0 10px 0 0;
 }
 
-/* line 608, ../sass/inkwell-admin.scss */
+/* line 613, ../sass/inkwell-admin.scss */
 .imageblock-image-right {
   float: right;
   margin: 0 0 0 10px;
 }
 
-/* line 613, ../sass/inkwell-admin.scss */
+/* line 618, ../sass/inkwell-admin.scss */
 .imageblock-content {
   display: table-cell;
   width: 1000em;
   vertical-align: top;
 }
 
-/* line 620, ../sass/inkwell-admin.scss */
+/* line 625, ../sass/inkwell-admin.scss */
 .ie6 .imageblock-content,
 .ie7 .imageblock-content {
   display: block;
@@ -2037,7 +2016,7 @@ ul.option-scroller:after {
 /* ============================================= */
 /*	Form Elements					   			 */
 /* ============================================= */
-/* line 632, ../sass/inkwell-admin.scss */
+/* line 637, ../sass/inkwell-admin.scss */
 .acf-ups-radio-image.widget {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2051,34 +2030,34 @@ ul.option-scroller:after {
   background: transparent;
   text-align: left;
 }
-/* line 642, ../sass/inkwell-admin.scss */
+/* line 647, ../sass/inkwell-admin.scss */
 .acf-ups-radio-image.widget input {
   top: -2px;
   position: relative;
 }
-/* line 649, ../sass/inkwell-admin.scss */
+/* line 654, ../sass/inkwell-admin.scss */
 .acf-ups-radio-image.widget .sub-field-instructions,
 .acf-ups-radio-image.widget .sub-field-instructions > p {
   color: #999999;
 }
-/* line 652, ../sass/inkwell-admin.scss */
+/* line 657, ../sass/inkwell-admin.scss */
 .acf-ups-radio-image.widget .sub-field-intro {
   color: #666;
 }
 
-/* line 657, ../sass/inkwell-admin.scss */
+/* line 662, ../sass/inkwell-admin.scss */
 .admin-label {
   display: inline-block;
   margin-bottom: 4px;
   font-weight: bold;
 }
 
-/* line 663, ../sass/inkwell-admin.scss */
+/* line 668, ../sass/inkwell-admin.scss */
 .sub-field-instructions {
   line-height: 140%;
 }
 
-/* line 667, ../sass/inkwell-admin.scss */
+/* line 672, ../sass/inkwell-admin.scss */
 .acf-ups-radio-image img {
   display: block;
   margin-bottom: 5px;
@@ -2086,13 +2065,13 @@ ul.option-scroller:after {
   width: 100%;
 }
 
-/* line 674, ../sass/inkwell-admin.scss */
+/* line 679, ../sass/inkwell-admin.scss */
 .acf-ups-radio-image.widget.selected {
   background-color: white;
   background-image: none;
 }
 
-/* line 679, ../sass/inkwell-admin.scss */
+/* line 684, ../sass/inkwell-admin.scss */
 .acf-ups-radio-image:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
@@ -2101,23 +2080,23 @@ ul.option-scroller:after {
 }
 
 /* Hide stuff on comments page */
-/* line 686, ../sass/inkwell-admin.scss */
+/* line 691, ../sass/inkwell-admin.scss */
 body.options-discussion-php .form-table tr:first-child {
   display: block;
 }
-/* line 689, ../sass/inkwell-admin.scss */
+/* line 694, ../sass/inkwell-admin.scss */
 body.options-discussion-php .form-table tr {
   display: none;
 }
-/* line 692, ../sass/inkwell-admin.scss */
+/* line 697, ../sass/inkwell-admin.scss */
 body.options-discussion-php form > h3 {
   display: none;
 }
-/* line 695, ../sass/inkwell-admin.scss */
+/* line 700, ../sass/inkwell-admin.scss */
 body.options-discussion-php form > p {
   display: none;
 }
-/* line 697, ../sass/inkwell-admin.scss */
+/* line 702, ../sass/inkwell-admin.scss */
 body.options-discussion-php form > p.submit {
   display: block;
 }
@@ -2125,17 +2104,17 @@ body.options-discussion-php form > p.submit {
 /* ============================================= */
 /*	Pages					   			 		 */
 /* ============================================= */
-/* line 713, ../sass/inkwell-admin.scss */
+/* line 718, ../sass/inkwell-admin.scss */
 .column-preview_img {
   background-color: #CECECE;
 }
-/* line 715, ../sass/inkwell-admin.scss */
+/* line 720, ../sass/inkwell-admin.scss */
 .column-preview_img .admin-table-preview-image {
   max-width: 100%;
   max-height: 100px;
 }
 
-/* line 721, ../sass/inkwell-admin.scss */
+/* line 726, ../sass/inkwell-admin.scss */
 .fm-query-post-type {
   *zoom: 1;
   padding-top: 10px;
@@ -2148,7 +2127,7 @@ body.options-discussion-php form > p.submit {
   display: table;
   clear: both;
 }
-/* line 726, ../sass/inkwell-admin.scss */
+/* line 731, ../sass/inkwell-admin.scss */
 .fm-query-post-type .fm-query-post-type-label {
   float: left;
   padding-top: 6px;
@@ -2157,64 +2136,64 @@ body.options-discussion-php form > p.submit {
   font-weight: 100;
   font-size: 17px;
 }
-/* line 734, ../sass/inkwell-admin.scss */
+/* line 739, ../sass/inkwell-admin.scss */
 .fm-query-post-type .iPhoneCheckContainer {
   right: 3px;
   float: right;
 }
 
-/* line 743, ../sass/inkwell-admin.scss */
+/* line 748, ../sass/inkwell-admin.scss */
 .acf_postbox .layout[data-layout="pullquote"] textarea {
   min-height: 80px;
 }
 
 /* photo field hiding */
-/* line 751, ../sass/inkwell-admin.scss */
+/* line 756, ../sass/inkwell-admin.scss */
 label[data-setting="alt"] {
   display: none;
 }
 
-/* line 756, ../sass/inkwell-admin.scss */
+/* line 761, ../sass/inkwell-admin.scss */
 .media-frame-content label[data-setting="description"] {
   display: none;
 }
 
-/* line 762, ../sass/inkwell-admin.scss */
+/* line 767, ../sass/inkwell-admin.scss */
 .wp_attachment_details p:nth-child(2) {
   display: none;
 }
-/* line 765, ../sass/inkwell-admin.scss */
+/* line 770, ../sass/inkwell-admin.scss */
 .wp_attachment_details label[for="content"] {
   display: none;
 }
-/* line 768, ../sass/inkwell-admin.scss */
+/* line 773, ../sass/inkwell-admin.scss */
 .wp_attachment_details #wp-attachment_content-wrap {
   display: none;
 }
 
-/* line 773, ../sass/inkwell-admin.scss */
+/* line 778, ../sass/inkwell-admin.scss */
 .media-item .post_content {
   display: none;
 }
 
-/* line 778, ../sass/inkwell-admin.scss */
+/* line 783, ../sass/inkwell-admin.scss */
 .post_type-feeds #pageparentdiv {
   display: none;
 }
 
-/* line 783, ../sass/inkwell-admin.scss */
+/* line 788, ../sass/inkwell-admin.scss */
 small {
   color: #999;
 }
 
 /* tables */
-/* line 788, ../sass/inkwell-admin.scss */
+/* line 793, ../sass/inkwell-admin.scss */
 .column-preview {
   max-width: 100px;
   width: 100px;
 }
 
-/* line 793, ../sass/inkwell-admin.scss */
+/* line 798, ../sass/inkwell-admin.scss */
 #postimagediv .inside img {
   max-width: 100%;
   width: 100%;

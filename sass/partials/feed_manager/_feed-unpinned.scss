@@ -53,6 +53,11 @@
                     &:visited {        
                         // color: white;    //Firefox fix
                     }
+                    > b {
+                        padding-left: 10px;
+                        color: $wp-button-grey-75;
+                        font-weight: 700;
+                    }
                 }
                 
                 /*a[href="#expandCollapse"]*/
@@ -96,7 +101,7 @@
     }
     .pin {
         position: absolute;
-        top: 13px;
+        top: 9px;
         color: $f-black-75;
         height: 24px;
         width: 24px;

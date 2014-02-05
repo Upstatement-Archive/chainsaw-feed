@@ -23,38 +23,13 @@
 .feed-post-search {
     position: relative;
     input[type='search'] {
-        margin: 7px 4px -2px 0px;
-        padding-left: 2%;
-        // border-width: 0;
+        width: 60%;
+        padding-right: 3%;
         height: 28px;
-        width: 100%;
-        height: 36px;
-        padding-right: 40px;
     }
     input[type='submit'] {
-        border: 0px none;
-        position:absolute;
-        top: 3px;
-        right:10px;
-        padding-bottom: 25px;
-        background-color: transparent;
-        color: rgb(33, 117, 155);
-        cursor: pointer;
-        margin-left: -60px;
-        &:hover {
-            @include trans($trans-time, color, $trans-ease);
-            color: $f-gray-30;
-        }
     }
 }
-
-.search-inputs {
-    margin-top: -7px;
-    width: 100%;
-}
-
-
-
 
 // Results
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~

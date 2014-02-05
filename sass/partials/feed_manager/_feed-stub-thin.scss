@@ -42,10 +42,10 @@
     }
 
     .stub-content-mod {
-        margin: -4px 18px 0 0;
+        // margin: -4px 18px 0 0;
         padding: 0;
         border-top: 0;
-        line-height: 40px;
+        line-height: 14px;
     }
 
     .stub-tool-mod {
@@ -53,7 +53,7 @@
     }
 
     .stub-title {
-           margin:-24px 0px -12px 0px;
+           margin: 0;
         > a {
             font-size: 12px;
             font-weight: 400;
@@ -62,7 +62,8 @@
     }
 
     .stub-text {
-        @include ellipsis;
+        padding-top:10px;
+        // @include ellipsis;
         color: $f-gray-100;
         // margin-left: 60px;
     }
