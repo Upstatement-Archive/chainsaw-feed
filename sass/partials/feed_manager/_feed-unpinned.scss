@@ -103,11 +103,8 @@
         position: absolute;
         top: 9px;
         color: $f-black-75;
-        height: 24px;
         width: 24px;
-        @include border-radius(12px);
-        border: 2px solid;
-        line-height: 1px;
+        line-height: 100%;
         right: -6px;
         padding-left: 1px;
         &:hover {

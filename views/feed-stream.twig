@@ -118,7 +118,7 @@
                         {% if zones.unpinned.desc %}
                                 <h6 class= "zone-desc">{{zones.unpinned.desc}}</h6>
                         {% endif %}
-                        <ol class="feed-in-use saveable" data-scope="posts">
+                        <ol class="feed-in-use pinned saveable" data-scope="posts">
                             {% for post in posts %}
                             <li class="feed-manager-post" data-pid="{{post.ID}}">
                                 <input name="pids[]" value="{{post.ID}}" type="hidden" class="array-saver" />

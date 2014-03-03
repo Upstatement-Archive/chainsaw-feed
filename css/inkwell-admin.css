@@ -1097,19 +1097,12 @@
   position: absolute;
   top: 9px;
   color: #5a5758;
-  height: 24px;
   width: 24px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-  border-radius: 12px;
-  border: 2px solid;
-  line-height: 1px;
+  line-height: 100%;
   right: -6px;
   padding-left: 1px;
 }
-/* line 113, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 110, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin:hover {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1118,7 +1111,7 @@
   background-color: transparent;
   color: #1e8cbe;
 }
-/* line 119, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 116, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-control {
   display: none;
 }
@@ -1186,6 +1179,7 @@
 .recently-removed {
   overflow-y: auto;
   max-height: 225px;
+  padding-top: 0px;
 }
 
 /* line 7, ../sass/partials/feed_manager/_feed-footer.scss */
