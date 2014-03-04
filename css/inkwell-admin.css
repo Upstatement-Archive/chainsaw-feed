@@ -27,6 +27,7 @@
   font-size: 35px;
   font-family: 'EntypoRegular';
   vertical-align: middle;
+  color: white;
 }
 
 /* line 246, ../sass/partials/_layout.scss */
@@ -335,7 +336,7 @@
 /* line 59, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-img-mod {
   float: left;
-  margin: 0px 17px 0px -27px;
+  margin: 10px 17px 0px 0px;
   width: 110px;
   height: 110px;
   background-color: #ececee;
@@ -556,12 +557,14 @@
 
 /* line 272, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-content-mod {
-  margin: 10px 50px 6px 70px;
+  display: block;
+  clear: both;
+  padding-top: 1px;
 }
 
 /* line 278, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-title {
-  margin: 0 0 13px 0;
+  margin: 10px 0 13px 0;
 }
 /* line 280, ../sass/partials/feed_manager/_feed-stub.scss */
 .stub-title > a {
@@ -632,7 +635,7 @@
   min-height: 40px;
   border: 1px dashed #bfc6c6;
 }
-/* line 27, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 28, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .new-post-stub {
   margin-bottom: 0px;
   padding: 1px 18px 7px 18px;
@@ -641,51 +644,52 @@
   border-radius: 0;
   box-shadow: none;
 }
-/* line 36, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 37, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-img-mod {
   display: none;
 }
-/* line 44, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 45, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-content-mod {
+  clear: none;
   padding: 0;
   border-top: 0;
   line-height: 14px;
 }
-/* line 51, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 52, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-tool-mod {
   float: right;
 }
-/* line 55, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 56, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-title {
   margin: 0;
 }
-/* line 57, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 58, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-title > a {
   font-size: 12px;
   font-weight: 400;
   color: black;
 }
-/* line 64, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 65, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-text {
   padding-top: 10px;
   color: #7f8c8d;
 }
-/* line 71, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 72, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-meta {
   display: none;
 }
-/* line 75, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 76, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-date {
   color: #d9dcdd;
 }
-/* line 79, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 80, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .thin-placeholder, .thin .results.ui-sortable-placeholder {
   visibility: visible !important;
   height: 40px;
   border: 1px dashed #bfc6c6;
   background-color: transparent;
 }
-/* line 85, ../sass/partials/feed_manager/_feed-stub-thin.scss */
+/* line 86, ../sass/partials/feed_manager/_feed-stub-thin.scss */
 .thin .stub-control {
   display: none;
 }
@@ -1012,25 +1016,24 @@
 .unpinned-category-list {
   margin-top: 12px;
   padding-bottom: 40px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
 }
 
 /*li*/
-/* line 22, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 21, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category {
   margin-bottom: 0;
   cursor: pointer;
 }
-/* line 25, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 24, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category:last-child {
   margin-bottom: 10px;
 }
-/* line 27, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 26, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category:last-child .feed-unpinned {
   margin-bottom: 0;
 }
 
-/* line 33, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 32, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category-button {
   position: relative;
   display: block;
@@ -1043,7 +1046,7 @@
   border-bottom: 1px solid #dfdfdf;
   margin: 0px;
 }
-/* line 48, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 47, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category-button:hover > .unpinned-icon {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1051,7 +1054,7 @@
   transition: color 0.2s ease-in;
   color: #1e8cbe;
 }
-/* line 56, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 55, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category-button > b {
   padding-left: 10px;
   color: #aaaaaa;
@@ -1059,9 +1062,10 @@
 }
 
 /*a[href="#expandCollapse"]*/
-/* line 64, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 63, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .category-expanded {
-  background-color: whitesmoke;
+  background-color: #bfc6c6;
+  color: white;
 }
 
 /*span*/
@@ -1084,15 +1088,15 @@
   pointer-events: none;
   margin: -4px 31px 0px 0px;
 }
-/* line 96, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 97, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .feeds-number-wrap {
   display: none;
 }
-/* line 99, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 100, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .display-selector {
   display: none;
 }
-/* line 102, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 103, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin {
   position: absolute;
   top: 9px;
@@ -1102,7 +1106,7 @@
   right: -6px;
   padding-left: 1px;
 }
-/* line 110, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 111, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin:hover {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1111,7 +1115,7 @@
   background-color: transparent;
   color: #1e8cbe;
 }
-/* line 116, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 117, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-control {
   display: none;
 }
@@ -1180,6 +1184,10 @@
   overflow-y: auto;
   max-height: 225px;
   padding-top: 0px;
+}
+/* line 25, ../sass/partials/feed_manager/_feed-removed.scss */
+.recently-removed .icon, .recently-removed .icon-dropdown-options, .recently-removed .post-types-title-icon, .recently-removed .post-types-dropdown-options-icon, .recently-removed .feed-main-title-icon, .recently-removed .feed-view-toggle, .recently-removed .unpinned-icon {
+  color: #9fa9aa;
 }
 
 /* line 7, ../sass/partials/feed_manager/_feed-footer.scss */
