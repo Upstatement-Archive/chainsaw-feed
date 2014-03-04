@@ -25,11 +25,11 @@
 	</div>
 
 	<div class="stub-content-mod">
-		
+			{% if show_thumbs %}
 				<div class="stub-img-mod">
 					<img class="stub-img" src="{{post.thumbnail.src|resize(120, 120)}}" />
 				</div>
-		
+			{% endif %}
 		<div class="stub-text">
 			<h4 class="stub-title"><a href="/wp-admin/post.php?post={{post.ID}}&amp;action=edit">{{post.post_title}}</a></h4>
 			<p class="stub-meta">
