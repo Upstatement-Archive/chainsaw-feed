@@ -1198,40 +1198,33 @@
   left: 0px;
   padding: 10px 20px;
   width: inherit;
-  border-top: 1px solid #bfc6c6;
   color: #9fa9aa;
   margin: 0 auto;
 }
 
 /* line 19, ../sass/partials/feed_manager/_feed-footer.scss */
 .st-logo {
-  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/ups-lig.png");
+  background-image: url("/wp-content/plugins/chainsaw-feed/sass/img/logo.png");
   height: 60px;
   width: 60px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  border-radius: 30px;
-  margin-top: -40px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   display: inline-block;
-  background-color: #5a5758;
-  border: #f1f1f1 solid 5px;
 }
-/* line 31, ../sass/partials/feed_manager/_feed-footer.scss */
+/* line 28, ../sass/partials/feed_manager/_feed-footer.scss */
 .st-logo:hover {
-  background-color: #5998b4;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
 }
 
-/* line 36, ../sass/partials/feed_manager/_feed-footer.scss */
+/* line 34, ../sass/partials/feed_manager/_feed-footer.scss */
 .footer-logo {
   text-align: center;
   padding-bottom: 10px;
 }
 
-/* line 40, ../sass/partials/feed_manager/_feed-footer.scss */
+/* line 38, ../sass/partials/feed_manager/_feed-footer.scss */
 .feed-manager-timestamp {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1243,7 +1236,7 @@
   float: right;
 }
 
-/* line 46, ../sass/partials/feed_manager/_feed-footer.scss */
+/* line 44, ../sass/partials/feed_manager/_feed-footer.scss */
 .footer-thanks {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1254,7 +1247,7 @@
   margin: 0;
   width: 100%;
 }
-/* line 50, ../sass/partials/feed_manager/_feed-footer.scss */
+/* line 48, ../sass/partials/feed_manager/_feed-footer.scss */
 .footer-thanks p {
   float: left;
 }
