@@ -7,12 +7,6 @@
 	    hideEffectSpeed: 200
 	});
 
-// Post number count
-$("ol").each(function(){
-	var postNumber = $(this).parent().siblings(".unpinned-category-button");
-	postNumber.append("<b>("+$(this).children('li').length+")</b>");
-});
-	
 
 	// Utility functions
 	// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
