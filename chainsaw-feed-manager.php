@@ -66,7 +66,8 @@
 			error_log($query);
 			$results = $wpdb->get_col($query);
 			$posts = Timber::get_posts($results);
-			if ($format == 'html'){
+			$data['show_thumbs'] = true;
+			if ($format == 'html' && is_array($posts)){
 				foreach($posts as $post){
 					$data['post'] = $post;
 					if (class_exists('InkwellVars') && isset(InkwellVars::$tease_sizes)){
@@ -75,13 +76,13 @@
 					Timber::render('feed-post-stub.twig', $data);
 				}
 			} else {
-				echo json_encode($posts);
+				echo 'Sorry, no results';
+				//echo json_encode($posts);
 			}
 			die();
 		}
 
 		function process_post_data(){
-			error_log('process_post_data');
 			if(isset($_POST['ink_page_name']) && $_POST['ink_page_name'] == 'feed_manager') {
 				TimberHelper::error_log($_POST);
 				$this->save_feed($_POST['pid']);
