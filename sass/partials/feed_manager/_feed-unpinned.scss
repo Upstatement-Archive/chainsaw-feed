@@ -15,7 +15,8 @@
             margin-top: 12px;
             padding-bottom: 40px;
 
-
+            // border: 1px solid rgb(229, 229, 229);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
         
         }
             /*li*/.unpinned-category {
@@ -52,17 +53,11 @@
                     &:visited {        
                         // color: white;    //Firefox fix
                     }
-                    > b {
-                        padding-left: 10px;
-                        color: $wp-button-grey-75;
-                        font-weight: 700;
-                    }
                 }
                 
                 /*a[href="#expandCollapse"]*/
                     .category-expanded {
-                        background-color:$f-gray-50;
-                        color:white;
+                        background-color:$wp-button-grey-light;
 
                     & .unpinned-icon {
                         // color: white;
@@ -92,7 +87,6 @@
     .stub-content-mod {
         pointer-events: none;
         margin: -4px 31px 0px 0px;
-
     }
     .feeds-number-wrap {
         display: none;
@@ -102,10 +96,13 @@
     }
     .pin {
         position: absolute;
-        top: 9px;
+        top: 13px;
         color: $f-black-75;
+        height: 24px;
         width: 24px;
-        line-height: 100%;
+        @include border-radius(12px);
+        border: 2px solid;
+        line-height: 1px;
         right: -6px;
         padding-left: 1px;
         &:hover {

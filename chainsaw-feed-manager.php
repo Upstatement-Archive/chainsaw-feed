@@ -179,7 +179,7 @@
 						'description' => '',
 						'public' => true,
 						'show_ui' => true,
-						'show_in_menu' => false,
+						'show_in_menu' => true,
 						'capability_type' => 'page',
 						'hierarchical' => false,
 						'rewrite' => array('slug' => ''),
