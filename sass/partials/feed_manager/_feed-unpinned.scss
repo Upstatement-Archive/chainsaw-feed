@@ -22,12 +22,6 @@
             /*li*/.unpinned-category {
                 margin-bottom: 0;
                 cursor: pointer;
-                &:last-child {
-                    margin-bottom: 10px;
-                    .feed-unpinned {
-                        margin-bottom: 0;
-                    }
-                }
             }
 
                 .unpinned-category-button {
@@ -54,23 +48,33 @@
                         // color: white;    //Firefox fix
                     }
 
-                    .unpinned-category-child-1 & {
+                    .unpinned-category-children & {
                         padding-left: 40px;
                     }
 
-                    .unpinned-category-child-2 & {
+                    .unpinned-category-children
+                    .unpinned-category-children & {
                         padding-left: 60px;
                     }
 
-                    .unpinned-category-child-3 & {
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children & {
                         padding-left: 80px;
                     }
 
-                    .unpinned-category-child-4 & {
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children & {
                         padding-left: 100px;
                     }
 
-                    .unpinned-category-child-5 & {
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children & {
                         padding-left: 120px;
                     }
                 }
@@ -92,6 +96,10 @@
                         color: $f-gray-30;
                     }
 
+    /*ul*/.unpinned-category-children li {
+        margin-bottom: 0;
+    }
+
 
 // Unpinned stubs
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
@@ -99,6 +107,7 @@
 .feed-unpinned {
     display: none;
     margin-bottom: 10px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
 }   
 
 .thin-unpin {
