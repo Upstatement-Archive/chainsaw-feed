@@ -147,8 +147,10 @@
 				}
 			}
 			foreach($terms as $term){
-				if ($term->parent == 0 && isset($term_child_map[$term->ID])){
-					$term->children = $term_child_map[$term->ID];
+				if ($term->parent == 0){
+					if (isset($term_child_map[$term->ID])){
+						$term->children = $term_child_map[$term->ID];
+					}
 					$context['lists'][] = $term;
 				}
 			}
