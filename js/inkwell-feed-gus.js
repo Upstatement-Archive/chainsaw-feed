@@ -81,9 +81,6 @@
 
 		// Show recent content unpinned category
 		setTimeout(function() { recentUpdated.trigger('click'); }, 0);
-		// updatedIcon.addClass('up-arrow');
-		// updatedIcon.css('transform','rotatex(180deg)');
-		// recentUpdated.addClass('category-expanded');
 	})();
 
 	// State-change functions
