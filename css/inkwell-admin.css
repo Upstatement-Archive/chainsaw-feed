@@ -1081,15 +1081,35 @@
   transition: color 0.2s ease-in;
   color: #1e8cbe;
 }
+/* line 57, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-child-1 .unpinned-category-button {
+  padding-left: 40px;
+}
+/* line 61, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-child-2 .unpinned-category-button {
+  padding-left: 60px;
+}
+/* line 65, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-child-3 .unpinned-category-button {
+  padding-left: 80px;
+}
+/* line 69, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-child-4 .unpinned-category-button {
+  padding-left: 100px;
+}
+/* line 73, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-child-5 .unpinned-category-button {
+  padding-left: 120px;
+}
 
 /*a[href="#expandCollapse"]*/
-/* line 59, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 79, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .category-expanded {
   background-color: whitesmoke;
 }
 
 /*span*/
-/* line 67, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 87, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-icon {
   position: absolute;
   top: 2px;
@@ -1097,26 +1117,26 @@
   color: #d9dcdd;
 }
 
-/* line 79, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 99, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .feed-unpinned {
   display: none;
   margin-bottom: 10px;
 }
 
-/* line 87, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 107, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-content-mod {
   pointer-events: none;
   margin: -4px 31px 0px 0px;
 }
-/* line 91, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 111, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .feeds-number-wrap {
   display: none;
 }
-/* line 94, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 114, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .display-selector {
   display: none;
 }
-/* line 97, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 117, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin {
   position: absolute;
   top: 13px;
@@ -1133,7 +1153,7 @@
   right: -6px;
   padding-left: 1px;
 }
-/* line 108, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 128, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin:hover {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1142,7 +1162,7 @@
   background-color: transparent;
   color: #1e8cbe;
 }
-/* line 114, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 134, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-control {
   display: none;
 }

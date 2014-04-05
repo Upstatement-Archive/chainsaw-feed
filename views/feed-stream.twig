@@ -43,15 +43,9 @@
 
                 <div class="unpinned-categories-wrapper">
                     <ul class="unpinned-category-list thin thin-unpin">
-                        {% for list in lists %}
-                        <li class="unpinned-category"><a href="#expandCollapse" class="unpinned-category-button">{{list.name}}<button class="unpinned-icon">&#59228;</button></a>
-                            <div class="feed-unpinned unpinned">
-                                <ol class="feed-in-use saveable posts" data-scope="posts">
-                                    {% for post in list.posts %} {% include "feed-post-stub.twig" %} {% endfor %}
-                                </ol>
-                            </div>
-                        </li>
-                        {% endfor %}
+                        
+                        {% include "feed-terms.twig" %}
+
                     </ul>
                 </div>
             </div>
