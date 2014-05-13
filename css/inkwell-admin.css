@@ -1051,16 +1051,8 @@
   margin-bottom: 0;
   cursor: pointer;
 }
-/* line 25, ../sass/partials/feed_manager/_feed-unpinned.scss */
-.unpinned-category:last-child {
-  margin-bottom: 10px;
-}
-/* line 27, ../sass/partials/feed_manager/_feed-unpinned.scss */
-.unpinned-category:last-child .feed-unpinned {
-  margin-bottom: 0;
-}
 
-/* line 33, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 27, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category-button {
   position: relative;
   display: block;
@@ -1073,7 +1065,7 @@
   border-bottom: 1px solid #dfdfdf;
   margin: 0px;
 }
-/* line 48, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 42, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-category-button:hover > .unpinned-icon {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1081,15 +1073,45 @@
   transition: color 0.2s ease-in;
   color: #1e8cbe;
 }
+/* line 51, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-children .unpinned-category-button {
+  padding-left: 40px;
+}
+/* line 56, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-children
+.unpinned-category-children .unpinned-category-button {
+  padding-left: 60px;
+}
+/* line 62, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-children
+.unpinned-category-children
+.unpinned-category-children .unpinned-category-button {
+  padding-left: 80px;
+}
+/* line 69, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-children
+.unpinned-category-children
+.unpinned-category-children
+.unpinned-category-children .unpinned-category-button {
+  padding-left: 100px;
+}
+/* line 77, ../sass/partials/feed_manager/_feed-unpinned.scss */
+.unpinned-category-children
+.unpinned-category-children
+.unpinned-category-children
+.unpinned-category-children
+.unpinned-category-children .unpinned-category-button {
+  padding-left: 120px;
+}
 
 /*a[href="#expandCollapse"]*/
-/* line 59, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 83, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .category-expanded {
   background-color: whitesmoke;
 }
 
 /*span*/
-/* line 67, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 91, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .unpinned-icon {
   position: absolute;
   top: 2px;
@@ -1097,26 +1119,27 @@
   color: #d9dcdd;
 }
 
-/* line 79, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 103, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .feed-unpinned {
   display: none;
   margin-bottom: 10px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
 }
 
-/* line 87, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 112, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-content-mod {
   pointer-events: none;
   margin: -4px 31px 0px 0px;
 }
-/* line 91, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 116, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .feeds-number-wrap {
   display: none;
 }
-/* line 94, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 119, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .display-selector {
   display: none;
 }
-/* line 97, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 122, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin {
   position: absolute;
   top: 13px;
@@ -1133,7 +1156,7 @@
   right: -6px;
   padding-left: 1px;
 }
-/* line 108, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 133, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .pin:hover {
   -webkit-transition: color 0.2s ease-in;
   -moz-transition: color 0.2s ease-in;
@@ -1142,7 +1165,7 @@
   background-color: transparent;
   color: #1e8cbe;
 }
-/* line 114, ../sass/partials/feed_manager/_feed-unpinned.scss */
+/* line 139, ../sass/partials/feed_manager/_feed-unpinned.scss */
 .thin-unpin .stub-control {
   display: none;
 }

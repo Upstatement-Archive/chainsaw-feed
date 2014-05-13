@@ -22,12 +22,6 @@
             /*li*/.unpinned-category {
                 margin-bottom: 0;
                 cursor: pointer;
-                &:last-child {
-                    margin-bottom: 10px;
-                    .feed-unpinned {
-                        margin-bottom: 0;
-                    }
-                }
             }
 
                 .unpinned-category-button {
@@ -52,6 +46,36 @@
                     }
                     &:visited {        
                         // color: white;    //Firefox fix
+                    }
+
+                    .unpinned-category-children & {
+                        padding-left: 40px;
+                    }
+
+                    .unpinned-category-children
+                    .unpinned-category-children & {
+                        padding-left: 60px;
+                    }
+
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children & {
+                        padding-left: 80px;
+                    }
+
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children & {
+                        padding-left: 100px;
+                    }
+
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children
+                    .unpinned-category-children & {
+                        padding-left: 120px;
                     }
                 }
                 
@@ -79,6 +103,7 @@
 .feed-unpinned {
     display: none;
     margin-bottom: 10px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
 }   
 
 .thin-unpin {

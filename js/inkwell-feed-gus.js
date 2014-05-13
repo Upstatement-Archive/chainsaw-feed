@@ -80,10 +80,7 @@
 		});
 
 		// Show recent content unpinned category
-		recentUpdated.siblings('.feed-unpinned').show();
-		updatedIcon.addClass('up-arrow');
-		updatedIcon.css('transform','rotatex(180deg)');
-		recentUpdated.addClass('category-expanded');
+		setTimeout(function() { recentUpdated.trigger('click'); }, 0);
 	})();
 
 	// State-change functions
@@ -121,7 +118,8 @@
 
 	// Show and hide unpinned category items on click and verbose
 	// function to change the icon button
-	$('[href="#expandCollapse"]').on('click', function() {
+	$('[href="#expandCollapse"]').on('click', function(e) {
+		e.preventDefault();
 		var $this = $(this),
 		categoryIcon = $this.parent('.unpinned-category').find('.unpinned-icon');
 

@@ -138,10 +138,21 @@
 			}
 			$context['lists'] = apply_filters('ink_feeds_lists', $context['lists']);
 			$context['feed'] = $feed;
-			$cats = Timber::get_terms($this->default_taxonomy);
-			foreach($cats as $cat){
-				$cat->posts = $cat->get_posts(6);
-				$context['lists'][] = $cat;
+			$terms = Timber::get_terms($this->default_taxonomy);
+			$term_child_map = array();
+			foreach($terms as $term){
+				$term->posts = $term->get_posts(6);
+				if ($term->parent != 0){
+					$term_child_map[$term->parent][] = $term;
+				}
+			}
+			foreach($terms as $term){
+				if ($term->parent == 0){
+					if (isset($term_child_map[$term->ID])){
+						$term->children = $term_child_map[$term->ID];
+					}
+					$context['lists'][] = $term;
+				}
 			}
 			$context['pinned'] = $feed->get_posts('pinned', 0, 0);
 			$context['posts'] = $feed->get_posts('posts', 0, 0);
